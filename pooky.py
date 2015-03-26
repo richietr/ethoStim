@@ -13,10 +13,16 @@ import cv2
 clock = core.Clock()
 date = time.strftime('%m%d%Y')
 now = time.strftime('%X')
+nowfolder = time.strftime('%H%M%S')
+shotdir1 = os.path.join(os.getcwd()+'/'+nowfolder+'/CAM1')
+shotdir2 = os.path.join(os.getcwd()+'/'+nowfolder+'/CAM2')
+os.makedirs(shotdir1)
+os.makedirs(shotdir2)
+shot_idx = 0
+
 
 # open output csv file for writing or appending
 f = date + '_ethotrials.csv'
-
 
 try:
     fsize = os.stat(f).st_size
@@ -88,7 +94,7 @@ except IndexError:
 
 
 # alternate side stimulus is displayed on
-csvf_length = sum(1 for row in w)
+csvf_length = sum(1 for row in f)
 
 if csvf_length % 2 == 0:
     trialstim1.win = win2
@@ -115,9 +121,6 @@ cap2 = cv2.VideoCapture(1)
 width2 = cap2.get(3)
 height2 = cap2.get(4)
 
-shotdir1 = os.getcwd()+'/CAM1'
-shotdir2 = os.getcwd()+'/CAM2'
-shot_idx = 0
 
 # do it
 while cap.isOpened():
@@ -127,12 +130,11 @@ while cap.isOpened():
         ret, frame = cap.read()
 
 
-        fn = '%s%03d.bmp' % (shotdir1, shot_idx)
-        fn1 = '%s%03d.bmp' % (shotdir2, shot_idx)
+        fn = '%s/%03d.bmp' % (shotdir1, shot_idx)
+        fn1 = '%s/%03d.bmp' % (shotdir2, shot_idx)
         cv2.imwrite(fn, frame)
         cv2.imwrite(fn1, frame2)
         if ord('q') == cv2.waitKey(1) & 0xFF:
-            write = False
             break
 
         display()
