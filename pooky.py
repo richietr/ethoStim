@@ -28,12 +28,16 @@ try:
     fsize = os.stat(f).st_size
 except OSError:
     w = csv.writer(open(f, 'w'), delimiter=',')
-    w.writerow(['date', 'trial time start', 'trial length', 'stimulus ID', 'trial type', 'stimulus1 screen',
+    w.writerow(['date', 'trial time start', 'stimulus ID', 'trial type', 'fish group',  'stimulus1 name', 'stimulus1 screen', 'stimulus2 name',
                 'stimulus2 screen'])
 else:
     if fsize > 0:
         w = csv.writer(open(f, 'a'), delimiter=',')
-
+try:
+    pesces = sys.argv[3]
+except IndexError:
+    print "you forgot to say which fish these are (e.g.; 'm1_f3' -[lftf_rghtf]"
+    pesces = 'lf?rf?'
 
 # presentation windows
 win1 = visual.Window(screen=0, size=(1920, 1080), pos=(0, 0))
@@ -143,10 +147,9 @@ while cap.isOpened():
 
 
 try:
-    w.writerow(
-        [date, now, stimID, ttID, trialstim1.name, trialstim1.win.screen, trialstim2.name, trialstim2.win.screen])
+    w.writerow([date, now, stimID, ttID, pesces, trialstim1.name, trialstim1.win.screen, trialstim2.name, trialstim2.win.screen])
 except NameError:
-    w.writerow([date, now, 'stimID missing', 'ttID missing', trialstim1.name, trialstim1.win.screen, trialstim2.name,
+    w.writerow([date, now, 'stimID missing', 'ttID missing', 'fishids missing', trialstim1.name, trialstim1.win.screen, trialstim2.name,
 
                 trialstim2.win.screen])
 
