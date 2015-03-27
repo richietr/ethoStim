@@ -14,15 +14,15 @@ clock = core.Clock()
 date = time.strftime('%m%d%Y')
 now = time.strftime('%X')
 nowfolder = time.strftime('%H%M%S')
-shotdir1 = os.path.join(os.getcwd()+'/'+nowfolder+'/CAM1')
-shotdir2 = os.path.join(os.getcwd()+'/'+nowfolder+'/CAM2')
+shotdir1 = os.path.join(os.getcwd()+'Data_'+date+'/'+nowfolder+'/CAM1')
+shotdir2 = os.path.join(os.getcwd()+'Data_'+date+'/'+nowfolder+'/CAM2')
 os.makedirs(shotdir1)
 os.makedirs(shotdir2)
 shot_idx = 0
 
 
 # open output csv file for writing or appending
-f = date + '_ethotrials.csv'
+f = os.path.join(os.getcwd()+'Data_'+date+'/'+date + '_ethotrials.csv')
 
 try:
     fsize = os.stat(f).st_size
@@ -33,6 +33,8 @@ except OSError:
 else:
     if fsize > 0:
         w = csv.writer(open(f, 'a'), delimiter=',')
+
+#fish specification
 try:
     pesces = sys.argv[3]
 except IndexError:
