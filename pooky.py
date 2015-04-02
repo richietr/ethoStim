@@ -131,8 +131,8 @@ while True:
     ret2, frame2 = cap2.read()
     ret, frame = cap.read()
 
-    fn = '%s/%07d.bmp' % (shotdir1, shot_idx)
-    fn1 = '%s/%07d.bmp' % (shotdir2, shot_idx)
+    fn = '%s/%07d.png' % (shotdir1, shot_idx)
+    fn1 = '%s/%07d.png' % (shotdir2, shot_idx)
     cv2.imwrite(fn, frame)
     cv2.imwrite(fn1, frame2)
     display()
