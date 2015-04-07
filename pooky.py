@@ -41,7 +41,7 @@ except IndexError:
     pesces = 'lf?rf?'
 
 # presentation windows
-win1 = visual.Window(screen=0, size=(1920, 1080), pos=(0, 0))
+win1 = visual.Window(screen=0, size=(1920, 1080), pos=(0, 0)) # need to adjust these for your displays
 win2 = visual.Window(screen=1, size=(1920, 1080), pos=(0, 0))
 
 # stimulus picking tree, adjust trial TypeIDs/stimulus combinations here
