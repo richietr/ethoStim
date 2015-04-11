@@ -17,12 +17,12 @@ nowfolder = time.strftime('%H%M%S')
 
 
 # open output csv file for writing or appending
-f = os.path.join(os.getcwd() + 'Data_' + date + '/' + date + '_ethotrials.csv')
-
+f = os.path.join(os.getcwd() + date + '_ethotrials.csv')
+print f
 try:
     fsize = os.stat(f).st_size
 except OSError:
-    w = csv.writer(open(f, 'w'), delimiter=',')
+    w = csv.writer(open(f, "w+b"))
     w.writerow(
         ['date', 'trial time start', 'stimulus ID', 'trial type', 'fish group', 'stimulus1 name', 'stimulus1 screen',
          'stimulus2 name',
@@ -80,8 +80,8 @@ try:
 
 except IndexError:
     print "you forgot to say what trial type. defaulting to 'acclim'"
-    trialstim1 = visual.ImageStim(win2, image='0.png', pos=(0, 0.75), colorSpace='rgb', name='9.png')
-    trialstim2 = visual.ImageStim(win1, image='0.png', pos=(0, 0.75), colorSpace='rgb', name='9.png')
+    trialstim1 = visual.ImageStim(win2, image='0.png', pos=(0, 0.75), colorSpace='rgb', name='0.png')
+    trialstim2 = visual.ImageStim(win1, image='0.png', pos=(0, 0.75), colorSpace='rgb', name='0.png')
 
 
 # training or probe trial/length
@@ -112,7 +112,7 @@ for thisKey in allKeys:
     if thisKey == 's':
 
 
-        # adjust these commands based on OS anddesired video format/codec. These capture Isight cam ('0') and desktop ('1') on OSX 10.10.2
+        # adjust these commands based on OS and desired video format/codec. These capture Isight cam ('0') and desktop ('1') on OSX 10.10.2
         subprocess.Popen(['ffmpeg', '-f', 'avfoundation', '-i', '0', '-t', str(tLength / 60), '../out.mpg'],
                          stdin=subprocess.PIPE,
                          stdout=subprocess.PIPE)
