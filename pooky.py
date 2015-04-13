@@ -1,3 +1,4 @@
+__author__ = 'ian'
 
 
 # imports
@@ -17,6 +18,7 @@ nowfolder = time.strftime('%H%M%S')
 
 
 # open output csv file for writing or appending
+
 f = os.path.join(os.getcwd() + date + '_ethotrials.csv')
 print f
 try:
@@ -31,6 +33,7 @@ else:
     if fsize > 0:
         w = csv.writer(open(f, 'a'), delimiter=',')
 # fish specification
+
 try:
     pesces = sys.argv[3]
 except IndexError:
@@ -38,8 +41,8 @@ except IndexError:
     pesces = 'lf?rf?'
 
 # presentation windows
-win1 = visual.Window(screen=0, size=(1920, 1080), pos=(0, 0))
-win2 = visual.Window(screen=1, size=(1920, 1080), pos=(0, 0))
+win1 = visual.Window(screen=0, size=(1024, 768), pos=(0, 0))
+win2 = visual.Window(screen=1, size=(1024, 768), pos=(0, 0))
 
 # stimulus picking tree, adjust trial TypeIDs/stimulus combinations here
 try:
@@ -88,12 +91,12 @@ except IndexError:
 try:
     ttID = sys.argv[2]
     if ttID == 'train':
-        tLength = 7 * 60
+        tLength = 3 * 60
     if ttID == 'probe':
-        tLength = 7 * 60
+        tLength = 3 * 60
 except IndexError:
     print "you forgot to say if this is a 'train' or 'probe' trial"
-    tLength = 4 * 60
+    tLength = 1 * 60
 
 try:
     w.writerow([date, now, stimID, ttID, pesces, trialstim1.name, trialstim1.win.screen, trialstim2.name,
@@ -112,16 +115,27 @@ for thisKey in allKeys:
     if thisKey == 's':
 
 
-        # adjust these commands based on OS and desired video format/codec. These capture Isight cam ('0') and desktop ('1') on OSX 10.10.2
+        # adjust these commands based on OS and desired video format/codec.
+        '''
+        # These capture Isight cam ('0') and desktop ('1') on OSX 10.10.2
         subprocess.Popen(['ffmpeg', '-f', 'avfoundation', '-i', '0', '-t', str(tLength / 60), '../out.mpg'],
                          stdin=subprocess.PIPE,
                          stdout=subprocess.PIPE)
         subprocess.Popen(['ffmpeg', '-f', 'avfoundation', '-i', '1', '-t', str(tLength / 60), '../out2.mpg'],
                          stdin=subprocess.PIPE,
                          stdout=subprocess.PIPE)
+        '''
+        # These capture cam1 ('/dev/video0') and  cam2 ('/dev/video1') on Ubuntu with v4l2
+        subprocess.Popen(['ffmpeg', '-f', 'v4l2', '-framerate', '15', '-i', '/dev/video0', '-t', str(tLength), '../out.mkv'],
+                 stdin=subprocess.PIPE,
+                 stdout=subprocess.PIPE)
+        subprocess.Popen(['ffmpeg', '-f', 'v4l2', '-framerate', '15', '-i', '/dev/video1', '-t', str(tLength), '../out2.mkv'],
+                 stdin=subprocess.PIPE,
+                 stdout=subprocess.PIPE)
 
+        startT = clock.getTime()
 
-        for FrameN in range(tLength):
+        while (clock.getTime()-startT) < tLength:
             trialstim1.draw()
             trialstim2.draw()
             win1.flip()
