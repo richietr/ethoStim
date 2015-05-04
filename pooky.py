@@ -38,7 +38,12 @@ try:
     pesces = sys.argv[3]
 except IndexError:
     print "you forgot to say which fish these are (e.g.; 'm1_f3' -[lftf_rghtf]"
-    pesces = 'lf?rf?'
+    pesces = 'lf?_rf?'
+
+try:
+    lftpez, rgtpez = pesces.split("_")
+except NameError:
+    pass
 
 # presentation windows
 win1 = visual.Window(screen=0, size=(1024, 768), pos=(0, 0))
@@ -62,7 +67,7 @@ try:
     if stimID == '9_12':
         trialstim1 = visual.ImageStim(win1, image='9.png', pos=(0, 0.75), colorSpace='rgb', name='9.png')
         trialstim2 = visual.ImageStim(win2, image='12.png', pos=(0, 0.75), colorSpace='rgb', name='12.png')
-    if stimID == 'acclim':
+    if stimID == 'acclim_acclim':
         trialstim1 = visual.ImageStim(win1, image='0.png', pos=(0, 0.75), colorSpace='rgb', name='0.png')
         trialstim2 = visual.ImageStim(win2, image='0.png', pos=(0, 0.75), colorSpace='rgb', name='0.png')
     if stimID == '10_5':
@@ -86,14 +91,18 @@ except IndexError:
     trialstim1 = visual.ImageStim(win2, image='0.png', pos=(0, 0.75), colorSpace='rgb', name='0.png')
     trialstim2 = visual.ImageStim(win1, image='0.png', pos=(0, 0.75), colorSpace='rgb', name='0.png')
 
+try:
+    lftstim, rgtstim = stimID.split("_")
+except NameError:
+    pass
 
 # training or probe trial/length
 try:
     ttID = sys.argv[2]
     if ttID == 'train':
-        tLength = 3 * 60
+        tLength = 4 * 60
     if ttID == 'probe':
-        tLength = 3 * 60
+        tLength = 4 * 60
 except IndexError:
     print "you forgot to say if this is a 'train' or 'probe' trial"
     tLength = 1 * 60
@@ -126,10 +135,10 @@ for thisKey in allKeys:
                          stdout=subprocess.PIPE)
         '''
         # These capture cam1 ('/dev/video0') and  cam2 ('/dev/video1') on Ubuntu with v4l2
-        subprocess.Popen(['ffmpeg', '-f', 'v4l2', '-framerate', '15', '-i', '/dev/video0', '-t', str(tLength), '../out.mkv'],
+        subprocess.Popen(['ffmpeg', '-f', 'v4l2', '-framerate', '15', '-s', '1280x720', '-i', '/dev/video0', '-t', str(tLength), str(lftpez)+str(lftstim)+'.avi'],
                  stdin=subprocess.PIPE,
                  stdout=subprocess.PIPE)
-        subprocess.Popen(['ffmpeg', '-f', 'v4l2', '-framerate', '15', '-i', '/dev/video1', '-t', str(tLength), '../out2.mkv'],
+        subprocess.Popen(['ffmpeg', '-f', 'v4l2', '-framerate', '15', '-s', '1280x720', '-i', '/dev/video1', '-t', str(tLength), str(rgtpez)+str(rgtstim)+'.avi'],
                  stdin=subprocess.PIPE,
                  stdout=subprocess.PIPE)
 
