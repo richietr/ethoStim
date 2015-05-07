@@ -45,6 +45,7 @@ try:
 except NameError:
     pass
 
+
 # presentation windows
 win1 = visual.Window(screen=0, size=(1024, 768), pos=(0, 0))
 win2 = visual.Window(screen=1, size=(1024, 768), pos=(0, 0))
@@ -135,19 +136,38 @@ for thisKey in allKeys:
                          stdout=subprocess.PIPE)
         '''
         # These capture cam1 ('/dev/video0') and  cam2 ('/dev/video1') on Ubuntu with v4l2
-        subprocess.Popen(['ffmpeg', '-f', 'v4l2', '-framerate', '15', '-s', '1280x720', '-i', '/dev/video0', '-t', str(tLength), str(lftpez)+str(lftstim)+'.avi'],
+        p1 = subprocess.Popen(['ffmpeg', '-f', 'v4l2', '-i', '/dev/video0', '-q', '3', '-framerate', '15', '-s', '1280x720', '-t', str(tLength), str(lftpez)+str(lftstim)+'.avi'],
                  stdin=subprocess.PIPE,
                  stdout=subprocess.PIPE)
-        subprocess.Popen(['ffmpeg', '-f', 'v4l2', '-framerate', '15', '-s', '1280x720', '-i', '/dev/video1', '-t', str(tLength), str(rgtpez)+str(rgtstim)+'.avi'],
+        p2 = subprocess.Popen(['ffmpeg', '-f', 'v4l2', '-i', '/dev/video1', '-q', '3', '-framerate', '15', '-s', '1280x720', '-t', str(tLength), str(rgtpez)+str(rgtstim)+'.avi'],
                  stdin=subprocess.PIPE,
                  stdout=subprocess.PIPE)
+
 
         startT = clock.getTime()
-
         while (clock.getTime()-startT) < tLength:
             trialstim1.draw()
             trialstim2.draw()
             win1.flip()
             win2.flip()
+            if p1.poll() == False and (clock.getTime()-startT) > tLength+15:
+                print 'warning, p1 requires restart'
+                p1 = subprocess.Popen(['ffmpeg', '-f', 'v4l2', '-i', '/dev/video0', '-q', '2', '-t', str(tLength), str(lftpez)+str(lftstim)+str(clock.getTime())+'.avi'],
+                 stdin=subprocess.PIPE,
+                 stdout=subprocess.PIPE)
+                startT = clock.getTime()
+            if p2.poll() == False and (clock.getTime()-startT) > tLength+15:
+                print 'warning, p2 requires restart'
+                p2 = subprocess.Popen(['ffmpeg', '-f', 'v4l2', '-i', '/dev/video0', '-q', '2', '-t', str(tLength), str(lftpez)+str(lftstim)+str(clock.getTime())+'.avi'],
+                 stdin=subprocess.PIPE,
+                 stdout=subprocess.PIPE)
+                startT = clock.getTime()
+            else:
 
+                continue
+win1.close()
+win2.close()
+core.quit()
+p1.kill()
+p2.kill()
 exit()
