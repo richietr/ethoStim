@@ -116,6 +116,26 @@ except NameError:
                 trialstim2.name,
                 trialstim2.win.screen])
 
+prepcam1 = subprocess.Popen(['v4l2-ctl', '-d', '/dev/video0', '--set-ctrl', 'focus_auto=0'],
+                            stdin=subprocess.PIPE,
+                            stdout=subprocess.PIPE)
+prepcam2 = subprocess.Popen(['v4l2-ctl', '-d', '/dev/video1', '--set-ctrl', 'focus_auto=0'],
+                            stdin=subprocess.PIPE,
+                            stdout=subprocess.PIPE)
+'''
+prepcam1b = subprocess.Popen(['v4l2-ctl', '-d', '/dev/video0', '--set-ctrl', 'white_balance_temperature_auto=0'],
+                             stdin=subprocess.PIPE,
+                             stdout=subprocess.PIPE)
+prepcam2b = subprocess.Popen(['v4l2-ctl', '-d', '/dev/video1', '--set-ctrl', 'white_balance_temperature_auto=0'],
+                             stdin=subprocess.PIPE,
+                             stdout=subprocess.PIPE)
+'''
+prepcam1c = subprocess.Popen(['v4l2-ctl', '-d', '/dev/video0', '--set-ctrl', 'focus_absolute=10'],
+                             stdin=subprocess.PIPE,
+                             stdout=subprocess.PIPE)
+prepcam2c = subprocess.Popen(['v4l2-ctl', '-d', '/dev/video1', '--set-ctrl', 'focus_absolute=10'],
+                             stdin=subprocess.PIPE,
+                             stdout=subprocess.PIPE)
 
 allKeys = event.waitKeys()
 
@@ -136,38 +156,56 @@ for thisKey in allKeys:
                          stdout=subprocess.PIPE)
         '''
         # These capture cam1 ('/dev/video0') and  cam2 ('/dev/video1') on Ubuntu with v4l2
-        p1 = subprocess.Popen(['ffmpeg', '-f', 'v4l2', '-i', '/dev/video0', '-q', '3', '-framerate', '15', '-s', '1280x720', '-t', str(tLength), str(lftpez)+str(lftstim)+'.avi'],
-                 stdin=subprocess.PIPE,
-                 stdout=subprocess.PIPE)
-        p2 = subprocess.Popen(['ffmpeg', '-f', 'v4l2', '-i', '/dev/video1', '-q', '3', '-framerate', '15', '-s', '1280x720', '-t', str(tLength), str(rgtpez)+str(rgtstim)+'.avi'],
-                 stdin=subprocess.PIPE,
-                 stdout=subprocess.PIPE)
-
+        p1 = subprocess.Popen(
+            ['ffmpeg', '-f', 'v4l2', '-i', '/dev/video0', '-q', '2', '-s', '1920x1080', '-t',
+             str(tLength), str(lftpez) + str(lftstim) + '.avi'],
+            stdin=subprocess.PIPE,
+            stdout=subprocess.PIPE)
+        p2 = subprocess.Popen(
+            ['ffmpeg', '-f', 'v4l2', '-i', '/dev/video1', '-q', '2', '-s', '1920x1080', '-t',
+             str(tLength), str(rgtpez) + str(rgtstim) + '.avi'],
+            stdin=subprocess.PIPE,
+            stdout=subprocess.PIPE)
 
         startT = clock.getTime()
-        while (clock.getTime()-startT) < tLength:
+        while (clock.getTime() - startT) < tLength:
             trialstim1.draw()
             trialstim2.draw()
             win1.flip()
             win2.flip()
-            if p1.poll() == False and (clock.getTime()-startT) > tLength+15:
-                print 'warning, p1 requires restart'
-                p1 = subprocess.Popen(['ffmpeg', '-f', 'v4l2', '-i', '/dev/video0', '-q', '2', '-t', str(tLength), str(lftpez)+str(lftstim)+str(clock.getTime())+'.avi'],
-                 stdin=subprocess.PIPE,
-                 stdout=subprocess.PIPE)
-                startT = clock.getTime()
-            if p2.poll() == False and (clock.getTime()-startT) > tLength+15:
-                print 'warning, p2 requires restart'
-                p2 = subprocess.Popen(['ffmpeg', '-f', 'v4l2', '-i', '/dev/video0', '-q', '2', '-t', str(tLength), str(lftpez)+str(lftstim)+str(clock.getTime())+'.avi'],
-                 stdin=subprocess.PIPE,
-                 stdout=subprocess.PIPE)
-                startT = clock.getTime()
+            if not p1.poll():
+                if (clock.getTime() - startT) > tLength + 15:
+                    print 'warning, p1 requires restart'
+                    p1 = subprocess.Popen(['ffmpeg', '-f', 'v4l2', '-i', '/dev/video0', '-q', '2', '-s', '1920x1080',
+                                           '-t', str(tLength-(clock.getTime() - startT)), str(lftpez) + str(lftstim) + str(clock.getTime()) + '.avi'],
+                                          stdin=subprocess.PIPE,
+                                          stdout=subprocess.PIPE)
+                    startT = clock.getTime()
+            if not p2.poll():
+                if (clock.getTime() - startT) > tLength + 15:
+                    print 'warning, p2 requires restart'
+                    p2 = subprocess.Popen(['ffmpeg', '-f', 'v4l2', '-i', '/dev/video0', '-q', '2', '-s', '1920x1080',
+                                           '-t', str(tLength-(clock.getTime() - startT)), str(lftpez) + str(lftstim) + str(clock.getTime()) + '.avi'],
+                                          stdin=subprocess.PIPE,
+                                          stdout=subprocess.PIPE)
+                    startT = clock.getTime()
             else:
 
                 continue
+
+
+if prepcam1.poll():
+    prepcam1.kill()
+if prepcam2.poll():
+    prepcam2.kill()
+if prepcam1c.poll():
+    prepcam1c.kill()
+if prepcam2c.poll():
+    prepcam2c.kill()
+if p1.poll():
+    p1.kill()
+if p2.poll():
+    p2.kill()
 win1.close()
 win2.close()
 core.quit()
-p1.kill()
-p2.kill()
-exit()
