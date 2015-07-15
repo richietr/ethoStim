@@ -125,22 +125,17 @@ class Trial:
             if thisKey == 's':
                 self.p1 = subprocess.Popen(
             ['ffmpeg', '-f', 'avfoundation', '-i', '2', '-r', '30', '-q', '10', '-t', str(self.tLength),
-             str(self.lftpez)+'_'+str(self.day)+'_'+str(self.session)+'.mpg'])#,
-                # stdin=subprocess.PIPE,
-                #stdout=subprocess.PIPE)
+             str(self.lftpez)+'_'+str(self.day)+'_'+str(self.session)+'.mpg'])
+
                 self.p2 = subprocess.Popen(
             ['ffmpeg', '-f', 'avfoundation', '-i', '0', '-r', '30', '-q', '10', '-t', str(self.tLength),
-             str(self.rgtpez)+'_'+str(self.day)+'_'+str(self.session)+'.mpg'])#,
-                                   #stdin=subprocess.PIPE,
-                                   #stdout=subprocess.PIPE)
+             str(self.rgtpez)+'_'+str(self.day)+'_'+str(self.session)+'.mpg'])
+
 
                 startT = self.clock.getTime()
                 while (self.clock.getTime() - startT) < self.tLength:
             
-            #self.win1.fullscrn=True
-            #self.win2.fullscrn=True
-            #self.win1.setPos(0.0,0.0)
-            #self.win2.setPos(0.0,0.0)
+
                     restKeys = event.getKeys()
                     self.trialstim1.draw()
                     self.trialstim2.draw()
