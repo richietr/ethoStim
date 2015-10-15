@@ -50,18 +50,19 @@ class Trial:
             self.stimID = str(highStim)+'_'+str(lowStim)
         if lfi =='H' and rfi == 'L' and coni == 'n':
             self.stimID = str(highStim)+'_'+str(lowStim)
-
+        '''
         f = os.path.join(os.getcwd() + date + '_ethotrials.csv')
         try:
             fsize = os.stat(f).st_size
         except OSError:
-            self.w = csv.writer(open(f, "w+b"))
+            self.w = csv.writer(open(f, 'r+w+'))
             self.w.writerow(
                 ['date', 'start time', 'day', 'trial session', 'left fish', 'right fish',
                  'high stim','lowstim','side fed'])
         else:
             if fsize > 0:
-                self.w = csv.writer(open(f, 'a'), delimiter=',')
+                self.w = csv.writer(open(f, 'a+'), delimiter=',')
+                '''
         try:
 
             if self.stimID == '5_10':
@@ -105,12 +106,12 @@ class Trial:
             self.trialstim1 = visual.ImageStim(win2, image='0.png', pos=(0, 0), colorSpace='rgb', name='0.png')
             self.trialstim2 = visual.ImageStim(win1, image='0.png', pos=(0, 0), colorSpace='rgb', name='0.png')
 
-
+    '''
     def writedat(self, date, now):
 
         self.w.writerow([date, now, self.day, self.session, self.lftpez, self.rgtpez, self.hstim, self.lstim,
                     self.conditionside])
-
+'''
     def randori(self):
         orifoo = [90, 180, 270, 0, 360]
         self.ori1 = int(random.choice(orifoo))
@@ -124,11 +125,11 @@ class Trial:
         for thisKey in allKeys:
             if thisKey == 's':
                 self.p1 = subprocess.Popen(
-            ['ffmpeg', '-f', 'avfoundation', '-i', '2', '-r', '30', '-q', '10', '-t', str(self.tLength),
+            ['ffmpeg', '-f', 'avfoundation', '-r', '20', '-s', '1920x1080', '-i', '2', '-t', str(self.tLength),
              str(self.lftpez)+'_'+str(self.day)+'_'+str(self.session)+'.mpg'])
 
                 self.p2 = subprocess.Popen(
-            ['ffmpeg', '-f', 'avfoundation', '-i', '0', '-r', '30', '-q', '10', '-t', str(self.tLength),
+            ['ffmpeg', '-f', 'avfoundation', '-r', '20', '-s', '1920x1080', '-i', '0', '-t', str(self.tLength),
              str(self.rgtpez)+'_'+str(self.day)+'_'+str(self.session)+'.mpg'])
 
 
@@ -148,11 +149,11 @@ class Trial:
                             self.p1.communicate(input='q')
                             self.p2.communicate(input='q')
                             _exit()
-        self.p1.kill()
-        self.p2.kill()
-        self.w.close()
-        self.win1.close()
-        self.win2.close()
+                            self.p1.kill()
+                            self.p2.kill()
+                            # self.w.close()
+                            self.win1.close()
+                            self.win2.close()
 
 
 if __name__ == '__main__':
@@ -168,7 +169,7 @@ if __name__ == '__main__':
     RT = Trial(time.strftime('%m%d%Y'), time.strftime('%X'), args["day"], args["session"], args["leftFish"],
                args["rightFish"], args["highStim"], args["lowStim"], args["fedSide"])
     RT.randori()
-    RT.writedat(time.strftime('%m%d%Y'), time.strftime('%X'))
+    #RT.writedat(time.strftime('%m%d%Y'), time.strftime('%X'))
     while 1:
 
         subprocess.Popen(["osascript", "screenset.scpt"])
