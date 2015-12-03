@@ -135,7 +135,7 @@ class Trial:
 
                 startT = self.clock.getTime()
                 while (self.clock.getTime() - startT) < self.tLength:
-            
+
 
                     restKeys = event.getKeys()
                     self.trialstim1.draw()
@@ -165,6 +165,19 @@ if __name__ == '__main__':
     ap.add_argument("-d","--day", help="experiment day, e.g. 1-7")
     ap.add_argument("-s","--session", help="trial session, e.g. 1-4")
     ap.add_argument("-fs","--fedSide", help="side feed on/conditioned side")
+    ap.add_argument("-d","--session", help="trial day")
+    ap.add_argument("-d","--sex", help="trial day")
+    ap.add_argument("-d","--ratio", help="trial day")
+    ap.add_argument("-d","--day", help="trial day")
+    ap.add_argument("-sp", "--species", help="species name")
+    ap.add_arguemtn("-fn", "--fishName", help="the name of the focal fish")
+    ap.add_argument("-rsl","--rightfishstandardLength", help="the standard length of the fish in the right tank")
+    ap.add_argument("-lsl","--rightfishstandardLength", help="the standard length of the fish in the left tank")
+    ap.add_argument("-r","--round", help="the round of the trial")
+    ap.add_argument("-st", "--stimulus", help="stimulus presented")
+    ap.add_argument("-rfs", "--rightfishsex", help="sex of fish in right tank")
+    ap.add_argument("-lfs", "--leftfishsex", help="sex of fish in right tank")
+
     args = vars(ap.parse_args())
     RT = Trial(time.strftime('%m%d%Y'), time.strftime('%X'), args["day"], args["session"], args["leftFish"],
                args["rightFish"], args["highStim"], args["lowStim"], args["fedSide"])
