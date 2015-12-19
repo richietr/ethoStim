@@ -56,7 +56,7 @@ pooky.py controls the stimulus and data collection for a numerosity (learning) a
 usage exampe: python pooky.py --day [0] --session [1] --leftFish [Liljohn] --rightFish [Ladygaga] --highStim [12] --lowStim [6] --fedSide [both] --species [sailfin] --round [3] --rightfishstandardlength [240] --leftfishstandardlength [220] --rightfishsex [F] --leftfishsex [M]
 (ommiting brackets)
 
-I find that it is best to generate these file names with a script or spreadsheet instead of typing them in (obviously).
+I find that it is best to generate these file names with a script or spreadsheet instead of typing them in.
 
 
 Processing and analysis scripts can be found at RobertIan/LearningFearandMateChoice
