@@ -35,7 +35,7 @@ import pygame
 import picamera
 import time
 import netifaces
-import Rpi.GPIO as GPIO
+import RPi.GPIO as GPIO
 import os.path
 
 class Trial:
@@ -60,6 +60,13 @@ class Trial:
         GPIO.setup(self.feeder, GPIO.OUT)
         GPIO.setup(self.notfeeder, GPIO.OUT)
         #
+        self.camera = picamera.PiCamera()
+        self.camera.resolution = (1920, 1080)
+        self.camera.framerate = 30
+        self.cmera.autofocus = False
+        self.camera.awb_mode = 'flourescent'
+        startT = time.asctime()
+        presented = False
 
     def checkPiIP(self):
         netifaces.ifaddresses('eth0')
@@ -102,30 +109,34 @@ class Trial:
         str(session)+'_' +str(stim)+'_'+str(conditionside)))
 
     def startRecording(self):
-        self.camera.start_recording('%s.%s' % (str(self.vidout), 'mkv'),
-        format=self.vcodec)
+        self.camera.start_recording('%s.%s' % (str(self.vidout), 'mkv'))
 
     def stopRecording(self):
         self.camera.stop_recording()
 
-    def mainLoop(self, feedornot):
-        startT = time.asctime()
-        presented = False
-        while (time.asctime() - startT) < self.tLength:
-            delaymet = False
-            if presented:
-                pass
-            elif (time.asctime() - startT) < self.feedDelay:
-                delaymet = True
-
-            if delaymet:
-                if
-            self.screen.blit(self.image, (0,0))
-            pygame.display.flip()
-
     def safeQuit(self):
         GPIO.cleanup()
         pygame.quit()
+        self.camera.close()
+        exit()
+
+    def mainLoop(self, feedornot):
+        while (time.asctime() - startT) < self.tLength:
+
+            try:
+                delaymet = False
+                if presented:
+                    pass
+                elif (time.asctime() - startT) < self.feedDelay:
+                    delaymet = True
+                if delaymet:
+                    if
+                self.screen.blit(self.image, (0,0))
+                pygame.display.flip()
+            except KeyboardInterrupt:
+                self.safeQuit()
+
+
 
 
 if __name__ == '__main__':
