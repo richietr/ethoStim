@@ -81,7 +81,7 @@ class Trial:
         self.camera.framerate = 30
         self.camera.autofocus = False
         self.camera.awb_mode = 'fluorescent'
-        
+        self.camera.led = False
         presented = False
 
     def checkPiIP(self):
@@ -163,12 +163,13 @@ class Trial:
         
 	self.startT = time.time()
         fed = False
-        
+        self.startRecording()
         while ((time.time() - self.startT) < self.tLength):
             print (time.time()-self.startT)
 	    pygame.display.flip()
 	    self.screen.blit(self.image, (250,100))
-	    #presented = True
+	    
+            #presented = True
             try:
                 
                # if presented == True:
@@ -241,7 +242,7 @@ if __name__ == '__main__':
     
     
     #if args["camera"]:
-    T.startRecording()
+    #T.startRecording()
     #else:
         #pass
     #if args["feed"]:
