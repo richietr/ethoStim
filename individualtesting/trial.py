@@ -76,12 +76,17 @@ class Trial:
         GPIO.setup(self.notfeeder, GPIO.OUT)
         GPIO.output(self.notfeeder, False)
         #
+<<<<<<< HEAD
         self.camera = picamera.PiCamera()
         self.camera.resolution = (1920, 1080)
         self.camera.framerate = 30
         self.camera.autofocus = False
         self.camera.awb_mode = 'fluorescent'
         self.camera.led = False
+=======
+        
+        
+>>>>>>> dd0d66831cd528cf737171875903779c5d4de6ff
         presented = False
 
     def checkPiIP(self):
@@ -117,6 +122,12 @@ class Trial:
 
     def notFeed(self):
         GPIO.output(self.notfeeder, GPIO.HIGH)
+    def cameraInit(self):
+        self.camera = picamera.PiCamera()
+        self.camera.resolution = (1920, 1080)
+        self.camera.framerate = 30
+        self.camera.autofocus = False
+        self.camera.awb_mode = 'fluorescent'
 
     def videoFileName(self, species, tround, sl, sex, fishid, day, session,
                     conditionside):
@@ -133,21 +144,14 @@ class Trial:
     def stopRecording(self):
         self.camera.stop_recording()
 
+    def cameraQuit(self):
+        self.camera.close()
+
     def safeQuit(self):
-	#KJW tries to do a manual key quit- press Enter to Quit
-	#i = 0
-	#while True:
-	    #os.system('cls' if os.name == 'nt' else 'clear')
-	    #if sys.stdin in select.select([sys.stdin], [], [], 0)[0]:
-	        #line = raw_input()
-	        #break
-	    #i += 1
-	#ok that's it for KJW's manual key quit
 	print'safeQuit'
         GPIO.output(self.feeder, True)#changed
         GPIO.cleanup()
         pygame.quit()
-        self.camera.close()
         exit()
 
     def mainLoop(self):
@@ -232,32 +236,42 @@ if __name__ == '__main__':
 
     T = Trial(args["presentedStim"], args["startTime"])
 
-    print 'Place3'
+    
     #T.safeQuit()
     
     T.checkPiIP()
     T.whatStimulus()
     T.videoFileName(args["species"], args["round"], args["fishstandardlength"],
                     args["sex"], args["fish"], args["day"], args["session"], args["fedSide"])
+
+    if args["camera"]:
+        T.cameraInit()    
     
+<<<<<<< HEAD
     
     #if args["camera"]:
     #T.startRecording()
     #else:
         #pass
     #if args["feed"]:
+=======
+    if args["camera"]:
+        T.startRecording()
+    else:
+        pass
+  #if args["feed"]:
+>>>>>>> dd0d66831cd528cf737171875903779c5d4de6ff
     T.mainLoop()
     print'Place4'
     #else:
       #T.mainLoop(False)
-    #if args["camera"]:
+    if args["camera"]:
+        T.stopRecording()
+    else:
+        pass  
+    
+    if args["camera"]:
+	T.cameraQuit()
 
-
-    print'Place5'
-
-    T.stopRecording()
-    #else:
-        #pass 
-    print'Place6'
     T.safeQuit() 
     print 'Place7'
