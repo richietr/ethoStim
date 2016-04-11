@@ -76,17 +76,13 @@ class Trial:
         GPIO.setup(self.notfeeder, GPIO.OUT)
         GPIO.output(self.notfeeder, False)
         #
-<<<<<<< HEAD
+
         self.camera = picamera.PiCamera()
         self.camera.resolution = (1920, 1080)
         self.camera.framerate = 30
         self.camera.autofocus = False
         self.camera.awb_mode = 'fluorescent'
         self.camera.led = False
-=======
-        
-        
->>>>>>> dd0d66831cd528cf737171875903779c5d4de6ff
         presented = False
 
     def checkPiIP(self):
