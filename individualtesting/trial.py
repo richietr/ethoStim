@@ -131,10 +131,10 @@ class Trial:
         +'_'+str(sl)+'_'+str(sex) +'_'+str(fishid)+'_'+str(day)+'_'+
         str(session)+'_' +str(self.stim)+'_'+str(conditionside)))
         print self.vidout
+    
     def startRecording(self):
-        print 'start recording' 
         self.camera.start_recording(self.vidout+ '.h264')
-        print 'recording'
+        
 
 
     def stopRecording(self):
@@ -144,7 +144,7 @@ class Trial:
         self.camera.close()
 
     def safeQuit(self):
-	print'safeQuit'
+	print 'Quit'
         GPIO.output(self.feeder, True)#changed
         GPIO.cleanup()
         pygame.quit()
@@ -152,8 +152,6 @@ class Trial:
 
     def mainLoop(self):
 
-        print 'feedornot'
-        print 'main loop'
 	#delaymet = False
         #presented = False
 
@@ -207,8 +205,6 @@ class Trial:
 if __name__ == '__main__':
 
 
-    print'Place1'
-
     ap = argparse.ArgumentParser()
     ap.add_argument("-f","--fish", help="ID of fish in tank")
     ap.add_argument("-ts", "--trainedStim",help="numerosity stimulus the individual is being trained to, e.g. 12")
@@ -227,9 +223,6 @@ if __name__ == '__main__':
     args = vars(ap.parse_args())
 
 
-
-    print 'Place2'
-
     T = Trial(args["presentedStim"], args["startTime"])
 
     
@@ -243,24 +236,23 @@ if __name__ == '__main__':
     if args["camera"]:
         T.cameraInit()    
     
-<<<<<<< HEAD
     
     #if args["camera"]:
     #T.startRecording()
     #else:
         #pass
     #if args["feed"]:
-=======
+
     if args["camera"]:
         T.startRecording()
     else:
         pass
   #if args["feed"]:
->>>>>>> dd0d66831cd528cf737171875903779c5d4de6ff
+
     T.mainLoop()
-    print'Place4'
+    
     #else:
-      #T.mainLoop(False)
+    #T.mainLoop(False)
     if args["camera"]:
         T.stopRecording()
     else:
@@ -270,4 +262,4 @@ if __name__ == '__main__':
 	T.cameraQuit()
 
     T.safeQuit() 
-    print 'Place7'
+
