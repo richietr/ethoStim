@@ -123,6 +123,7 @@ class Trial:
         self.camera.resolution = (1920, 1080)
         self.camera.framerate = 30
         self.camera.autofocus = False
+        self.camera.led = False
         self.camera.awb_mode = 'fluorescent'
 
     def videoFileName(self, species, tround, sl, sex, fishid, day, session,
@@ -144,7 +145,6 @@ class Trial:
         self.camera.close()
 
     def safeQuit(self):
-	print 'Quit'
         GPIO.output(self.feeder, True)#changed
         GPIO.cleanup()
         pygame.quit()
