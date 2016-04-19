@@ -66,7 +66,7 @@ class Trial:
         self.feedDelay = 15 #thirty seconds
         #
         GPIO.setmode(GPIO.BCM)
-
+        GPIO.setwarnings(False)
         self.feeder = 17 ##
         self.notfeeder = 5 ##
         GPIO.setup(27, GPIO.IN)
@@ -123,9 +123,10 @@ class Trial:
         self.camera.resolution = (1920, 1080)
         self.camera.framerate = 30
         self.camera.autofocus = False
-        self.camera.led = False
         self.camera.awb_mode = 'fluorescent'
-
+       # self.camera.led = False
+       # presented = False
+        
     def videoFileName(self, species, tround, sl, sex, fishid, day, session,
                     conditionside):
         self.vidout = ('data/'+str(self.ip)+'/'+(str(species)+'_'+str(tround)
@@ -136,7 +137,6 @@ class Trial:
     def startRecording(self):
         self.camera.start_recording(self.vidout+ '.h264')
         
-
 
     def stopRecording(self):
         self.camera.stop_recording()
@@ -235,7 +235,9 @@ if __name__ == '__main__':
 
     if args["camera"]:
         T.cameraInit()    
-    
+       # T.startRecording()
+    else:
+        pass   
     
     #if args["camera"]:
     #T.startRecording()
@@ -245,8 +247,8 @@ if __name__ == '__main__':
 
     if args["camera"]:
         T.startRecording()
-    else:
-        pass
+   # else:
+       # pass
   #if args["feed"]:
 
     T.mainLoop()
