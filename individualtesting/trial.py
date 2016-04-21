@@ -76,13 +76,13 @@ class Trial:
         GPIO.setup(self.notfeeder, GPIO.OUT)
         GPIO.output(self.notfeeder, False)
      
-        self.camera = picamera.PiCamera()
-        self.camera.resolution = (1920, 1080)
-        self.camera.framerate = 30
-        self.camera.autofocus = False
-        self.camera.awb_mode = 'fluorescent'
-        self.camera.led = False
-        presented = False
+#        self.camera = picamera.PiCamera()
+#        self.camera.resolution = (1920, 1080)
+#        self.camera.framerate = 30
+#        self.camera.autofocus = False
+#        self.camera.awb_mode = 'fluorescent'
+#        self.camera.led = False
+#        presented = False
 
     def checkPiIP(self):
        self.ip = netifaces.ifaddresses('eth0')[2][0]['addr']
@@ -117,14 +117,15 @@ class Trial:
 
     def notFeed(self):
         GPIO.output(self.notfeeder, GPIO.HIGH)
-#    def cameraInit(self):
-#        self.camera = picamera.PiCamera()
-#        self.camera.resolution = (1920, 1080)
-#        self.camera.framerate = 30
-#        self.camera.autofocus = False
-#        self.camera.awb_mode = 'fluorescent'
-#        self.camera.led = False
-#        presented = False
+ 
+    def cameraInit(self):
+        self.camera = picamera.PiCamera()
+        self.camera.resolution = (1920, 1080)
+        self.camera.framerate = 30
+        self.camera.autofocus = False
+        self.camera.awb_mode = 'fluorescent'
+        self.camera.led = False
+        presented = False
         
     def videoFileName(self, species, tround, sl, sex, fishid, day, session,
                     conditionside):
@@ -160,7 +161,10 @@ class Trial:
         
 	self.startT = time.time()
         fed = False
-        self.startRecording()
+        if args["camera"]:      
+            self.startRecording()
+        else:
+            pass
         while ((time.time() - self.startT) < self.tLength):
             print (time.time()-self.startT)
 	    pygame.display.flip()
@@ -237,6 +241,8 @@ if __name__ == '__main__':
     #else:
         #pass
     #if args["feed"]:
+    if args["camera"]:
+        T.cameraInit()
 
     T.mainLoop()
     
