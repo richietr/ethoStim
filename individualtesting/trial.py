@@ -75,8 +75,7 @@ class Trial:
         GPIO.output(self.feeder, True)
         GPIO.setup(self.notfeeder, GPIO.OUT)
         GPIO.output(self.notfeeder, False)
-        #
-
+     
         self.camera = picamera.PiCamera()
         self.camera.resolution = (1920, 1080)
         self.camera.framerate = 30
@@ -118,14 +117,14 @@ class Trial:
 
     def notFeed(self):
         GPIO.output(self.notfeeder, GPIO.HIGH)
-    def cameraInit(self):
-        self.camera = picamera.PiCamera()
-        self.camera.resolution = (1920, 1080)
-        self.camera.framerate = 30
-        self.camera.autofocus = False
-        self.camera.awb_mode = 'fluorescent'
-       # self.camera.led = False
-       # presented = False
+#    def cameraInit(self):
+#        self.camera = picamera.PiCamera()
+#        self.camera.resolution = (1920, 1080)
+#        self.camera.framerate = 30
+#        self.camera.autofocus = False
+#        self.camera.awb_mode = 'fluorescent'
+#        self.camera.led = False
+#        presented = False
         
     def videoFileName(self, species, tround, sl, sex, fishid, day, session,
                     conditionside):
@@ -231,25 +230,13 @@ if __name__ == '__main__':
     T.checkPiIP()
     T.whatStimulus()
     T.videoFileName(args["species"], args["round"], args["fishstandardlength"],
-                    args["sex"], args["fish"], args["day"], args["session"], args["fedSide"])
-
-    if args["camera"]:
-        T.cameraInit()    
-       # T.startRecording()
-    else:
-        pass   
+                    args["sex"], args["fish"], args["day"], args["session"], args["fedSide"])  
     
     #if args["camera"]:
     #T.startRecording()
     #else:
         #pass
     #if args["feed"]:
-
-    if args["camera"]:
-        T.startRecording()
-   # else:
-       # pass
-  #if args["feed"]:
 
     T.mainLoop()
     
