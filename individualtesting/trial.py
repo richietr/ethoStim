@@ -70,12 +70,14 @@ class Trial:
         self.feeder = 17 ##
         self.notfeeder = 5 ##
         GPIO.setup(27, GPIO.IN)
+	print "GPIO.setup27in"
         GPIO.add_event_detect(27, GPIO.RISING)
+	print "GPIOaddedeventdetect27rising"
         GPIO.setup(self.feeder, GPIO.OUT)
         GPIO.output(self.feeder, True)
         GPIO.setup(self.notfeeder, GPIO.OUT)
         GPIO.output(self.notfeeder, False)
-     
+        print "GPIOinit"
 #        self.camera = picamera.PiCamera()
 #        self.camera.resolution = (1920, 1080)
 #        self.camera.framerate = 30
@@ -113,11 +115,12 @@ class Trial:
                 ony jpg/JPG, ong/PNG, avi/AVI and mpg/MPG formats'
         '''
     def feed(self):
+	print"deffeedGPIO?"
         GPIO.output(self.feeder, GPIO.HIGH)
-
+        print "deffeedGPIO.HIGH"          
     def notFeed(self):
         GPIO.output(self.notfeeder, GPIO.HIGH)
- 
+ 	print "defnotfeedGPIO.HIGH"
     def cameraInit(self):
         self.camera = picamera.PiCamera()
         self.camera.resolution = (1920, 1080)
@@ -145,8 +148,10 @@ class Trial:
         self.camera.close()
 
     def safeQuit(self):
+	print "safequit"
         GPIO.output(self.feeder, True)#changed
         GPIO.cleanup()
+	print "GPIOcleanup"
         pygame.quit()
         exit()
 
@@ -156,7 +161,7 @@ class Trial:
         #presented = False
 
         while time.time()<self.start:
-            print time.time()-self.start
+           #print time.time()-self.start
             pass
         
 	self.startT = time.time()
@@ -166,7 +171,7 @@ class Trial:
         else:
             pass
         while ((time.time() - self.startT) < self.tLength):
-            print (time.time()-self.startT)
+           #print (time.time()-self.startT)
 	    pygame.display.flip()
 	    self.screen.blit(self.image, (250,100))
 	    
@@ -187,11 +192,12 @@ class Trial:
       		 
                  	#presented = True
                     if fed:
-                        pass
+    		        pass
                     elif GPIO.event_detected(27):
 		        time.sleep(1.0)
 		        GPIO.output(17,True)
                         fed = True
+			print "notfed, event detected"
    		    else:
                       # time.sleep(1.0)
                        GPIO.output(17, False)
@@ -200,7 +206,7 @@ class Trial:
 		  # pass
 
             except KeyboardInterrupt:
-		print'KeyInterupt'
+		print'KeyInterrupt'
 		self.safeQuit()	
 		
 
@@ -245,7 +251,7 @@ if __name__ == '__main__':
         T.cameraInit()
 
     T.mainLoop()
-    
+    print "mainloop"
     #else:
     #T.mainLoop(False)
     if args["camera"]:
@@ -257,4 +263,4 @@ if __name__ == '__main__':
 	T.cameraQuit()
 
     T.safeQuit() 
-
+    print "safequit"
