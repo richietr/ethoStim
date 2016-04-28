@@ -64,10 +64,11 @@ class Trial:
         self.start = float(starttime)
         self.tLength = 30 #four minute trial, changed to 1 min KJW
         self.feedDelay = 5 #thirty seconds
-        #
+	#
         GPIO.setmode(GPIO.BCM)
         GPIO.setwarnings(False)
-        self.feeder = 17 ##
+        GPIO.cleanup()
+	self.feeder = 17 ##
         self.notfeeder = 5 ##
         GPIO.setup(27, GPIO.IN)
 	print "GPIO.setup27in"
