@@ -63,16 +63,16 @@ class Trial:
         #
         self.start = float(starttime)
         self.tLength = 30 #four minute trial, changed to 1 min KJW
-        self.feedDelay = 15 #thirty seconds
+        self.feedDelay = 5 #thirty seconds
 	#
         GPIO.setmode(GPIO.BCM)
         GPIO.setwarnings(False)
         GPIO.cleanup()
 	self.feeder = 17 ##
         self.notfeeder = 5 ##
-        #GPIO.setup(27, GPIO.IN)
+        GPIO.setup(27, GPIO.IN)
 	print "GPIO.setup27in"
-        #GPIO.add_event_detect(27, GPIO.RISING)
+        GPIO.add_event_detect(27, GPIO.RISING)
 	print "GPIOaddedeventdetect27rising"
         GPIO.setup(self.feeder, GPIO.OUT)
         GPIO.output(self.feeder, True)
@@ -98,7 +98,7 @@ class Trial:
         or extension == '.JPG':
         # still image
             try:
-                self.image = pygame.image.load('/home/pi/ethoStim/individualtesting/src/'+str(self.stimulus))
+                self.image = pygame.image.load('/home/pi/ethoStim/individualtesting/src/10.png')
             except IOError:
                 # currently a print, should be changed to send a message to
                 #the client
@@ -192,16 +192,16 @@ class Trial:
               	 	#self.screen.blit(self.image, (0,0))
       		 
                  	#presented = True
-                    #if fed:
-    		        #pass
-                    #elif GPIO.event_detected(27):
-		        #time.sleep(1.0)
-		        #GPIO.output(17,True)
-                        #fed = True
-			#print "notfed, event detected"
-   		    #else:
+                    if fed:
+    		        pass
+                    elif GPIO.event_detected(27):
+		        time.sleep(1.0)
+		        GPIO.output(17,True)
+                        fed = True
+			print "notfed, event detected"
+   		    else:
                       # time.sleep(1.0)
-                    GPIO.output(17, False)
+                       GPIO.output(17, False)
 		      
                        #print time.time()
 		  # pass
