@@ -124,12 +124,15 @@ class Trial:
  	print "defnotfeedGPIO.HIGH"
     def cameraInit(self):
         self.camera = picamera.PiCamera()
-        self.camera.resolution = (1920, 1080)
-        self.camera.framerate = 30
+        self.camera.resolution = (1280,720)
+	self.camera.contrast = 100
+        self.camera.brightness = 60
+	self.camera.framerate = 30
         self.camera.autofocus = False
         self.camera.awb_mode = 'fluorescent'
         self.camera.led = False
         presented = False
+	self.camera.rotation = 180
         
     def videoFileName(self, species, tround, sl, sex, fishid, day, session,
                     conditionside):
