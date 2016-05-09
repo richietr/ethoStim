@@ -97,7 +97,6 @@ class Trial:
         # still image
             try:
                 self.image = pygame.image.load('/home/pi/ethoStim/individualtesting/src/'+str(self.stimulus))
-            	self.image = pygame.transform.scale(self.image, (720,460))
             except IOError:
                 # currently a print, should be changed to send a message to
                 #the client
@@ -130,7 +129,6 @@ class Trial:
         self.camera.led = False
         presented = False
 	self.camera.rotation = 180
-	#self.camera.iso = 800	
         
     def videoFileName(self, species, tround, sl, sex, fishid, day, session,
                     conditionside):
@@ -140,7 +138,7 @@ class Trial:
         print self.vidout
     
     def startRecording(self):
-        self.camera.start_recording(self.vidout+'.mkv', format='h264')
+        self.camera.start_recording(self.vidout, format='rgb')
         
 
     def stopRecording(self):
@@ -156,14 +154,7 @@ class Trial:
         pygame.quit()
         exit()
 
-    def mainLoop(self, feedornot):
-        ##MATT: set-up feed or not. Dont forget to add it 
-        # as a variable in 'mailoop(self, feedornot)'
-        if feedornot == 'yes':
-            feed = True
-        else:
-            feed = False
-
+    def mainLoop(self):
 
 	#delaymet = False
         #presented = False
@@ -181,8 +172,9 @@ class Trial:
         while ((time.time() - self.startT) < self.tLength):
            #print (time.time()-self.startT)
 	    pygame.display.flip()
-	    self.screen.blit(self.image, (0,0))
-	    #presented = True
+	    self.screen.blit(self.image, (250,100))
+	    
+            #presented = True
             try:
                 
                # if presented == True:
@@ -207,13 +199,8 @@ class Trial:
 			#print "notfed, event detected"
    		    #else:
                       # time.sleep(1.0)
-                    ## MATT: turn on either the feeder on the notfeeder here
-                    if feed:
-                        GPIO.output(self.feeder, False)
-                    else:
-		        GPIO.output(self.notfeeder, False)  
-
-
+                    GPIO.output(17, False)
+		      
                        #print time.time()
 		  # pass
 
@@ -262,12 +249,7 @@ if __name__ == '__main__':
     if args["camera"]:
         T.cameraInit()
 
-    ## MATT: tell the mainloop yes or no on feeding
-    if args["feed"]:
-        T.mainLoop('yes')
-    else:
-        T.mainLoop('no')
-
+    T.mainLoop()
     #else:
     #T.mainLoop(False)
     if args["camera"]:
