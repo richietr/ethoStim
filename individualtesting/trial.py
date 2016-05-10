@@ -62,8 +62,8 @@ class Trial:
         self.stimulus = stim
         #
         self.start = float(starttime)
-        self.tLength = 30 #four minute trial, changed to 1 min KJW
-        self.feedDelay = 15 #thirty seconds
+        self.tLength = 240
+        self.feedDelay = 10
 	#
         GPIO.setmode(GPIO.BCM)
         GPIO.setwarnings(False)
