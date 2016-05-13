@@ -62,7 +62,7 @@ class Trial:
         self.stimulus = stim
         #
         self.start = float(starttime)
-        self.tLength = 60
+        self.tLength = 240
         self.feedDelay = 10
 	#
         GPIO.setmode(GPIO.BCM)
@@ -127,17 +127,17 @@ class Trial:
         self.camera.autofocus = False
 	self.camera.exposure_mode = 'auto'
         self.camera.awb_mode = 'off'
-	self.camera.awb_gains = (1.5, 1.2)
+	self.camera.awb_gains = (2.0, 1.0)
         self.camera.led = False
         presented = False
 	self.camera.rotation = 180
 	#self.camera.iso = 800	
         
     def videoFileName(self, species, tround, sl, sex, fishid, day, session,
-                    conditionside):
+                    trainedStim,conditionside):
         self.vidout = ('data/'+str(self.ip)+'/'+(str(species)+'_'+str(tround)
         +'_'+str(sl)+'_'+str(sex) +'_'+str(fishid)+'_'+str(day)+'_'+
-        str(session)+'_' +str(self.stim)+'_'+str(conditionside)))
+        str(session)+'_' +str(self.stim)+'_'+str(trainedStim)+'_'+str(conditionside)))
         print self.vidout
     
     def startRecording(self):
@@ -229,13 +229,13 @@ if __name__ == '__main__':
 
     ap = argparse.ArgumentParser()
     ap.add_argument("-f","--fish", help="ID of fish in tank")
-    ap.add_argument("-ts", "--trainedStim",help="numerosity stimulus the individual is being trained to, e.g. 12")
+    ap.add_argument("-ts", "--trainedStim",help="numerosity stimulus being shown on the other raspberry pi")
     ap.add_argument("-ps", "--presentedStim", help="stimulus being presented with this raspberry pi")
     ap.add_argument("-d","--day", help="experiment day, e.g. 1-7")
     ap.add_argument("-s","--session", help="trial session, e.g. 1-4")
     ap.add_argument("-fs","--fedSide", help="side(self.ip feed on/conditioned side")
     ap.add_argument("-x","--sex", help="fish sex")
-    ap.add_argument("-p","--proportion", help="training ratio")
+    ap.add_argument("-p","--proportion", help="ratio that is being presented this trial")
     ap.add_argument("-sp", "--species", help="species name")
     ap.add_argument("-sl","--fishstandardlength", help="standard length of the")
     ap.add_argument("-r","--round", help="training round")
@@ -253,7 +253,7 @@ if __name__ == '__main__':
     T.checkPiIP()
     T.whatStimulus()
     T.videoFileName(args["species"], args["round"], args["fishstandardlength"],
-                    args["sex"], args["fish"], args["day"], args["session"], args["fedSide"])  
+                    args["sex"], args["fish"], args["day"], args["session"], args["trainedStim"], args["fedSide"])  
     
     #if args["camera"]:
     #T.startRecording()
