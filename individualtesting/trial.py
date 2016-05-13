@@ -134,10 +134,10 @@ class Trial:
 	#self.camera.iso = 800	
         
     def videoFileName(self, species, tround, sl, sex, fishid, day, session,
-                    trainedStim,conditionside):
+                    trainedStim,proportion, conditionside):
         self.vidout = ('data/'+str(self.ip)+'/'+(str(species)+'_'+str(tround)
         +'_'+str(sl)+'_'+str(sex) +'_'+str(fishid)+'_'+str(day)+'_'+
-        str(session)+'_' +str(self.stim)+'_'+str(trainedStim)+'_'+str(conditionside)))
+        str(session)+'_' +str(self.stim)+'_'+str(trainedStim)+'_'+str(proportion)+'_'+str(conditionside)))
         print self.vidout
     
     def startRecording(self):
@@ -253,7 +253,7 @@ if __name__ == '__main__':
     T.checkPiIP()
     T.whatStimulus()
     T.videoFileName(args["species"], args["round"], args["fishstandardlength"],
-                    args["sex"], args["fish"], args["day"], args["session"], args["trainedStim"], args["fedSide"])  
+                    args["sex"], args["fish"], args["day"], args["session"], args["trainedStim"], args["proportion"], args["fedSide"])  
     
     #if args["camera"]:
     #T.startRecording()
