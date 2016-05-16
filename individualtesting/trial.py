@@ -127,7 +127,7 @@ class Trial:
         self.camera.autofocus = False
 	self.camera.exposure_mode = 'auto'
         self.camera.awb_mode = 'off'
-	self.camera.awb_gains = (2.3, 1.0)
+	self.camera.awb_gains = (1.8, 1.0)
         self.camera.led = False
         presented = False
 	self.camera.rotation = 180
