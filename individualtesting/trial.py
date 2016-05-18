@@ -120,7 +120,7 @@ class Trial:
         GPIO.output(self.notfeeder, GPIO.HIGH)
     def cameraInit(self):
         self.camera = picamera.PiCamera()
-        self.camera.resolution = (1280,720)
+        self.camera.resolution = (1980,1080)
 	self.camera.contrast = 100
         self.camera.brightness = 60
 	self.camera.framerate = 30
