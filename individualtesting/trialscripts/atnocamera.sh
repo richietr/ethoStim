@@ -33,7 +33,7 @@ at -f d6t2nc.sh -v 11:00 AM May 23 2016
 at -f d6t3nc.sh -v 1:00 PM May 23 2016
 at -f d6t4nc.sh -v 3:00 PM May 23 2016
 
-at -f d71nc.sh -v 9:00 AM May 24 2016
+at -f d7t1nc.sh -v 9:00 AM May 24 2016
 at -f d7t2nc.sh -v 11:00 AM May 24 2016
 at -f d7t3nc.sh -v 1:00 PM May 24 2016
 at -f d7t4nc.sh -v 3:00 PM May 24 2016
