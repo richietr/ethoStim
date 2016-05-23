@@ -123,7 +123,7 @@ class Trial:
         self.camera.resolution = (1280,720)
 	self.camera.contrast = 100
         self.camera.brightness = 60
-	self.camera.framerate = 30
+	self.camera.framerate = 25
         self.camera.autofocus = False
 	self.camera.exposure_mode = 'auto'
         self.camera.awb_mode = 'off'
