@@ -97,7 +97,7 @@ class Trial:
         # still image
             try:
                 self.image = pygame.image.load('/home/pi/ethoStim/individualtesting/src/'+str(self.stimulus))
-            	self.image = pygame.transform.scale(self.image, (580,460))
+            	self.image = pygame.transform.scale(self.image, (640,460))
             except IOError:
                 # currently a print, should be changed to send a message to
                 #the client
@@ -182,7 +182,7 @@ class Trial:
         while ((time.time() - self.startT) < self.tLength):
            #print (time.time()-self.startT)
 	    pygame.display.flip()
-	    self.screen.blit(self.image, (70,0))
+	    self.screen.blit(self.image, (40,0))
 	    #presented = True
             try:
                 
