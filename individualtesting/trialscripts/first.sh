@@ -1,2 +1,2 @@
 export DISPLAY=:0.0
-cd /home/pi/ethoStim/individualtesting/trialscripts
+cd /home/pi/ethoStim/individualtesting
