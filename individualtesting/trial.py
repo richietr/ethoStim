@@ -62,7 +62,7 @@ class Trial:
         self.stimulus = stim
         #
         self.start = float(starttime)
-        self.tLength = 240
+        self.tLength = 30
         self.feedDelay = 10
 	#
         GPIO.setmode(GPIO.BCM)
@@ -123,7 +123,7 @@ class Trial:
         self.camera.resolution = (1280,720)
 	self.camera.contrast = 100
         self.camera.brightness = 60
-	self.camera.framerate = 20
+	self.camera.framerate = 25
         self.camera.autofocus = False
 	self.camera.exposure_mode = 'auto'
         self.camera.awb_mode = 'off'
@@ -134,10 +134,10 @@ class Trial:
 	#self.camera.iso = 800	
         
     def videoFileName(self, species, tround, sl, sex, fishid, day, session,
-                    trainedStim,proportion, conditionside):
+                    thatpistimulus, proportion, fedside, correctside):
         self.vidout = ('data/'+str(self.ip)+'/'+(str(species)+'_'+str(tround)
         +'_'+str(sl)+'_'+str(sex) +'_'+str(fishid)+'_'+str(day)+'_'+
-        str(session)+'_' +str(self.stim)+'_'+str(trainedStim)+'_'+str(proportion)+'_'+str(conditionside)))
+        str(session)+'_' +str(self.stim)+'_'+str(thatpistimulus)+'_'+str(proportion)+'_'+str(fedside)+'_'+str(correctside)))
         print self.vidout
     
     def startRecording(self):
@@ -229,8 +229,9 @@ if __name__ == '__main__':
 
     ap = argparse.ArgumentParser()
     ap.add_argument("-f","--fish", help="ID of fish in tank")
-    ap.add_argument("-ts", "--trainedStim",help="numerosity stimulus being shown on the other raspberry pi")
-    ap.add_argument("-ps", "--presentedStim", help="stimulus being presented with this raspberry pi")
+    ap.add_argument("-ts", "--thatpistimulus",help="numerosity stimulus being shown on the other raspberry pi in the tank")
+    ap.add_argument("-ps", "--pistimulus", help="stimulus being presented with this raspberry pi")
+    ap.add_argument("-cs", "--correctside", help="stimulus side on which the correct stimulus is being presented")
     ap.add_argument("-d","--day", help="experiment day, e.g. 1-7")
     ap.add_argument("-s","--session", help="trial session, e.g. 1-4")
     ap.add_argument("-fs","--fedSide", help="side(self.ip feed on/conditioned side")
@@ -245,7 +246,7 @@ if __name__ == '__main__':
     args = vars(ap.parse_args())
 
 
-    T = Trial(args["presentedStim"], args["startTime"])
+    T = Trial(args["pistimulus"], args["startTime"])
 
     
     #T.safeQuit()
@@ -253,7 +254,7 @@ if __name__ == '__main__':
     T.checkPiIP()
     T.whatStimulus()
     T.videoFileName(args["species"], args["round"], args["fishstandardlength"],
-                    args["sex"], args["fish"], args["day"], args["session"], args["trainedStim"], args["proportion"], args["fedSide"])  
+                    args["sex"], args["fish"], args["day"], args["session"], args["thatpistimulus"], args["proportion"], args["fedSide"], args["correctside"])  
     
     #if args["camera"]:
     #T.startRecording()
