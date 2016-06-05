@@ -1,3 +1,3 @@
 export DISPLAY=:0.0
 cd /home/pi/ethoStim/individualtesting
-d=$(date --date='TZ="US/Central" May 18 15:05:00 2016' +%s); python trial.py -f Second -ps 6.png -ts 12 -d 1 -s 4 -fs right -x female -p 50 -sp gambusia -sl 367 -r 1 -m $d
+d=$(date --date='TZ="US/Central" Sun Jun 5 15:05:00 2016' +%s); python trial.py -f Harriet -ps 0.png -ts 0 -d 1 -s 4 -fs both -x female -p 0 -sp gambusia -sl 367 -r 1 -cs B -fd -m $d
