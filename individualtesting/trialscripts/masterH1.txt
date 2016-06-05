@@ -1,72 +1,72 @@
-d=$(date --date='TZ="US/Central" 9:05:00 2016' +%s); python trial.py -f Harriet1 -ps 0.png -ts 0 -d 1 -s 1 -fs both -x female -p 0 -sp gambusia -sl 367 -r 1 -cs B -fd -m $d
-d=$(date --date='TZ="US/Central" 9:05:00 2016' +%s); python trial.py -f Harriet1 -ps 0.png -ts 0 -d 1 -s 1 -fs both -x female -p 0 -sp gambusia -sl 367 -r 1 -cs B -fd -c -m $d
-d=$(date --date='TZ="US/Central" 11:05:00 2016' +%s); python trial.py -f Harriet1 -ps 0.png -ts 0 -d 1 -s 2 -fs both -x female -p 0 -sp gambusia -sl 367 -r 1 -cs B -fd -m $d
-d=$(date --date='TZ="US/Central" 11:05:00 2016' +%s); python trial.py -f Harriet1 -ps 0.png -ts 0 -d 1 -s 2 -fs both -x female -p 0 -sp gambusia -sl 367 -r 1 -cs B -fd -c -m $d
-d=$(date --date='TZ="US/Central" 13:05:00 2016' +%s); python trial.py -f Harriet1 -ps 0.png -ts 0 -d 1 -s 3 -fs both -x female -p 0 -sp gambusia -sl 367 -r 1 -cs B -fd -m $d
-d=$(date --date='TZ="US/Central" 13:05:00 2016' +%s); python trial.py -f Harriet1 -ps 0.png -ts 0 -d 1 -s 3 -fs both -x female -p 0 -sp gambusia -sl 367 -r 1 -cs B -fd -c -m $d
-d=$(date --date='TZ="US/Central" 15:05:00 2016' +%s); python trial.py -f Harriet1 -ps 0.png -ts 0 -d 1 -s 4 -fs both -x female -p 0 -sp gambusia -sl 367 -r 1 -cs B -fd -m $d
-d=$(date --date='TZ="US/Central" 15:05:00 2016' +%s); python trial.py -f Harriet1 -ps 0.png -ts 0 -d 1 -s 4 -fs both -x female -p 0 -sp gambusia -sl 367 -r 1 -cs B -fd -c -m $d
-d=$(date --date='TZ="US/Central" 9:05:00 2016' +%s); python trial.py -f Harriet1 -ps 0.png -ts 0 -d 2 -s 1 -fs both -x female -p 0 -sp gambusia -sl 367 -r 1 -cs B -fd -m $d
-d=$(date --date='TZ="US/Central" 9:05:00 2016' +%s); python trial.py -f Harriet1 -ps 0.png -ts 0 -d 2 -s 1 -fs both -x female -p 0 -sp gambusia -sl 367 -r 1 -cs B -fd -c -m $d
-d=$(date --date='TZ="US/Central" 11:05:00 2016' +%s); python trial.py -f Harriet1 -ps 0.png -ts 0 -d 2 -s 2 -fs both -x female -p 0 -sp gambusia -sl 367 -r 1 -cs B -fd -m $d
-d=$(date --date='TZ="US/Central" 11:05:00 2016' +%s); python trial.py -f Harriet1 -ps 0.png -ts 0 -d 2 -s 2 -fs both -x female -p 0 -sp gambusia -sl 367 -r 1 -cs B -fd -c -m $d
-d=$(date --date='TZ="US/Central" 13:05:00 2016' +%s); python trial.py -f Harriet1 -ps 0.png -ts 0 -d 2 -s 3 -fs both -x female -p 0 -sp gambusia -sl 367 -r 1 -cs B -fd -m $d
-d=$(date --date='TZ="US/Central" 13:05:00 2016' +%s); python trial.py -f Harriet1 -ps 0.png -ts 0 -d 2 -s 3 -fs both -x female -p 0 -sp gambusia -sl 367 -r 1 -cs B -fd -c -m $d
-d=$(date --date='TZ="US/Central" 15:05:00 2016' +%s); python trial.py -f Harriet1 -ps 0.png -ts 0 -d 2 -s 4 -fs both -x female -p 0 -sp gambusia -sl 367 -r 1 -cs B -fd -m $d
-d=$(date --date='TZ="US/Central" 15:05:00 2016' +%s); python trial.py -f Harriet1 -ps 0.png -ts 0 -d 2 -s 4 -fs both -x female -p 0 -sp gambusia -sl 367 -r 1 -cs B -fd -c -m $d
-d=$(date --date='TZ="US/Central" 9:05:00 2016' +%s); python trial.py -f Harriet1 -ps 5.png -ts 10 -d 3 -s 1 -fs right -x female -p 50 -sp gambusia -sl 367 -r 1 -cs R -m $d
-d=$(date --date='TZ="US/Central" 9:05:00 2016' +%s); python trial.py -f Harriet1 -ps 10.png -ts 5 -d 3 -s 1 -fs right -x female -p 50 -sp gambusia -sl 367 -r 1 -cs R -fd -c -m $d
-d=$(date --date='TZ="US/Central" 11:05:00 2016' +%s); python trial.py -f Harriet1 -ps 12.png -ts 6 -d 3 -s 2 -fs left -x female -p 50 -sp gambusia -sl 367 -r 1 -cs L -fd -m $d
-d=$(date --date='TZ="US/Central" 11:05:00 2016' +%s); python trial.py -f Harriet1 -ps 6.png -ts 12 -d 3 -s 2 -fs left -x female -p 50 -sp gambusia -sl 367 -r 1 -cs L -c -m $d
-d=$(date --date='TZ="US/Central" 13:05:00 2016' +%s); python trial.py -f Harriet1 -ps 12.png -ts 6 -d 3 -s 3 -fs left -x female -p 50 -sp gambusia -sl 367 -r 1 -cs L -fd -m $d
-d=$(date --date='TZ="US/Central" 13:05:00 2016' +%s); python trial.py -f Harriet1 -ps 6.png -ts 12 -d 3 -s 3 -fs left -x female -p 50 -sp gambusia -sl 367 -r 1 -cs L -c -m $d
-d=$(date --date='TZ="US/Central" 15:05:00 2016' +%s); python trial.py -f Harriet1 -ps 5.png -ts 10 -d 3 -s 4 -fs right -x female -p 50 -sp gambusia -sl 367 -r 1 -cs R -m $d
-d=$(date --date='TZ="US/Central" 15:05:00 2016' +%s); python trial.py -f Harriet1 -ps 10.png -ts 5 -d 3 -s 4 -fs right -x female -p 50 -sp gambusia -sl 367 -r 1 -cs R -fd -c -m $d
-d=$(date --date='TZ="US/Central" 9:05:00 2016' +%s); python trial.py -f Harriet1 -ps 6.png -ts 12 -d 4 -s 1 -fs right -x female -p 50 -sp gambusia -sl 367 -r 1 -cs R -m $d
-d=$(date --date='TZ="US/Central" 9:05:00 2016' +%s); python trial.py -f Harriet1 -ps 12.png -ts 6 -d 4 -s 1 -fs right -x female -p 50 -sp gambusia -sl 367 -r 1 -cs R -fd -c -m $d
-d=$(date --date='TZ="US/Central" 11:05:00 2016' +%s); python trial.py -f Harriet1 -ps 10.png -ts 5 -d 4 -s 2 -fs left -x female -p 50 -sp gambusia -sl 367 -r 1 -cs L -fd -m $d
-d=$(date --date='TZ="US/Central" 11:05:00 2016' +%s); python trial.py -f Harriet1 -ps 5.png -ts 10 -d 4 -s 2 -fs left -x female -p 50 -sp gambusia -sl 367 -r 1 -cs L -c -m $d
-d=$(date --date='TZ="US/Central" 13:05:00 2016' +%s); python trial.py -f Harriet1 -ps 6.png -ts 12 -d 4 -s 3 -fs right -x female -p 50 -sp gambusia -sl 367 -r 1 -cs R -m $d
-d=$(date --date='TZ="US/Central" 13:05:00 2016' +%s); python trial.py -f Harriet1 -ps 12.png -ts 6 -d 4 -s 3 -fs right -x female -p 50 -sp gambusia -sl 367 -r 1 -cs R -fd -c -m $d
-d=$(date --date='TZ="US/Central" 15:05:00 2016' +%s); python trial.py -f Harriet1 -ps 10.png -ts 5 -d 4 -s 4 -fs left -x female -p 50 -sp gambusia -sl 367 -r 1 -cs L -fd -m $d
-d=$(date --date='TZ="US/Central" 15:05:00 2016' +%s); python trial.py -f Harriet1 -ps 5.png -ts 10 -d 4 -s 4 -fs left -x female -p 50 -sp gambusia -sl 367 -r 1 -cs L -c -m $d
-d=$(date --date='TZ="US/Central" 9:05:00 2016' +%s); python trial.py -f Harriet1 -ps 12.png -ts 6 -d 5 -s 1 -fs left -x female -p 50 -sp gambusia -sl 367 -r 1 -cs L -fd -m $d
-d=$(date --date='TZ="US/Central" 9:05:00 2016' +%s); python trial.py -f Harriet1 -ps 6.png -ts 12 -d 5 -s 1 -fs left -x female -p 50 -sp gambusia -sl 367 -r 1 -cs L -c -m $d
-d=$(date --date='TZ="US/Central" 11:05:00 2016' +%s); python trial.py -f Harriet1 -ps 5.png -ts 10 -d 5 -s 2 -fs right -x female -p 50 -sp gambusia -sl 367 -r 1 -cs R -m $d
-d=$(date --date='TZ="US/Central" 11:05:00 2016' +%s); python trial.py -f Harriet1 -ps 10.png -ts 5 -d 5 -s 2 -fs right -x female -p 50 -sp gambusia -sl 367 -r 1 -cs R -fd -c -m $d
-d=$(date --date='TZ="US/Central" 13:05:00 2016' +%s); python trial.py -f Harriet1 -ps 5.png -ts 10 -d 5 -s 3 -fs right -x female -p 50 -sp gambusia -sl 367 -r 1 -cs R -m $d
-d=$(date --date='TZ="US/Central" 13:05:00 2016' +%s); python trial.py -f Harriet1 -ps 10.png -ts 5 -d 5 -s 3 -fs right -x female -p 50 -sp gambusia -sl 367 -r 1 -cs R -fd -c -m $d
-d=$(date --date='TZ="US/Central" 15:05:00 2016' +%s); python trial.py -f Harriet1 -ps 12.png -ts 6 -d 5 -s 4 -fs left -x female -p 50 -sp gambusia -sl 367 -r 1 -cs L -fd -m $d
-d=$(date --date='TZ="US/Central" 15:05:00 2016' +%s); python trial.py -f Harriet1 -ps 6.png -ts 12 -d 5 -s 4 -fs left -x female -p 50 -sp gambusia -sl 367 -r 1 -cs L -c -m $d
-d=$(date --date='TZ="US/Central" 9:05:00 2016' +%s); python trial.py -f Harriet1 -ps 10.png -ts 5 -d 6 -s 1 -fs left -x female -p 50 -sp gambusia -sl 367 -r 1 -cs L -fd -m $d
-d=$(date --date='TZ="US/Central" 9:05:00 2016' +%s); python trial.py -f Harriet1 -ps 5.png -ts 10 -d 6 -s 1 -fs left -x female -p 50 -sp gambusia -sl 367 -r 1 -cs L -c -m $d
-d=$(date --date='TZ="US/Central" 11:05:00 2016' +%s); python trial.py -f Harriet1 -ps 6.png -ts 12 -d 6 -s 2 -fs right -x female -p 50 -sp gambusia -sl 367 -r 1 -cs R -m $d
-d=$(date --date='TZ="US/Central" 11:05:00 2016' +%s); python trial.py -f Harriet1 -ps 12.png -ts 6 -d 6 -s 2 -fs right -x female -p 50 -sp gambusia -sl 367 -r 1 -cs R -fd -c -m $d
-d=$(date --date='TZ="US/Central" 13:05:00 2016' +%s); python trial.py -f Harriet1 -ps 10.png -ts 5 -d 6 -s 3 -fs left -x female -p 50 -sp gambusia -sl 367 -r 1 -cs L -fd -m $d
-d=$(date --date='TZ="US/Central" 13:05:00 2016' +%s); python trial.py -f Harriet1 -ps 5.png -ts 10 -d 6 -s 3 -fs left -x female -p 50 -sp gambusia -sl 367 -r 1 -cs L -c -m $d
-d=$(date --date='TZ="US/Central" 15:05:00 2016' +%s); python trial.py -f Harriet1 -ps 6.png -ts 12 -d 6 -s 4 -fs right -x female -p 50 -sp gambusia -sl 367 -r 1 -cs R -m $d
-d=$(date --date='TZ="US/Central" 15:05:00 2016' +%s); python trial.py -f Harriet1 -ps 12.png -ts 6 -d 6 -s 4 -fs right -x female -p 50 -sp gambusia -sl 367 -r 1 -cs R -fd -c -m $d
-d=$(date --date='TZ="US/Central" 9:05:00 2016' +%s); python trial.py -f Harriet1 -ps 12.png -ts 8 -d 7 -s 1 -fs none -x female -p 67 -sp gambusia -sl 367 -r 1 -cs L -m $d
-d=$(date --date='TZ="US/Central" 9:05:00 2016' +%s); python trial.py -f Harriet1 -ps 8.png -ts 12 -d 7 -s 1 -fs none -x female -p 67 -sp gambusia -sl 367 -r 1 -cs L -c -m $d
-d=$(date --date='TZ="US/Central" 11:05:00 2016' +%s); python trial.py -f Harriet1 -ps 7.png -ts 14 -d 7 -s 2 -fs none -x female -p 50 -sp gambusia -sl 367 -r 1 -cs R -m $d
-d=$(date --date='TZ="US/Central" 11:05:00 2016' +%s); python trial.py -f Harriet1 -ps 14.png -ts 7 -d 7 -s 2 -fs none -x female -p 50 -sp gambusia -sl 367 -r 1 -cs R -c -m $d
-d=$(date --date='TZ="US/Central" 13:05:00 2016' +%s); python trial.py -f Harriet1 -ps 12.png -ts 9 -d 7 -s 3 -fs none -x female -p 75 -sp gambusia -sl 367 -r 1 -cs L -m $d
-d=$(date --date='TZ="US/Central" 13:05:00 2016' +%s); python trial.py -f Harriet1 -ps 9.png -ts 12 -d 7 -s 3 -fs none -x female -p 75 -sp gambusia -sl 367 -r 1 -cs L -c -m $d
-d=$(date --date='TZ="US/Central" 15:05:00 2016' +%s); python trial.py -f Harriet1 -ps 5.png -ts 10 -d 7 -s 4 -fs right -x female -p 50 -sp gambusia -sl 367 -r 1 -cs R -m $d
-d=$(date --date='TZ="US/Central" 15:05:00 2016' +%s); python trial.py -f Harriet1 -ps 10.png -ts 5 -d 7 -s 4 -fs right -x female -p 50 -sp gambusia -sl 367 -r 1 -cs R -fd -c -m $d
-d=$(date --date='TZ="US/Central" 9:05:00 2016' +%s); python trial.py -f Harriet1 -ps 14.png -ts 7 -d 8 -s 1 -fs none -x female -p 50 -sp gambusia -sl 367 -r 1 -cs L -m $d
-d=$(date --date='TZ="US/Central" 9:05:00 2016' +%s); python trial.py -f Harriet1 -ps 7.png -ts 14 -d 8 -s 1 -fs none -x female -p 50 -sp gambusia -sl 367 -r 1 -cs L -c -m $d
-d=$(date --date='TZ="US/Central" 11:05:00 2016' +%s); python trial.py -f Harriet1 -ps 9.png -ts 12 -d 8 -s 2 -fs none -x female -p 75 -sp gambusia -sl 367 -r 1 -cs R -m $d
-d=$(date --date='TZ="US/Central" 11:05:00 2016' +%s); python trial.py -f Harriet1 -ps 12.png -ts 9 -d 8 -s 2 -fs none -x female -p 75 -sp gambusia -sl 367 -r 1 -cs R -c -m $d
-d=$(date --date='TZ="US/Central" 13:05:00 2016' +%s); python trial.py -f Harriet1 -ps 12.png -ts 8 -d 8 -s 3 -fs none -x female -p 67 -sp gambusia -sl 367 -r 1 -cs L -m $d
-d=$(date --date='TZ="US/Central" 13:05:00 2016' +%s); python trial.py -f Harriet1 -ps 8.png -ts 12 -d 8 -s 3 -fs none -x female -p 67 -sp gambusia -sl 367 -r 1 -cs L -c -m $d
-d=$(date --date='TZ="US/Central" 15:05:00 2016' +%s); python trial.py -f Harriet1 -ps 6.png -ts 12 -d 8 -s 4 -fs right -x female -p 50 -sp gambusia -sl 367 -r 1 -cs R -m $d
-d=$(date --date='TZ="US/Central" 15:05:00 2016' +%s); python trial.py -f Harriet1 -ps 12.png -ts 6 -d 8 -s 4 -fs right -x female -p 50 -sp gambusia -sl 367 -r 1 -cs R -fd -c -m $d
-d=$(date --date='TZ="US/Central" 9:05:00 2016' +%s); python trial.py -f Harriet1 -ps 12.png -ts 9 -d 9 -s 1 -fs none -x female -p 75 -sp gambusia -sl 367 -r 1 -cs L -m $d
-d=$(date --date='TZ="US/Central" 9:05:00 2016' +%s); python trial.py -f Harriet1 -ps 9.png -ts 12 -d 9 -s 1 -fs none -x female -p 75 -sp gambusia -sl 367 -r 1 -cs L -c -m $d
-d=$(date --date='TZ="US/Central" 11:05:00 2016' +%s); python trial.py -f Harriet1 -ps 8.png -ts 12 -d 9 -s 2 -fs none -x female -p 67 -sp gambusia -sl 367 -r 1 -cs R -m $d
-d=$(date --date='TZ="US/Central" 11:05:00 2016' +%s); python trial.py -f Harriet1 -ps 12.png -ts 8 -d 9 -s 2 -fs none -x female -p 67 -sp gambusia -sl 367 -r 1 -cs R -c -m $d
-d=$(date --date='TZ="US/Central" 13:05:00 2016' +%s); python trial.py -f Harriet1 -ps 14.png -ts 7 -d 9 -s 3 -fs none -x female -p 50 -sp gambusia -sl 367 -r 1 -cs L -m $d
-d=$(date --date='TZ="US/Central" 13:05:00 2016' +%s); python trial.py -f Harriet1 -ps 7.png -ts 14 -d 9 -s 3 -fs none -x female -p 50 -sp gambusia -sl 367 -r 1 -cs L -c -m $d
-d=$(date --date='TZ="US/Central" 15:05:00 2016' +%s); python trial.py -f Harriet1 -ps 12.png -ts 6 -d 9 -s 4 -fs right -x female -p 50 -sp gambusia -sl 367 -r 1 -cs L -fd -m $d
-d=$(date --date='TZ="US/Central" 15:05:00 2016' +%s); python trial.py -f Harriet1 -ps 6.png -ts 12 -d 9 -s 4 -fs right -x female -p 50 -sp gambusia -sl 367 -r 1 -cs L -c -m $d
+d=$(date --date='TZ="US/Central" Sun Jun 5 9:05:00 2016' +%s); python trial.py -f Harriet -ps 0.png -ts 0 -d 1 -s 1 -fs both -x female -p 0 -sp gambusia -sl 367 -r 1 -cs B -fd -m $d
+d=$(date --date='TZ="US/Central" Sun Jun 5 9:05:00 2016' +%s); python trial.py -f Harriet -ps 0.png -ts 0 -d 1 -s 1 -fs both -x female -p 0 -sp gambusia -sl 367 -r 1 -cs B -fd -c -m $d
+d=$(date --date='TZ="US/Central" Sun Jun 5 11:05:00 2016' +%s); python trial.py -f Harriet -ps 0.png -ts 0 -d 1 -s 2 -fs both -x female -p 0 -sp gambusia -sl 367 -r 1 -cs B -fd -m $d
+d=$(date --date='TZ="US/Central" Sun Jun 5 11:05:00 2016' +%s); python trial.py -f Harriet -ps 0.png -ts 0 -d 1 -s 2 -fs both -x female -p 0 -sp gambusia -sl 367 -r 1 -cs B -fd -c -m $d
+d=$(date --date='TZ="US/Central" Sun Jun 5 13:05:00 2016' +%s); python trial.py -f Harriet -ps 0.png -ts 0 -d 1 -s 3 -fs both -x female -p 0 -sp gambusia -sl 367 -r 1 -cs B -fd -m $d
+d=$(date --date='TZ="US/Central" Sun Jun 5 13:05:00 2016' +%s); python trial.py -f Harriet -ps 0.png -ts 0 -d 1 -s 3 -fs both -x female -p 0 -sp gambusia -sl 367 -r 1 -cs B -fd -c -m $d
+d=$(date --date='TZ="US/Central" Sun Jun 5 15:05:00 2016' +%s); python trial.py -f Harriet -ps 0.png -ts 0 -d 1 -s 4 -fs both -x female -p 0 -sp gambusia -sl 367 -r 1 -cs B -fd -m $d
+d=$(date --date='TZ="US/Central" Sun Jun 5 15:05:00 2016' +%s); python trial.py -f Harriet -ps 0.png -ts 0 -d 1 -s 4 -fs both -x female -p 0 -sp gambusia -sl 367 -r 1 -cs B -fd -c -m $d
+d=$(date --date='TZ="US/Central" Mon Jun 6 9:05:00 2016' +%s); python trial.py -f Harriet -ps 0.png -ts 0 -d 2 -s 1 -fs both -x female -p 0 -sp gambusia -sl 367 -r 1 -cs B -fd -m $d
+d=$(date --date='TZ="US/Central" Mon Jun 6 9:05:00 2016' +%s); python trial.py -f Harriet -ps 0.png -ts 0 -d 2 -s 1 -fs both -x female -p 0 -sp gambusia -sl 367 -r 1 -cs B -fd -c -m $d
+d=$(date --date='TZ="US/Central" Mon Jun 6 11:05:00 2016' +%s); python trial.py -f Harriet -ps 0.png -ts 0 -d 2 -s 2 -fs both -x female -p 0 -sp gambusia -sl 367 -r 1 -cs B -fd -m $d
+d=$(date --date='TZ="US/Central" Mon Jun 6 11:05:00 2016' +%s); python trial.py -f Harriet -ps 0.png -ts 0 -d 2 -s 2 -fs both -x female -p 0 -sp gambusia -sl 367 -r 1 -cs B -fd -c -m $d
+d=$(date --date='TZ="US/Central" Mon Jun 6 13:05:00 2016' +%s); python trial.py -f Harriet -ps 0.png -ts 0 -d 2 -s 3 -fs both -x female -p 0 -sp gambusia -sl 367 -r 1 -cs B -fd -m $d
+d=$(date --date='TZ="US/Central" Mon Jun 6 13:05:00 2016' +%s); python trial.py -f Harriet -ps 0.png -ts 0 -d 2 -s 3 -fs both -x female -p 0 -sp gambusia -sl 367 -r 1 -cs B -fd -c -m $d
+d=$(date --date='TZ="US/Central" Mon Jun 6 15:05:00 2016' +%s); python trial.py -f Harriet -ps 0.png -ts 0 -d 2 -s 4 -fs both -x female -p 0 -sp gambusia -sl 367 -r 1 -cs B -fd -m $d
+d=$(date --date='TZ="US/Central" Mon Jun 6 15:05:00 2016' +%s); python trial.py -f Harriet -ps 0.png -ts 0 -d 2 -s 4 -fs both -x female -p 0 -sp gambusia -sl 367 -r 1 -cs B -fd -c -m $d
+d=$(date --date='TZ="US/Central" Tue Jun 7 9:05:00 2016' +%s); python trial.py -f Harriet -ps 5.png -ts 10 -d 3 -s 1 -fs right -x female -p 50 -sp gambusia -sl 367 -r 1 -cs R -m $d
+d=$(date --date='TZ="US/Central" Tue Jun 7 9:05:00 2016' +%s); python trial.py -f Harriet -ps 10.png -ts 5 -d 3 -s 1 -fs right -x female -p 50 -sp gambusia -sl 367 -r 1 -cs R -fd -c -m $d
+d=$(date --date='TZ="US/Central" Tue Jun 7 11:05:00 2016' +%s); python trial.py -f Harriet -ps 12.png -ts 6 -d 3 -s 2 -fs left -x female -p 50 -sp gambusia -sl 367 -r 1 -cs L -fd -m $d
+d=$(date --date='TZ="US/Central" Tue Jun 7 11:05:00 2016' +%s); python trial.py -f Harriet -ps 6.png -ts 12 -d 3 -s 2 -fs left -x female -p 50 -sp gambusia -sl 367 -r 1 -cs L -c -m $d
+d=$(date --date='TZ="US/Central" Tue Jun 7 13:05:00 2016' +%s); python trial.py -f Harriet -ps 12.png -ts 6 -d 3 -s 3 -fs left -x female -p 50 -sp gambusia -sl 367 -r 1 -cs L -fd -m $d
+d=$(date --date='TZ="US/Central" Tue Jun 7 13:05:00 2016' +%s); python trial.py -f Harriet -ps 6.png -ts 12 -d 3 -s 3 -fs left -x female -p 50 -sp gambusia -sl 367 -r 1 -cs L -c -m $d
+d=$(date --date='TZ="US/Central" Tue Jun 7 15:05:00 2016' +%s); python trial.py -f Harriet -ps 5.png -ts 10 -d 3 -s 4 -fs right -x female -p 50 -sp gambusia -sl 367 -r 1 -cs R -m $d
+d=$(date --date='TZ="US/Central" Tue Jun 7 15:05:00 2016' +%s); python trial.py -f Harriet -ps 10.png -ts 5 -d 3 -s 4 -fs right -x female -p 50 -sp gambusia -sl 367 -r 1 -cs R -fd -c -m $d
+d=$(date --date='TZ="US/Central" Wed Jun 8 9:05:00 2016' +%s); python trial.py -f Harriet -ps 6.png -ts 12 -d 4 -s 1 -fs right -x female -p 50 -sp gambusia -sl 367 -r 1 -cs R -m $d
+d=$(date --date='TZ="US/Central" Wed Jun 8 9:05:00 2016' +%s); python trial.py -f Harriet -ps 12.png -ts 6 -d 4 -s 1 -fs right -x female -p 50 -sp gambusia -sl 367 -r 1 -cs R -fd -c -m $d
+d=$(date --date='TZ="US/Central" Wed Jun 8 11:05:00 2016' +%s); python trial.py -f Harriet -ps 10.png -ts 5 -d 4 -s 2 -fs left -x female -p 50 -sp gambusia -sl 367 -r 1 -cs L -fd -m $d
+d=$(date --date='TZ="US/Central" Wed Jun 8 11:05:00 2016' +%s); python trial.py -f Harriet -ps 5.png -ts 10 -d 4 -s 2 -fs left -x female -p 50 -sp gambusia -sl 367 -r 1 -cs L -c -m $d
+d=$(date --date='TZ="US/Central" Wed Jun 8 13:05:00 2016' +%s); python trial.py -f Harriet -ps 6.png -ts 12 -d 4 -s 3 -fs right -x female -p 50 -sp gambusia -sl 367 -r 1 -cs R -m $d
+d=$(date --date='TZ="US/Central" Wed Jun 8 13:05:00 2016' +%s); python trial.py -f Harriet -ps 12.png -ts 6 -d 4 -s 3 -fs right -x female -p 50 -sp gambusia -sl 367 -r 1 -cs R -fd -c -m $d
+d=$(date --date='TZ="US/Central" Wed Jun 8 15:05:00 2016' +%s); python trial.py -f Harriet -ps 10.png -ts 5 -d 4 -s 4 -fs left -x female -p 50 -sp gambusia -sl 367 -r 1 -cs L -fd -m $d
+d=$(date --date='TZ="US/Central" Wed Jun 8 15:05:00 2016' +%s); python trial.py -f Harriet -ps 5.png -ts 10 -d 4 -s 4 -fs left -x female -p 50 -sp gambusia -sl 367 -r 1 -cs L -c -m $d
+d=$(date --date='TZ="US/Central" Thu Jun 9 9:05:00 2016' +%s); python trial.py -f Harriet -ps 12.png -ts 6 -d 5 -s 1 -fs left -x female -p 50 -sp gambusia -sl 367 -r 1 -cs L -fd -m $d
+d=$(date --date='TZ="US/Central" Thu Jun 9 9:05:00 2016' +%s); python trial.py -f Harriet -ps 6.png -ts 12 -d 5 -s 1 -fs left -x female -p 50 -sp gambusia -sl 367 -r 1 -cs L -c -m $d
+d=$(date --date='TZ="US/Central" Thu Jun 9 11:05:00 2016' +%s); python trial.py -f Harriet -ps 5.png -ts 10 -d 5 -s 2 -fs right -x female -p 50 -sp gambusia -sl 367 -r 1 -cs R -m $d
+d=$(date --date='TZ="US/Central" Thu Jun 9 11:05:00 2016' +%s); python trial.py -f Harriet -ps 10.png -ts 5 -d 5 -s 2 -fs right -x female -p 50 -sp gambusia -sl 367 -r 1 -cs R -fd -c -m $d
+d=$(date --date='TZ="US/Central" Thu Jun 9 13:05:00 2016' +%s); python trial.py -f Harriet -ps 5.png -ts 10 -d 5 -s 3 -fs right -x female -p 50 -sp gambusia -sl 367 -r 1 -cs R -m $d
+d=$(date --date='TZ="US/Central" Thu Jun 9 13:05:00 2016' +%s); python trial.py -f Harriet -ps 10.png -ts 5 -d 5 -s 3 -fs right -x female -p 50 -sp gambusia -sl 367 -r 1 -cs R -fd -c -m $d
+d=$(date --date='TZ="US/Central" Thu Jun 9 15:05:00 2016' +%s); python trial.py -f Harriet -ps 12.png -ts 6 -d 5 -s 4 -fs left -x female -p 50 -sp gambusia -sl 367 -r 1 -cs L -fd -m $d
+d=$(date --date='TZ="US/Central" Thu Jun 9 15:05:00 2016' +%s); python trial.py -f Harriet -ps 6.png -ts 12 -d 5 -s 4 -fs left -x female -p 50 -sp gambusia -sl 367 -r 1 -cs L -c -m $d
+d=$(date --date='TZ="US/Central" Fri Jun 10 9:05:00 2016' +%s); python trial.py -f Harriet -ps 10.png -ts 5 -d 6 -s 1 -fs left -x female -p 50 -sp gambusia -sl 367 -r 1 -cs L -fd -m $d
+d=$(date --date='TZ="US/Central" Fri Jun 10 9:05:00 2016' +%s); python trial.py -f Harriet -ps 5.png -ts 10 -d 6 -s 1 -fs left -x female -p 50 -sp gambusia -sl 367 -r 1 -cs L -c -m $d
+d=$(date --date='TZ="US/Central" Fri Jun 10 11:05:00 2016' +%s); python trial.py -f Harriet -ps 6.png -ts 12 -d 6 -s 2 -fs right -x female -p 50 -sp gambusia -sl 367 -r 1 -cs R -m $d
+d=$(date --date='TZ="US/Central" Fri Jun 10 11:05:00 2016' +%s); python trial.py -f Harriet -ps 12.png -ts 6 -d 6 -s 2 -fs right -x female -p 50 -sp gambusia -sl 367 -r 1 -cs R -fd -c -m $d
+d=$(date --date='TZ="US/Central" Fri Jun 10 13:05:00 2016' +%s); python trial.py -f Harriet -ps 10.png -ts 5 -d 6 -s 3 -fs left -x female -p 50 -sp gambusia -sl 367 -r 1 -cs L -fd -m $d
+d=$(date --date='TZ="US/Central" Fri Jun 10 13:05:00 2016' +%s); python trial.py -f Harriet -ps 5.png -ts 10 -d 6 -s 3 -fs left -x female -p 50 -sp gambusia -sl 367 -r 1 -cs L -c -m $d
+d=$(date --date='TZ="US/Central" Fri Jun 10 15:05:00 2016' +%s); python trial.py -f Harriet -ps 6.png -ts 12 -d 6 -s 4 -fs right -x female -p 50 -sp gambusia -sl 367 -r 1 -cs R -m $d
+d=$(date --date='TZ="US/Central" Fri Jun 10 15:05:00 2016' +%s); python trial.py -f Harriet -ps 12.png -ts 6 -d 6 -s 4 -fs right -x female -p 50 -sp gambusia -sl 367 -r 1 -cs R -fd -c -m $d
+d=$(date --date='TZ="US/Central" Sat Jun 11 9:05:00 2016' +%s); python trial.py -f Harriet -ps 12.png -ts 8 -d 7 -s 1 -fs none -x female -p 67 -sp gambusia -sl 367 -r 1 -cs L -m $d
+d=$(date --date='TZ="US/Central" Sat Jun 11 9:05:00 2016' +%s); python trial.py -f Harriet -ps 8.png -ts 12 -d 7 -s 1 -fs none -x female -p 67 -sp gambusia -sl 367 -r 1 -cs L -c -m $d
+d=$(date --date='TZ="US/Central" Sat Jun 11 11:05:00 2016' +%s); python trial.py -f Harriet -ps 7.png -ts 14 -d 7 -s 2 -fs none -x female -p 50 -sp gambusia -sl 367 -r 1 -cs R -m $d
+d=$(date --date='TZ="US/Central" Sat Jun 11 11:05:00 2016' +%s); python trial.py -f Harriet -ps 14.png -ts 7 -d 7 -s 2 -fs none -x female -p 50 -sp gambusia -sl 367 -r 1 -cs R -c -m $d
+d=$(date --date='TZ="US/Central" Sat Jun 11 13:05:00 2016' +%s); python trial.py -f Harriet -ps 12.png -ts 9 -d 7 -s 3 -fs none -x female -p 75 -sp gambusia -sl 367 -r 1 -cs L -m $d
+d=$(date --date='TZ="US/Central" Sat Jun 11 13:05:00 2016' +%s); python trial.py -f Harriet -ps 9.png -ts 12 -d 7 -s 3 -fs none -x female -p 75 -sp gambusia -sl 367 -r 1 -cs L -c -m $d
+d=$(date --date='TZ="US/Central" Sat Jun 11 15:05:00 2016' +%s); python trial.py -f Harriet -ps 5.png -ts 10 -d 7 -s 4 -fs right -x female -p 50 -sp gambusia -sl 367 -r 1 -cs R -m $d
+d=$(date --date='TZ="US/Central" Sat Jun 11 15:05:00 2016' +%s); python trial.py -f Harriet -ps 10.png -ts 5 -d 7 -s 4 -fs right -x female -p 50 -sp gambusia -sl 367 -r 1 -cs R -fd -c -m $d
+d=$(date --date='TZ="US/Central" Sun Jun 12 9:05:00 2016' +%s); python trial.py -f Harriet -ps 14.png -ts 7 -d 8 -s 1 -fs none -x female -p 50 -sp gambusia -sl 367 -r 1 -cs L -m $d
+d=$(date --date='TZ="US/Central" Sun Jun 12 9:05:00 2016' +%s); python trial.py -f Harriet -ps 7.png -ts 14 -d 8 -s 1 -fs none -x female -p 50 -sp gambusia -sl 367 -r 1 -cs L -c -m $d
+d=$(date --date='TZ="US/Central" Sun Jun 12 11:05:00 2016' +%s); python trial.py -f Harriet -ps 9.png -ts 12 -d 8 -s 2 -fs none -x female -p 75 -sp gambusia -sl 367 -r 1 -cs R -m $d
+d=$(date --date='TZ="US/Central" Sun Jun 12 11:05:00 2016' +%s); python trial.py -f Harriet -ps 12.png -ts 9 -d 8 -s 2 -fs none -x female -p 75 -sp gambusia -sl 367 -r 1 -cs R -c -m $d
+d=$(date --date='TZ="US/Central" Sun Jun 12 13:05:00 2016' +%s); python trial.py -f Harriet -ps 12.png -ts 8 -d 8 -s 3 -fs none -x female -p 67 -sp gambusia -sl 367 -r 1 -cs L -m $d
+d=$(date --date='TZ="US/Central" Sun Jun 12 13:05:00 2016' +%s); python trial.py -f Harriet -ps 8.png -ts 12 -d 8 -s 3 -fs none -x female -p 67 -sp gambusia -sl 367 -r 1 -cs L -c -m $d
+d=$(date --date='TZ="US/Central" Sun Jun 12 15:05:00 2016' +%s); python trial.py -f Harriet -ps 6.png -ts 12 -d 8 -s 4 -fs right -x female -p 50 -sp gambusia -sl 367 -r 1 -cs R -m $d
+d=$(date --date='TZ="US/Central" Sun Jun 12 15:05:00 2016' +%s); python trial.py -f Harriet -ps 12.png -ts 6 -d 8 -s 4 -fs right -x female -p 50 -sp gambusia -sl 367 -r 1 -cs R -fd -c -m $d
+d=$(date --date='TZ="US/Central" Mon Jun 13 9:05:00 2016' +%s); python trial.py -f Harriet -ps 12.png -ts 9 -d 9 -s 1 -fs none -x female -p 75 -sp gambusia -sl 367 -r 1 -cs L -m $d
+d=$(date --date='TZ="US/Central" Mon Jun 13 9:05:00 2016' +%s); python trial.py -f Harriet -ps 9.png -ts 12 -d 9 -s 1 -fs none -x female -p 75 -sp gambusia -sl 367 -r 1 -cs L -c -m $d
+d=$(date --date='TZ="US/Central" Mon Jun 13 11:05:00 2016' +%s); python trial.py -f Harriet -ps 8.png -ts 12 -d 9 -s 2 -fs none -x female -p 67 -sp gambusia -sl 367 -r 1 -cs R -m $d
+d=$(date --date='TZ="US/Central" Mon Jun 13 11:05:00 2016' +%s); python trial.py -f Harriet -ps 12.png -ts 8 -d 9 -s 2 -fs none -x female -p 67 -sp gambusia -sl 367 -r 1 -cs R -c -m $d
+d=$(date --date='TZ="US/Central" Mon Jun 13 13:05:00 2016' +%s); python trial.py -f Harriet -ps 14.png -ts 7 -d 9 -s 3 -fs none -x female -p 50 -sp gambusia -sl 367 -r 1 -cs L -m $d
+d=$(date --date='TZ="US/Central" Mon Jun 13 13:05:00 2016' +%s); python trial.py -f Harriet -ps 7.png -ts 14 -d 9 -s 3 -fs none -x female -p 50 -sp gambusia -sl 367 -r 1 -cs L -c -m $d
+d=$(date --date='TZ="US/Central" Mon Jun 13 15:05:00 2016' +%s); python trial.py -f Harriet -ps 12.png -ts 6 -d 9 -s 4 -fs right -x female -p 50 -sp gambusia -sl 367 -r 1 -cs L -fd -m $d
+d=$(date --date='TZ="US/Central" Mon Jun 13 15:05:00 2016' +%s); python trial.py -f Harriet -ps 6.png -ts 12 -d 9 -s 4 -fs right -x female -p 50 -sp gambusia -sl 367 -r 1 -cs L -c -m $d
