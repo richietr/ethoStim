@@ -122,7 +122,7 @@ class Trial:
         self.camera = picamera.PiCamera()
         self.camera.resolution = (1280,720)
 	self.camera.contrast = 100
-        self.camera.brightness = 60
+        self.camera.brightness = 75
 	self.camera.framerate = 25
         self.camera.autofocus = False
 	self.camera.exposure_mode = 'auto'
