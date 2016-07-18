@@ -46,7 +46,7 @@ d=$(date --date='TZ="US/Central" Wed July 20 13:05:00 2016' +%s); python trial.p
 d=$(date --date='TZ="US/Central" Wed July 20 13:05:00 2016' +%s); python trial.py -f Helga -ps 10.png -ts 5 -d 5 -s 3 -fs right -x female -p 50 -sp gambusia -sl 260 -r 3 -cs R -fd -c -m $d
 d=$(date --date='TZ="US/Central" Wed July 20 15:05:00 2016' +%s); python trial.py -f Helga -ps 12.png -ts 6 -d 5 -s 4 -fs left -x female -p 50 -sp gambusia -sl 260 -r 3 -cs L -fd -m $d
 d=$(date --date='TZ="US/Central" Wed July 20 15:05:00 2016' +%s); python trial.py -f Helga -ps 6.png -ts 12 -d 5 -s 4 -fs left -x female -p 50 -sp gambusia -sl 260 -r 3 -cs L -c -m $d
-d=$(date --date='TZ="US/Central" Wed July 20 17:05:00 2016' +%s); python trial.py -f Helga -ps 05.png -ts 10 -d 5 -s 5 -fs right -x female -p 50 -sp gambusia -sl 260 -r 3 -cs R -m $d
+d=$(date --date='TZ="US/Central" Wed July 20 17:05:00 2016' +%s); python trial.py -f Helga -ps 5.png -ts 10 -d 5 -s 5 -fs right -x female -p 50 -sp gambusia -sl 260 -r 3 -cs R -m $d
 d=$(date --date='TZ="US/Central" Wed July 20 17:05:00 2016' +%s); python trial.py -f Helga -ps 10.png -ts 5 -d 5 -s 5 -fs right -x female -p 50 -sp gambusia -sl 260 -r 3 -cs R -fd -c -m $d
 d=$(date --date='TZ="US/Central" Thu July 21 9:05:00 2016' +%s); python trial.py -f Helga -ps 10.png -ts 5 -d 6 -s 1 -fs left -x female -p 50 -sp gambusia -sl 260 -r 3 -cs L -fd -m $d
 d=$(date --date='TZ="US/Central" Thu July 21 9:05:00 2016' +%s); python trial.py -f Helga -ps 5.png -ts 10 -d 6 -s 1 -fs left -x female -p 50 -sp gambusia -sl 260 -r 3 -cs L -c -m $d
@@ -77,7 +77,7 @@ d=$(date --date='TZ="US/Central" Sat July 23 13:05:00 2016' +%s); python trial.p
 d=$(date --date='TZ="US/Central" Sat July 23 15:05:00 2016' +%s); python trial.py -f Helga -ps 10.png -ts 5 -d 8 -s 4 -fs left -x female -p 50 -sp gambusia -sl 260 -r 3 -cs L -fd -m $d
 d=$(date --date='TZ="US/Central" Sat July 23 15:05:00 2016' +%s); python trial.py -f Helga -ps 5.png -ts 10 -d 8 -s 4 -fs left -x female -p 50 -sp gambusia -sl 260 -r 3 -cs L -c -m $d
 d=$(date --date='TZ="US/Central" Sat July 23 17:05:00 2016' +%s); python trial.py -f Helga -ps 6.png -ts 12 -d 8 -s 5 -fs right -x female -p 50 -sp gambusia -sl 260 -r 3 -cs R -m $d
-d=$(date --date='TZ="US/Central" Sat July 23 17:05:00 2016' +%s); python trial.py -f Helga -ps 6.png -ts 12 -d 8 -s 5 -fs right -x female -p 50 -sp gambusia -sl 260 -r 3 -cs R -fd -c -m $d
+d=$(date --date='TZ="US/Central" Sat July 23 17:05:00 2016' +%s); python trial.py -f Helga -ps 12.png -ts 6 -d 8 -s 5 -fs right -x female -p 50 -sp gambusia -sl 260 -r 3 -cs R -fd -c -m $d
 d=$(date --date='TZ="US/Central" Sun July 24 9:05:00 2016' +%s); python trial.py -f Helga -ps 12.png -ts 9 -d 9 -s 1 -fs none -x female -p 75 -sp gambusia -sl 260 -r 3 -cs L -m $d
 d=$(date --date='TZ="US/Central" Sun July 24 9:05:00 2016' +%s); python trial.py -f Helga -ps 9.png -ts 12 -d 9 -s 1 -fs none -x female -p 75 -sp gambusia -sl 260 -r 3 -cs L -c -m $d
 d=$(date --date='TZ="US/Central" Sun July 24 11:05:00 2016' +%s); python trial.py -f Helga -ps 8.png -ts 12 -d 9 -s 2 -fs none -x female -p 67 -sp gambusia -sl 260 -r 3 -cs R -m $d
