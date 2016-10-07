@@ -1,116 +1,116 @@
-d=$(date --date='TZ="US/Central" Sun September 18 9:05:00 2016' +%s); python trial.py -f Hero -ps 0.png -ts 0 -d 1 -s 1 -fs both -x female -p 0 -sp gambusia -sl TBD -r 6 -cs B -fd -m $d
-d=$(date --date='TZ="US/Central" Sun September 18 9:05:00 2016' +%s); python trial.py -f Hero -ps 0.png -ts 0 -d 1 -s 1 -fs both -x female -p 0 -sp gambusia -sl TBD -r 6 -cs B -fd -c -m $d
-d=$(date --date='TZ="US/Central" Sun September 18 11:05:00 2016' +%s); python trial.py -f Hero -ps 0.png -ts 0 -d 1 -s 2 -fs both -x female -p 0 -sp gambusia -sl TBD -r 6 -cs B -fd -m $d
-d=$(date --date='TZ="US/Central" Sun September 18 11:05:00 2016' +%s); python trial.py -f Hero -ps 0.png -ts 0 -d 1 -s 2 -fs both -x female -p 0 -sp gambusia -sl TBD -r 6 -cs B -fd -c -m $d
-d=$(date --date='TZ="US/Central" Sun September 18 13:05:00 2016' +%s); python trial.py -f Hero -ps 0.png -ts 0 -d 1 -s 3 -fs both -x female -p 0 -sp gambusia -sl TBD -r 6 -cs B -fd -m $d
-d=$(date --date='TZ="US/Central" Sun September 18 13:05:00 2016' +%s); python trial.py -f Hero -ps 0.png -ts 0 -d 1 -s 3 -fs both -x female -p 0 -sp gambusia -sl TBD -r 6 -cs B -fd -c -m $d
-d=$(date --date='TZ="US/Central" Sun September 18 15:05:00 2016' +%s); python trial.py -f Hero -ps 0.png -ts 0 -d 1 -s 4 -fs both -x female -p 0 -sp gambusia -sl TBD -r 6 -cs B -fd -m $d
-d=$(date --date='TZ="US/Central" Sun September 18 15:05:00 2016' +%s); python trial.py -f Hero -ps 0.png -ts 0 -d 1 -s 4 -fs both -x female -p 0 -sp gambusia -sl TBD -r 6 -cs B -fd -c -m $d
-d=$(date --date='TZ="US/Central" Sun September 18 17:05:00 2016' +%s); python trial.py -f Hero -ps 0.png -ts 0 -d 1 -s 5 -fs both -x female -p 0 -sp gambusia -sl TBD -r 6 -cs B -fd -m $d
-d=$(date --date='TZ="US/Central" Sun September 18 17:05:00 2016' +%s); python trial.py -f Hero -ps 0.png -ts 0 -d 1 -s 5 -fs both -x female -p 0 -sp gambusia -sl TBD -r 6 -cs B -fd -c -m $d
-d=$(date --date='TZ="US/Central" Mon September 19 9:05:00 2016' +%s); python trial.py -f Hero -ps 0.png -ts 0 -d 2 -s 1 -fs both -x female -p 0 -sp gambusia -sl TBD -r 6 -cs B -fd -m $d
-d=$(date --date='TZ="US/Central" Mon September 19 9:05:00 2016' +%s); python trial.py -f Hero -ps 0.png -ts 0 -d 2 -s 1 -fs both -x female -p 0 -sp gambusia -sl TBD -r 6 -cs B -fd -c -m $d
-d=$(date --date='TZ="US/Central" Mon September 19 11:05:00 2016' +%s); python trial.py -f Hero -ps 0.png -ts 0 -d 2 -s 2 -fs both -x female -p 0 -sp gambusia -sl TBD -r 6 -cs B -fd -m $d
-d=$(date --date='TZ="US/Central" Mon September 19 11:05:00 2016' +%s); python trial.py -f Hero -ps 0.png -ts 0 -d 2 -s 2 -fs both -x female -p 0 -sp gambusia -sl TBD -r 6 -cs B -fd -c -m $d
-d=$(date --date='TZ="US/Central" Mon September 19 13:05:00 2016' +%s); python trial.py -f Hero -ps 0.png -ts 0 -d 2 -s 3 -fs both -x female -p 0 -sp gambusia -sl TBD -r 6 -cs B -fd -m $d
-d=$(date --date='TZ="US/Central" Mon September 19 13:05:00 2016' +%s); python trial.py -f Hero -ps 0.png -ts 0 -d 2 -s 3 -fs both -x female -p 0 -sp gambusia -sl TBD -r 6 -cs B -fd -c -m $d
-d=$(date --date='TZ="US/Central" Mon September 19 15:05:00 2016' +%s); python trial.py -f Hero -ps 0.png -ts 0 -d 2 -s 4 -fs both -x female -p 0 -sp gambusia -sl TBD -r 6 -cs B -fd -m $d
-d=$(date --date='TZ="US/Central" Mon September 19 15:05:00 2016' +%s); python trial.py -f Hero -ps 0.png -ts 0 -d 2 -s 4 -fs both -x female -p 0 -sp gambusia -sl TBD -r 6 -cs B -fd -c -m $d
-d=$(date --date='TZ="US/Central" Mon September 19 17:05:00 2016' +%s); python trial.py -f Hero -ps 0.png -ts 0 -d 2 -s 5 -fs both -x female -p 0 -sp gambusia -sl TBD -r 6 -cs B -fd -m $d
-d=$(date --date='TZ="US/Central" Mon September 19 17:05:00 2016' +%s); python trial.py -f Hero -ps 0.png -ts 0 -d 2 -s 5 -fs both -x female -p 0 -sp gambusia -sl TBD -r 6 -cs B -fd -c -m $d
-d=$(date --date='TZ="US/Central" Tue September 20 9:05:00 2016' +%s); python trial.py -f Hero -ps 5.png -ts 10 -d 3 -s 1 -fs right -x female -p 50 -sp gambusia -sl TBD -r 6 -cs R -m $d
-d=$(date --date='TZ="US/Central" Tue September 20 9:05:00 2016' +%s); python trial.py -f Hero -ps 10.png -ts 5 -d 3 -s 1 -fs right -x female -p 50 -sp gambusia -sl TBD -r 6 -cs R -fd -c -m $d
-d=$(date --date='TZ="US/Central" Tue September 20 11:05:00 2016' +%s); python trial.py -f Hero -ps 12.png -ts 6 -d 3 -s 2 -fs left -x female -p 50 -sp gambusia -sl TBD -r 6 -cs L -fd -m $d
-d=$(date --date='TZ="US/Central" Tue September 20 11:05:00 2016' +%s); python trial.py -f Hero -ps 6.png -ts 12 -d 3 -s 2 -fs left -x female -p 50 -sp gambusia -sl TBD -r 6 -cs L -c -m $d
-d=$(date --date='TZ="US/Central" Tue September 20 13:05:00 2016' +%s); python trial.py -f Hero -ps 12.png -ts 6 -d 3 -s 3 -fs left -x female -p 50 -sp gambusia -sl TBD -r 6 -cs L -fd -m $d
-d=$(date --date='TZ="US/Central" Tue September 20 13:05:00 2016' +%s); python trial.py -f Hero -ps 6.png -ts 12 -d 3 -s 3 -fs left -x female -p 50 -sp gambusia -sl TBD -r 6 -cs L -c -m $d
-d=$(date --date='TZ="US/Central" Tue September 20 15:05:00 2016' +%s); python trial.py -f Hero -ps 5.png -ts 10 -d 3 -s 4 -fs right -x female -p 50 -sp gambusia -sl TBD -r 6 -cs R -m $d
-d=$(date --date='TZ="US/Central" Tue September 20 15:05:00 2016' +%s); python trial.py -f Hero -ps 10.png -ts 5 -d 3 -s 4 -fs right -x female -p 50 -sp gambusia -sl TBD -r 6 -cs R -fd -c -m $d
-d=$(date --date='TZ="US/Central" Tue September 20 17:05:00 2016' +%s); python trial.py -f Hero -ps 10.png -ts 5 -d 3 -s 5 -fs left -x female -p 50 -sp gambusia -sl TBD -r 6 -cs L -fd -m $d
-d=$(date --date='TZ="US/Central" Tue September 20 17:05:00 2016' +%s); python trial.py -f Hero -ps 5.png -ts 10 -d 3 -s 5 -fs left -x female -p 50 -sp gambusia -sl TBD -r 6 -cs L -c -m $d
-d=$(date --date='TZ="US/Central" Wed September 21 9:05:00 2016' +%s); python trial.py -f Hero -ps 6.png -ts 12 -d 4 -s 1 -fs right -x female -p 50 -sp gambusia -sl TBD -r 6 -cs R -m $d
-d=$(date --date='TZ="US/Central" Wed September 21 9:05:00 2016' +%s); python trial.py -f Hero -ps 12.png -ts 6 -d 4 -s 1 -fs right -x female -p 50 -sp gambusia -sl TBD -r 6 -cs R -fd -c -m $d
-d=$(date --date='TZ="US/Central" Wed September 21 11:05:00 2016' +%s); python trial.py -f Hero -ps 10.png -ts 5 -d 4 -s 2 -fs left -x female -p 50 -sp gambusia -sl TBD -r 6 -cs L -fd -m $d
-d=$(date --date='TZ="US/Central" Wed September 21 11:05:00 2016' +%s); python trial.py -f Hero -ps 5.png -ts 10 -d 4 -s 2 -fs left -x female -p 50 -sp gambusia -sl TBD -r 6 -cs L -c -m $d
-d=$(date --date='TZ="US/Central" Wed September 21 13:05:00 2016' +%s); python trial.py -f Hero -ps 6.png -ts 12 -d 4 -s 3 -fs right -x female -p 50 -sp gambusia -sl TBD -r 6 -cs R -m $d
-d=$(date --date='TZ="US/Central" Wed September 21 13:05:00 2016' +%s); python trial.py -f Hero -ps 12.png -ts 6 -d 4 -s 3 -fs right -x female -p 50 -sp gambusia -sl TBD -r 6 -cs R -fd -c -m $d
-d=$(date --date='TZ="US/Central" Wed September 21 15:05:00 2016' +%s); python trial.py -f Hero -ps 10.png -ts 5 -d 4 -s 4 -fs left -x female -p 50 -sp gambusia -sl TBD -r 6 -cs L -fd -m $d
-d=$(date --date='TZ="US/Central" Wed September 21 15:05:00 2016' +%s); python trial.py -f Hero -ps 5.png -ts 10 -d 4 -s 4 -fs left -x female -p 50 -sp gambusia -sl TBD -r 6 -cs L -c -m $d
-d=$(date --date='TZ="US/Central" Wed September 21 17:05:00 2016' +%s); python trial.py -f Hero -ps 6.png -ts 12 -d 4 -s 5 -fs right -x female -p 50 -sp gambusia -sl TBD -r 6 -cs R -m $d
-d=$(date --date='TZ="US/Central" Wed September 21 17:05:00 2016' +%s); python trial.py -f Hero -ps 12.png -ts 6 -d 4 -s 5 -fs right -x female -p 50 -sp gambusia -sl TBD -r 6 -cs R -fd -c -m $d
-d=$(date --date='TZ="US/Central" Thu September 22 9:05:00 2016' +%s); python trial.py -f Hero -ps 12.png -ts 6 -d 5 -s 1 -fs left -x female -p 50 -sp gambusia -sl TBD -r 6 -cs L -fd -m $d
-d=$(date --date='TZ="US/Central" Thu September 22 9:05:00 2016' +%s); python trial.py -f Hero -ps 6.png -ts 12 -d 5 -s 1 -fs left -x female -p 50 -sp gambusia -sl TBD -r 6 -cs L -c -m $d
-d=$(date --date='TZ="US/Central" Thu September 22 11:05:00 2016' +%s); python trial.py -f Hero -ps 5.png -ts 10 -d 5 -s 2 -fs right -x female -p 50 -sp gambusia -sl TBD -r 6 -cs R -m $d
-d=$(date --date='TZ="US/Central" Thu September 22 11:05:00 2016' +%s); python trial.py -f Hero -ps 10.png -ts 5 -d 5 -s 2 -fs right -x female -p 50 -sp gambusia -sl TBD -r 6 -cs R -fd -c -m $d
-d=$(date --date='TZ="US/Central" Thu September 22 13:05:00 2016' +%s); python trial.py -f Hero -ps 5.png -ts 10 -d 5 -s 3 -fs right -x female -p 50 -sp gambusia -sl TBD -r 6 -cs R -m $d
-d=$(date --date='TZ="US/Central" Thu September 22 13:05:00 2016' +%s); python trial.py -f Hero -ps 10.png -ts 5 -d 5 -s 3 -fs right -x female -p 50 -sp gambusia -sl TBD -r 6 -cs R -fd -c -m $d
-d=$(date --date='TZ="US/Central" Thu September 22 15:05:00 2016' +%s); python trial.py -f Hero -ps 12.png -ts 6 -d 5 -s 4 -fs left -x female -p 50 -sp gambusia -sl TBD -r 6 -cs L -fd -m $d
-d=$(date --date='TZ="US/Central" Thu September 22 15:05:00 2016' +%s); python trial.py -f Hero -ps 6.png -ts 12 -d 5 -s 4 -fs left -x female -p 50 -sp gambusia -sl TBD -r 6 -cs L -c -m $d
-d=$(date --date='TZ="US/Central" Thu September 22 17:05:00 2016' +%s); python trial.py -f Hero -ps 5.png -ts 10 -d 5 -s 5 -fs right -x female -p 50 -sp gambusia -sl TBD -r 6 -cs R -m $d
-d=$(date --date='TZ="US/Central" Thu September 22 17:05:00 2016' +%s); python trial.py -f Hero -ps 10.png -ts 5 -d 5 -s 5 -fs right -x female -p 50 -sp gambusia -sl TBD -r 6 -cs R -fd -c -m $d
-d=$(date --date='TZ="US/Central" Fri September 23 9:05:00 2016' +%s); python trial.py -f Hero -ps 10.png -ts 5 -d 6 -s 1 -fs left -x female -p 50 -sp gambusia -sl TBD -r 6 -cs L -fd -m $d
-d=$(date --date='TZ="US/Central" Fri September 23 9:05:00 2016' +%s); python trial.py -f Hero -ps 5.png -ts 10 -d 6 -s 1 -fs left -x female -p 50 -sp gambusia -sl TBD -r 6 -cs L -c -m $d
-d=$(date --date='TZ="US/Central" Fri September 23 11:05:00 2016' +%s); python trial.py -f Hero -ps 6.png -ts 12 -d 6 -s 2 -fs right -x female -p 50 -sp gambusia -sl TBD -r 6 -cs R -m $d
-d=$(date --date='TZ="US/Central" Fri September 23 11:05:00 2016' +%s); python trial.py -f Hero -ps 12.png -ts 6 -d 6 -s 2 -fs right -x female -p 50 -sp gambusia -sl TBD -r 6 -cs R -fd -c -m $d
-d=$(date --date='TZ="US/Central" Fri September 23 13:05:00 2016' +%s); python trial.py -f Hero -ps 10.png -ts 5 -d 6 -s 3 -fs left -x female -p 50 -sp gambusia -sl TBD -r 6 -cs L -fd -m $d
-d=$(date --date='TZ="US/Central" Fri September 23 13:05:00 2016' +%s); python trial.py -f Hero -ps 5.png -ts 10 -d 6 -s 3 -fs left -x female -p 50 -sp gambusia -sl TBD -r 6 -cs L -c -m $d
-d=$(date --date='TZ="US/Central" Fri September 23 15:05:00 2016' +%s); python trial.py -f Hero -ps 6.png -ts 12 -d 6 -s 4 -fs right -x female -p 50 -sp gambusia -sl TBD -r 6 -cs R -m $d
-d=$(date --date='TZ="US/Central" Fri September 23 15:05:00 2016' +%s); python trial.py -f Hero -ps 12.png -ts 6 -d 6 -s 4 -fs right -x female -p 50 -sp gambusia -sl TBD -r 6 -cs R -fd -c -m $d
-d=$(date --date='TZ="US/Central" Fri September 23 17:05:00 2016' +%s); python trial.py -f Hero -ps 10.png -ts 5 -d 6 -s 5 -fs left -x female -p 50 -sp gambusia -sl TBD -r 6 -cs L -fd -m $d
-d=$(date --date='TZ="US/Central" Fri September 23 17:05:00 2016' +%s); python trial.py -f Hero -ps 5.png -ts 10 -d 6 -s 5 -fs left -x female -p 50 -sp gambusia -sl TBD -r 6 -cs L -c -m $d
-d=$(date --date='TZ="US/Central" Sat September 24 9:05:00 2016' +%s); python trial.py -f Hero -ps 5.png -ts 10 -d 7 -s 1 -fs right -x female -p 50 -sp gambusia -sl TBD -r 6 -cs R -m $d
-d=$(date --date='TZ="US/Central" Sat September 24 9:05:00 2016' +%s); python trial.py -f Hero -ps 10.png -ts 5 -d 7 -s 1 -fs right -x female -p 50 -sp gambusia -sl TBD -r 6 -cs R -fd -c -m $d
-d=$(date --date='TZ="US/Central" Sat September 24 11:05:00 2016' +%s); python trial.py -f Hero -ps 12.png -ts 6 -d 7 -s 2 -fs left -x female -p 50 -sp gambusia -sl TBD -r 6 -cs L -fd -m $d
-d=$(date --date='TZ="US/Central" Sat September 24 11:05:00 2016' +%s); python trial.py -f Hero -ps 6.png -ts 12 -d 7 -s 2 -fs left -x female -p 50 -sp gambusia -sl TBD -r 6 -cs L -c -m $d
-d=$(date --date='TZ="US/Central" Sat September 24 13:05:00 2016' +%s); python trial.py -f Hero -ps 12.png -ts 6 -d 7 -s 3 -fs left -x female -p 50 -sp gambusia -sl TBD -r 6 -cs L -fd -m $d
-d=$(date --date='TZ="US/Central" Sat September 24 13:05:00 2016' +%s); python trial.py -f Hero -ps 6.png -ts 12 -d 7 -s 3 -fs left -x female -p 50 -sp gambusia -sl TBD -r 6 -cs L -c -m $d
-d=$(date --date='TZ="US/Central" Sat September 24 15:05:00 2016' +%s); python trial.py -f Hero -ps 5.png -ts 10 -d 7 -s 4 -fs right -x female -p 50 -sp gambusia -sl TBD -r 6 -cs R -m $d
-d=$(date --date='TZ="US/Central" Sat September 24 15:05:00 2016' +%s); python trial.py -f Hero -ps 10.png -ts 5 -d 7 -s 4 -fs right -x female -p 50 -sp gambusia -sl TBD -r 6 -cs R -fd -c -m $d
-d=$(date --date='TZ="US/Central" Sat September 24 17:05:00 2016' +%s); python trial.py -f Hero -ps 12.png -ts 6 -d 7 -s 5 -fs left -x female -p 50 -sp gambusia -sl TBD -r 6 -cs L -fd -m $d
-d=$(date --date='TZ="US/Central" Sat September 24 17:05:00 2016' +%s); python trial.py -f Hero -ps 6.png -ts 12 -d 7 -s 5 -fs left -x female -p 50 -sp gambusia -sl TBD -r 6 -cs L -c -m $d
-d=$(date --date='TZ="US/Central" Sun September 25 9:05:00 2016' +%s); python trial.py -f Hero -ps 6.png -ts 12 -d 8 -s 1 -fs right -x female -p 50 -sp gambusia -sl TBD -r 6 -cs R -m $d
-d=$(date --date='TZ="US/Central" Sun September 25 9:05:00 2016' +%s); python trial.py -f Hero -ps 12.png -ts 6 -d 8 -s 1 -fs right -x female -p 50 -sp gambusia -sl TBD -r 6 -cs R -fd -c -m $d
-d=$(date --date='TZ="US/Central" Sun September 25 11:05:00 2016' +%s); python trial.py -f Hero -ps 10.png -ts 5 -d 8 -s 2 -fs left -x female -p 50 -sp gambusia -sl TBD -r 6 -cs L -fd -m $d
-d=$(date --date='TZ="US/Central" Sun September 25 11:05:00 2016' +%s); python trial.py -f Hero -ps 5.png -ts 10 -d 8 -s 2 -fs left -x female -p 50 -sp gambusia -sl TBD -r 6 -cs L -c -m $d
-d=$(date --date='TZ="US/Central" Sun September 25 13:05:00 2016' +%s); python trial.py -f Hero -ps 6.png -ts 12 -d 8 -s 3 -fs right -x female -p 50 -sp gambusia -sl TBD -r 6 -cs R -m $d
-d=$(date --date='TZ="US/Central" Sun September 25 13:05:00 2016' +%s); python trial.py -f Hero -ps 12.png -ts 6 -d 8 -s 3 -fs right -x female -p 50 -sp gambusia -sl TBD -r 6 -cs R -fd -c -m $d
-d=$(date --date='TZ="US/Central" Sun September 25 15:05:00 2016' +%s); python trial.py -f Hero -ps 10.png -ts 5 -d 8 -s 4 -fs left -x female -p 50 -sp gambusia -sl TBD -r 6 -cs L -fd -m $d
-d=$(date --date='TZ="US/Central" Sun September 25 15:05:00 2016' +%s); python trial.py -f Hero -ps 5.png -ts 10 -d 8 -s 4 -fs left -x female -p 50 -sp gambusia -sl TBD -r 6 -cs L -c -m $d
-d=$(date --date='TZ="US/Central" Sun September 25 17:05:00 2016' +%s); python trial.py -f Hero -ps 6.png -ts 12 -d 8 -s 5 -fs right -x female -p 50 -sp gambusia -sl TBD -r 6 -cs R -m $d
-d=$(date --date='TZ="US/Central" Sun September 25 17:05:00 2016' +%s); python trial.py -f Hero -ps 12.png -ts 6 -d 8 -s 5 -fs right -x female -p 50 -sp gambusia -sl TBD -r 6 -cs R -fd -c -m $d
-d=$(date --date='TZ="US/Central" Mon September 26 9:05:00 2016' +%s); python trial.py -f Hero -ps 12.png -ts 9 -d 9 -s 1 -fs none -x female -p 75 -sp gambusia -sl TBD -r 6 -cs L -m $d
-d=$(date --date='TZ="US/Central" Mon September 26 9:05:00 2016' +%s); python trial.py -f Hero -ps 9.png -ts 12 -d 9 -s 1 -fs none -x female -p 75 -sp gambusia -sl TBD -r 6 -cs L -c -m $d
-d=$(date --date='TZ="US/Central" Mon September 26 11:05:00 2016' +%s); python trial.py -f Hero -ps 8.png -ts 12 -d 9 -s 2 -fs none -x female -p 67 -sp gambusia -sl TBD -r 6 -cs R -m $d
-d=$(date --date='TZ="US/Central" Mon September 26 11:05:00 2016' +%s); python trial.py -f Hero -ps 12.png -ts 8 -d 9 -s 2 -fs none -x female -p 67 -sp gambusia -sl TBD -r 6 -cs R -c -m $d
-d=$(date --date='TZ="US/Central" Mon September 26 13:05:00 2016' +%s); python trial.py -f Hero -ps 14.png -ts 7 -d 9 -s 3 -fs none -x female -p 50 -sp gambusia -sl TBD -r 6 -cs L -m $d
-d=$(date --date='TZ="US/Central" Mon September 26 13:05:00 2016' +%s); python trial.py -f Hero -ps 7.png -ts 14 -d 9 -s 3 -fs none -x female -p 50 -sp gambusia -sl TBD -r 6 -cs L -c -m $d
-d=$(date --date='TZ="US/Central" Mon September 26 15:05:00 2016' +%s); python trial.py -f Hero -ps 12.png -ts 6 -d 9 -s 4 -fs left -x female -p 50 -sp gambusia -sl TBD -r 6 -cs L -fd -m $d
-d=$(date --date='TZ="US/Central" Mon September 26 15:05:00 2016' +%s); python trial.py -f Hero -ps 6.png -ts 12 -d 9 -s 4 -fs left -x female -p 50 -sp gambusia -sl TBD -r 6 -cs L -c -m $d
-d=$(date --date='TZ="US/Central" Mon September 26 16:05:00 2016' +%s); python trialblack.py -fd -m $d
-d=$(date --date='TZ="US/Central" Mon September 26 16:05:00 2016' +%s); python trialblack.py -fd -m $d
-d=$(date --date='TZ="US/Central" Mon September 26 16:10:00 2016' +%s); python trialblack.py -fd -m $d
-d=$(date --date='TZ="US/Central" Mon September 26 16:10:00 2016' +%s); python trialblack.py -fd -m $d
-d=$(date --date='TZ="US/Central" Tue September 27 9:05:00 2016' +%s); python trial.py -f Hero -ps 12.png -ts 8 -d 10 -s 1 -fs none -x female -p 67 -sp gambusia -sl TBD -r 6 -cs L -m $d
-d=$(date --date='TZ="US/Central" Tue September 27 9:05:00 2016' +%s); python trial.py -f Hero -ps 8.png -ts 12 -d 10 -s 1 -fs none -x female -p 67 -sp gambusia -sl TBD -r 6 -cs L -c -m $d
-d=$(date --date='TZ="US/Central" Tue September 27 11:05:00 2016' +%s); python trial.py -f Hero -ps 7.png -ts 14 -d 10 -s 2 -fs none -x female -p 50 -sp gambusia -sl TBD -r 6 -cs R -m $d
-d=$(date --date='TZ="US/Central" Tue September 27 11:05:00 2016' +%s); python trial.py -f Hero -ps 14.png -ts 7 -d 10 -s 2 -fs none -x female -p 50 -sp gambusia -sl TBD -r 6 -cs R -c -m $d
-d=$(date --date='TZ="US/Central" Tue September 27 13:05:00 2016' +%s); python trial.py -f Hero -ps 12.png -ts 9 -d 10 -s 3 -fs none -x female -p 75 -sp gambusia -sl TBD -r 6 -cs L -m $d
-d=$(date --date='TZ="US/Central" Tue September 27 13:05:00 2016' +%s); python trial.py -f Hero -ps 9.png -ts 12 -d 10 -s 3 -fs none -x female -p 75 -sp gambusia -sl TBD -r 6 -cs L -c -m $d
-d=$(date --date='TZ="US/Central" Tue September 27 15:05:00 2016' +%s); python trial.py -f Hero -ps 5.png -ts 10 -d 10 -s 4 -fs right -x female -p 50 -sp gambusia -sl TBD -r 6 -cs R -m $d
-d=$(date --date='TZ="US/Central" Tue September 27 15:05:00 2016' +%s); python trial.py -f Hero -ps 10.png -ts 5 -d 10 -s 4 -fs right -x female -p 50 -sp gambusia -sl TBD -r 6 -cs R -fd -c -m $d
-d=$(date --date='TZ="US/Central" Tue September 27 16:05:00 2016' +%s); python trialblack.py -fd -m $d
-d=$(date --date='TZ="US/Central" Tue September 27 16:05:00 2016' +%s); python trialblack.py -fd -m $d
-d=$(date --date='TZ="US/Central" Tue September 27 16:10:00 2016' +%s); python trialblack.py -fd -m $d
-d=$(date --date='TZ="US/Central" Tue September 27 16:10:00 2016' +%s); python trialblack.py -fd -m $d
-d=$(date --date='TZ="US/Central" Wed September 28 9:05:00 2016' +%s); python trial.py -f Hero -ps 14.png -ts 7 -d 11 -s 1 -fs none -x female -p 50 -sp gambusia -sl TBD -r 6 -cs L -m $d
-d=$(date --date='TZ="US/Central" Wed September 28 9:05:00 2016' +%s); python trial.py -f Hero -ps 7.png -ts 14 -d 11 -s 1 -fs none -x female -p 50 -sp gambusia -sl TBD -r 6 -cs L -c -m $d
-d=$(date --date='TZ="US/Central" Wed September 28 11:05:00 2016' +%s); python trial.py -f Hero -ps 9.png -ts 12 -d 11 -s 2 -fs none -x female -p 75 -sp gambusia -sl TBD -r 6 -cs R -m $d
-d=$(date --date='TZ="US/Central" Wed September 28 11:05:00 2016' +%s); python trial.py -f Hero -ps 12.png -ts 9 -d 11 -s 2 -fs none -x female -p 75 -sp gambusia -sl TBD -r 6 -cs R -c -m $d
-d=$(date --date='TZ="US/Central" Wed September 28 13:05:00 2016' +%s); python trial.py -f Hero -ps 12.png -ts 8 -d 11 -s 3 -fs none -x female -p 67 -sp gambusia -sl TBD -r 6 -cs L -m $d
-d=$(date --date='TZ="US/Central" Wed September 28 13:05:00 2016' +%s); python trial.py -f Hero -ps 8.png -ts 12 -d 11 -s 3 -fs none -x female -p 67 -sp gambusia -sl TBD -r 6 -cs L -c -m $d
-d=$(date --date='TZ="US/Central" Wed September 28 15:05:00 2016' +%s); python trial.py -f Hero -ps 6.png -ts 12 -d 11 -s 4 -fs right -x female -p 50 -sp gambusia -sl TBD -r 6 -cs R -m $d
-d=$(date --date='TZ="US/Central" Wed September 28 15:05:00 2016' +%s); python trial.py -f Hero -ps 12.png -ts 6 -d 11 -s 4 -fs right -x female -p 50 -sp gambusia -sl TBD -r 6 -cs R -fd -c -m $d
-d=$(date --date='TZ="US/Central" Wed September 28 16:05:00 2016' +%s); python trialblack.py -fd -m $d
-d=$(date --date='TZ="US/Central" Wed September 28 16:05:00 2016' +%s); python trialblack.py -fd -m $d
-d=$(date --date='TZ="US/Central" Wed September 28 16:10:00 2016' +%s); python trialblack.py -fd -m $d
-d=$(date --date='TZ="US/Central" Wed September 28 16:10:00 2016' +%s); python trialblack.py -fd -m $d
+d=$(date --date='TZ="US/Central" Sun October 9 9:05:00 2016' +%s); python trial.py -f Harlene -ps 0.png -ts 0 -d 1 -s 1 -fs both -x female -p 0 -sp gambusia -sl TBD -r 7 -cs B -fd -m $d
+d=$(date --date='TZ="US/Central" Sun October 9 9:05:00 2016' +%s); python trial.py -f Harlene -ps 0.png -ts 0 -d 1 -s 1 -fs both -x female -p 0 -sp gambusia -sl TBD -r 7 -cs B -fd -c -m $d
+d=$(date --date='TZ="US/Central" Sun October 9 11:05:00 2016' +%s); python trial.py -f Harlene -ps 0.png -ts 0 -d 1 -s 2 -fs both -x female -p 0 -sp gambusia -sl TBD -r 7 -cs B -fd -m $d
+d=$(date --date='TZ="US/Central" Sun October 9 11:05:00 2016' +%s); python trial.py -f Harlene -ps 0.png -ts 0 -d 1 -s 2 -fs both -x female -p 0 -sp gambusia -sl TBD -r 7 -cs B -fd -c -m $d
+d=$(date --date='TZ="US/Central" Sun October 9 13:05:00 2016' +%s); python trial.py -f Harlene -ps 0.png -ts 0 -d 1 -s 3 -fs both -x female -p 0 -sp gambusia -sl TBD -r 7 -cs B -fd -m $d
+d=$(date --date='TZ="US/Central" Sun October 9 13:05:00 2016' +%s); python trial.py -f Harlene -ps 0.png -ts 0 -d 1 -s 3 -fs both -x female -p 0 -sp gambusia -sl TBD -r 7 -cs B -fd -c -m $d
+d=$(date --date='TZ="US/Central" Sun October 9 15:05:00 2016' +%s); python trial.py -f Harlene -ps 0.png -ts 0 -d 1 -s 4 -fs both -x female -p 0 -sp gambusia -sl TBD -r 7 -cs B -fd -m $d
+d=$(date --date='TZ="US/Central" Sun October 9 15:05:00 2016' +%s); python trial.py -f Harlene -ps 0.png -ts 0 -d 1 -s 4 -fs both -x female -p 0 -sp gambusia -sl TBD -r 7 -cs B -fd -c -m $d
+d=$(date --date='TZ="US/Central" Sun October 9 17:05:00 2016' +%s); python trial.py -f Harlene -ps 0.png -ts 0 -d 1 -s 5 -fs both -x female -p 0 -sp gambusia -sl TBD -r 7 -cs B -fd -m $d
+d=$(date --date='TZ="US/Central" Sun October 9 17:05:00 2016' +%s); python trial.py -f Harlene -ps 0.png -ts 0 -d 1 -s 5 -fs both -x female -p 0 -sp gambusia -sl TBD -r 7 -cs B -fd -c -m $d
+d=$(date --date='TZ="US/Central" Mon October 10 9:05:00 2016' +%s); python trial.py -f Harlene -ps 0.png -ts 0 -d 2 -s 1 -fs both -x female -p 0 -sp gambusia -sl TBD -r 7 -cs B -fd -m $d
+d=$(date --date='TZ="US/Central" Mon October 10 9:05:00 2016' +%s); python trial.py -f Harlene -ps 0.png -ts 0 -d 2 -s 1 -fs both -x female -p 0 -sp gambusia -sl TBD -r 7 -cs B -fd -c -m $d
+d=$(date --date='TZ="US/Central" Mon October 10 11:05:00 2016' +%s); python trial.py -f Harlene -ps 0.png -ts 0 -d 2 -s 2 -fs both -x female -p 0 -sp gambusia -sl TBD -r 7 -cs B -fd -m $d
+d=$(date --date='TZ="US/Central" Mon October 10 11:05:00 2016' +%s); python trial.py -f Harlene -ps 0.png -ts 0 -d 2 -s 2 -fs both -x female -p 0 -sp gambusia -sl TBD -r 7 -cs B -fd -c -m $d
+d=$(date --date='TZ="US/Central" Mon October 10 13:05:00 2016' +%s); python trial.py -f Harlene -ps 0.png -ts 0 -d 2 -s 3 -fs both -x female -p 0 -sp gambusia -sl TBD -r 7 -cs B -fd -m $d
+d=$(date --date='TZ="US/Central" Mon October 10 13:05:00 2016' +%s); python trial.py -f Harlene -ps 0.png -ts 0 -d 2 -s 3 -fs both -x female -p 0 -sp gambusia -sl TBD -r 7 -cs B -fd -c -m $d
+d=$(date --date='TZ="US/Central" Mon October 10 15:05:00 2016' +%s); python trial.py -f Harlene -ps 0.png -ts 0 -d 2 -s 4 -fs both -x female -p 0 -sp gambusia -sl TBD -r 7 -cs B -fd -m $d
+d=$(date --date='TZ="US/Central" Mon October 10 15:05:00 2016' +%s); python trial.py -f Harlene -ps 0.png -ts 0 -d 2 -s 4 -fs both -x female -p 0 -sp gambusia -sl TBD -r 7 -cs B -fd -c -m $d
+d=$(date --date='TZ="US/Central" Mon October 10 17:05:00 2016' +%s); python trial.py -f Harlene -ps 0.png -ts 0 -d 2 -s 5 -fs both -x female -p 0 -sp gambusia -sl TBD -r 7 -cs B -fd -m $d
+d=$(date --date='TZ="US/Central" Mon October 10 17:05:00 2016' +%s); python trial.py -f Harlene -ps 0.png -ts 0 -d 2 -s 5 -fs both -x female -p 0 -sp gambusia -sl TBD -r 7 -cs B -fd -c -m $d
+d=$(date --date='TZ="US/Central" Tue October 11 9:05:00 2016' +%s); python trial.py -f Harlene -ps 5.png -ts 10 -d 3 -s 1 -fs right -x female -p 50 -sp gambusia -sl TBD -r 7 -cs R -m $d
+d=$(date --date='TZ="US/Central" Tue October 11 9:05:00 2016' +%s); python trial.py -f Harlene -ps 10.png -ts 5 -d 3 -s 1 -fs right -x female -p 50 -sp gambusia -sl TBD -r 7 -cs R -fd -c -m $d
+d=$(date --date='TZ="US/Central" Tue October 11 11:05:00 2016' +%s); python trial.py -f Harlene -ps 12.png -ts 6 -d 3 -s 2 -fs left -x female -p 50 -sp gambusia -sl TBD -r 7 -cs L -fd -m $d
+d=$(date --date='TZ="US/Central" Tue October 11 11:05:00 2016' +%s); python trial.py -f Harlene -ps 6.png -ts 12 -d 3 -s 2 -fs left -x female -p 50 -sp gambusia -sl TBD -r 7 -cs L -c -m $d
+d=$(date --date='TZ="US/Central" Tue October 11 13:05:00 2016' +%s); python trial.py -f Harlene -ps 12.png -ts 6 -d 3 -s 3 -fs left -x female -p 50 -sp gambusia -sl TBD -r 7 -cs L -fd -m $d
+d=$(date --date='TZ="US/Central" Tue October 11 13:05:00 2016' +%s); python trial.py -f Harlene -ps 6.png -ts 12 -d 3 -s 3 -fs left -x female -p 50 -sp gambusia -sl TBD -r 7 -cs L -c -m $d
+d=$(date --date='TZ="US/Central" Tue October 11 15:05:00 2016' +%s); python trial.py -f Harlene -ps 5.png -ts 10 -d 3 -s 4 -fs right -x female -p 50 -sp gambusia -sl TBD -r 7 -cs R -m $d
+d=$(date --date='TZ="US/Central" Tue October 11 15:05:00 2016' +%s); python trial.py -f Harlene -ps 10.png -ts 5 -d 3 -s 4 -fs right -x female -p 50 -sp gambusia -sl TBD -r 7 -cs R -fd -c -m $d
+d=$(date --date='TZ="US/Central" Tue October 11 17:05:00 2016' +%s); python trial.py -f Harlene -ps 10.png -ts 5 -d 3 -s 5 -fs left -x female -p 50 -sp gambusia -sl TBD -r 7 -cs L -fd -m $d
+d=$(date --date='TZ="US/Central" Tue October 11 17:05:00 2016' +%s); python trial.py -f Harlene -ps 5.png -ts 10 -d 3 -s 5 -fs left -x female -p 50 -sp gambusia -sl TBD -r 7 -cs L -c -m $d
+d=$(date --date='TZ="US/Central" Wed October 12 9:05:00 2016' +%s); python trial.py -f Harlene -ps 6.png -ts 12 -d 4 -s 1 -fs right -x female -p 50 -sp gambusia -sl TBD -r 7 -cs R -m $d
+d=$(date --date='TZ="US/Central" Wed October 12 9:05:00 2016' +%s); python trial.py -f Harlene -ps 12.png -ts 6 -d 4 -s 1 -fs right -x female -p 50 -sp gambusia -sl TBD -r 7 -cs R -fd -c -m $d
+d=$(date --date='TZ="US/Central" Wed October 12 11:05:00 2016' +%s); python trial.py -f Harlene -ps 10.png -ts 5 -d 4 -s 2 -fs left -x female -p 50 -sp gambusia -sl TBD -r 7 -cs L -fd -m $d
+d=$(date --date='TZ="US/Central" Wed October 12 11:05:00 2016' +%s); python trial.py -f Harlene -ps 5.png -ts 10 -d 4 -s 2 -fs left -x female -p 50 -sp gambusia -sl TBD -r 7 -cs L -c -m $d
+d=$(date --date='TZ="US/Central" Wed October 12 13:05:00 2016' +%s); python trial.py -f Harlene -ps 6.png -ts 12 -d 4 -s 3 -fs right -x female -p 50 -sp gambusia -sl TBD -r 7 -cs R -m $d
+d=$(date --date='TZ="US/Central" Wed October 12 13:05:00 2016' +%s); python trial.py -f Harlene -ps 12.png -ts 6 -d 4 -s 3 -fs right -x female -p 50 -sp gambusia -sl TBD -r 7 -cs R -fd -c -m $d
+d=$(date --date='TZ="US/Central" Wed October 12 15:05:00 2016' +%s); python trial.py -f Harlene -ps 10.png -ts 5 -d 4 -s 4 -fs left -x female -p 50 -sp gambusia -sl TBD -r 7 -cs L -fd -m $d
+d=$(date --date='TZ="US/Central" Wed October 12 15:05:00 2016' +%s); python trial.py -f Harlene -ps 5.png -ts 10 -d 4 -s 4 -fs left -x female -p 50 -sp gambusia -sl TBD -r 7 -cs L -c -m $d
+d=$(date --date='TZ="US/Central" Wed October 12 17:05:00 2016' +%s); python trial.py -f Harlene -ps 6.png -ts 12 -d 4 -s 5 -fs right -x female -p 50 -sp gambusia -sl TBD -r 7 -cs R -m $d
+d=$(date --date='TZ="US/Central" Wed October 12 17:05:00 2016' +%s); python trial.py -f Harlene -ps 12.png -ts 6 -d 4 -s 5 -fs right -x female -p 50 -sp gambusia -sl TBD -r 7 -cs R -fd -c -m $d
+d=$(date --date='TZ="US/Central" Thu October 13 9:05:00 2016' +%s); python trial.py -f Harlene -ps 12.png -ts 6 -d 5 -s 1 -fs left -x female -p 50 -sp gambusia -sl TBD -r 7 -cs L -fd -m $d
+d=$(date --date='TZ="US/Central" Thu October 13 9:05:00 2016' +%s); python trial.py -f Harlene -ps 6.png -ts 12 -d 5 -s 1 -fs left -x female -p 50 -sp gambusia -sl TBD -r 7 -cs L -c -m $d
+d=$(date --date='TZ="US/Central" Thu October 13 11:05:00 2016' +%s); python trial.py -f Harlene -ps 5.png -ts 10 -d 5 -s 2 -fs right -x female -p 50 -sp gambusia -sl TBD -r 7 -cs R -m $d
+d=$(date --date='TZ="US/Central" Thu October 13 11:05:00 2016' +%s); python trial.py -f Harlene -ps 10.png -ts 5 -d 5 -s 2 -fs right -x female -p 50 -sp gambusia -sl TBD -r 7 -cs R -fd -c -m $d
+d=$(date --date='TZ="US/Central" Thu October 13 13:05:00 2016' +%s); python trial.py -f Harlene -ps 5.png -ts 10 -d 5 -s 3 -fs right -x female -p 50 -sp gambusia -sl TBD -r 7 -cs R -m $d
+d=$(date --date='TZ="US/Central" Thu October 13 13:05:00 2016' +%s); python trial.py -f Harlene -ps 10.png -ts 5 -d 5 -s 3 -fs right -x female -p 50 -sp gambusia -sl TBD -r 7 -cs R -fd -c -m $d
+d=$(date --date='TZ="US/Central" Thu October 13 15:05:00 2016' +%s); python trial.py -f Harlene -ps 12.png -ts 6 -d 5 -s 4 -fs left -x female -p 50 -sp gambusia -sl TBD -r 7 -cs L -fd -m $d
+d=$(date --date='TZ="US/Central" Thu October 13 15:05:00 2016' +%s); python trial.py -f Harlene -ps 6.png -ts 12 -d 5 -s 4 -fs left -x female -p 50 -sp gambusia -sl TBD -r 7 -cs L -c -m $d
+d=$(date --date='TZ="US/Central" Thu October 13 17:05:00 2016' +%s); python trial.py -f Harlene -ps 5.png -ts 10 -d 5 -s 5 -fs right -x female -p 50 -sp gambusia -sl TBD -r 7 -cs R -m $d
+d=$(date --date='TZ="US/Central" Thu October 13 17:05:00 2016' +%s); python trial.py -f Harlene -ps 10.png -ts 5 -d 5 -s 5 -fs right -x female -p 50 -sp gambusia -sl TBD -r 7 -cs R -fd -c -m $d
+d=$(date --date='TZ="US/Central" Fri October 14 9:05:00 2016' +%s); python trial.py -f Harlene -ps 10.png -ts 5 -d 6 -s 1 -fs left -x female -p 50 -sp gambusia -sl TBD -r 7 -cs L -fd -m $d
+d=$(date --date='TZ="US/Central" Fri October 14 9:05:00 2016' +%s); python trial.py -f Harlene -ps 5.png -ts 10 -d 6 -s 1 -fs left -x female -p 50 -sp gambusia -sl TBD -r 7 -cs L -c -m $d
+d=$(date --date='TZ="US/Central" Fri October 14 11:05:00 2016' +%s); python trial.py -f Harlene -ps 6.png -ts 12 -d 6 -s 2 -fs right -x female -p 50 -sp gambusia -sl TBD -r 7 -cs R -m $d
+d=$(date --date='TZ="US/Central" Fri October 14 11:05:00 2016' +%s); python trial.py -f Harlene -ps 12.png -ts 6 -d 6 -s 2 -fs right -x female -p 50 -sp gambusia -sl TBD -r 7 -cs R -fd -c -m $d
+d=$(date --date='TZ="US/Central" Fri October 14 13:05:00 2016' +%s); python trial.py -f Harlene -ps 10.png -ts 5 -d 6 -s 3 -fs left -x female -p 50 -sp gambusia -sl TBD -r 7 -cs L -fd -m $d
+d=$(date --date='TZ="US/Central" Fri October 14 13:05:00 2016' +%s); python trial.py -f Harlene -ps 5.png -ts 10 -d 6 -s 3 -fs left -x female -p 50 -sp gambusia -sl TBD -r 7 -cs L -c -m $d
+d=$(date --date='TZ="US/Central" Fri October 14 15:05:00 2016' +%s); python trial.py -f Harlene -ps 6.png -ts 12 -d 6 -s 4 -fs right -x female -p 50 -sp gambusia -sl TBD -r 7 -cs R -m $d
+d=$(date --date='TZ="US/Central" Fri October 14 15:05:00 2016' +%s); python trial.py -f Harlene -ps 12.png -ts 6 -d 6 -s 4 -fs right -x female -p 50 -sp gambusia -sl TBD -r 7 -cs R -fd -c -m $d
+d=$(date --date='TZ="US/Central" Fri October 14 17:05:00 2016' +%s); python trial.py -f Harlene -ps 10.png -ts 5 -d 6 -s 5 -fs left -x female -p 50 -sp gambusia -sl TBD -r 7 -cs L -fd -m $d
+d=$(date --date='TZ="US/Central" Fri October 14 17:05:00 2016' +%s); python trial.py -f Harlene -ps 5.png -ts 10 -d 6 -s 5 -fs left -x female -p 50 -sp gambusia -sl TBD -r 7 -cs L -c -m $d
+d=$(date --date='TZ="US/Central" Sat October 15 9:05:00 2016' +%s); python trial.py -f Harlene -ps 5.png -ts 10 -d 7 -s 1 -fs right -x female -p 50 -sp gambusia -sl TBD -r 7 -cs R -m $d
+d=$(date --date='TZ="US/Central" Sat October 15 9:05:00 2016' +%s); python trial.py -f Harlene -ps 10.png -ts 5 -d 7 -s 1 -fs right -x female -p 50 -sp gambusia -sl TBD -r 7 -cs R -fd -c -m $d
+d=$(date --date='TZ="US/Central" Sat October 15 11:05:00 2016' +%s); python trial.py -f Harlene -ps 12.png -ts 6 -d 7 -s 2 -fs left -x female -p 50 -sp gambusia -sl TBD -r 7 -cs L -fd -m $d
+d=$(date --date='TZ="US/Central" Sat October 15 11:05:00 2016' +%s); python trial.py -f Harlene -ps 6.png -ts 12 -d 7 -s 2 -fs left -x female -p 50 -sp gambusia -sl TBD -r 7 -cs L -c -m $d
+d=$(date --date='TZ="US/Central" Sat October 15 13:05:00 2016' +%s); python trial.py -f Harlene -ps 12.png -ts 6 -d 7 -s 3 -fs left -x female -p 50 -sp gambusia -sl TBD -r 7 -cs L -fd -m $d
+d=$(date --date='TZ="US/Central" Sat October 15 13:05:00 2016' +%s); python trial.py -f Harlene -ps 6.png -ts 12 -d 7 -s 3 -fs left -x female -p 50 -sp gambusia -sl TBD -r 7 -cs L -c -m $d
+d=$(date --date='TZ="US/Central" Sat October 15 15:05:00 2016' +%s); python trial.py -f Harlene -ps 5.png -ts 10 -d 7 -s 4 -fs right -x female -p 50 -sp gambusia -sl TBD -r 7 -cs R -m $d
+d=$(date --date='TZ="US/Central" Sat October 15 15:05:00 2016' +%s); python trial.py -f Harlene -ps 10.png -ts 5 -d 7 -s 4 -fs right -x female -p 50 -sp gambusia -sl TBD -r 7 -cs R -fd -c -m $d
+d=$(date --date='TZ="US/Central" Sat October 15 17:05:00 2016' +%s); python trial.py -f Harlene -ps 12.png -ts 6 -d 7 -s 5 -fs left -x female -p 50 -sp gambusia -sl TBD -r 7 -cs L -fd -m $d
+d=$(date --date='TZ="US/Central" Sat October 15 17:05:00 2016' +%s); python trial.py -f Harlene -ps 6.png -ts 12 -d 7 -s 5 -fs left -x female -p 50 -sp gambusia -sl TBD -r 7 -cs L -c -m $d
+d=$(date --date='TZ="US/Central" Sun October 16 9:05:00 2016' +%s); python trial.py -f Harlene -ps 6.png -ts 12 -d 8 -s 1 -fs right -x female -p 50 -sp gambusia -sl TBD -r 7 -cs R -m $d
+d=$(date --date='TZ="US/Central" Sun October 16 9:05:00 2016' +%s); python trial.py -f Harlene -ps 12.png -ts 6 -d 8 -s 1 -fs right -x female -p 50 -sp gambusia -sl TBD -r 7 -cs R -fd -c -m $d
+d=$(date --date='TZ="US/Central" Sun October 16 11:05:00 2016' +%s); python trial.py -f Harlene -ps 10.png -ts 5 -d 8 -s 2 -fs left -x female -p 50 -sp gambusia -sl TBD -r 7 -cs L -fd -m $d
+d=$(date --date='TZ="US/Central" Sun October 16 11:05:00 2016' +%s); python trial.py -f Harlene -ps 5.png -ts 10 -d 8 -s 2 -fs left -x female -p 50 -sp gambusia -sl TBD -r 7 -cs L -c -m $d
+d=$(date --date='TZ="US/Central" Sun October 16 13:05:00 2016' +%s); python trial.py -f Harlene -ps 6.png -ts 12 -d 8 -s 3 -fs right -x female -p 50 -sp gambusia -sl TBD -r 7 -cs R -m $d
+d=$(date --date='TZ="US/Central" Sun October 16 13:05:00 2016' +%s); python trial.py -f Harlene -ps 12.png -ts 6 -d 8 -s 3 -fs right -x female -p 50 -sp gambusia -sl TBD -r 7 -cs R -fd -c -m $d
+d=$(date --date='TZ="US/Central" Sun October 16 15:05:00 2016' +%s); python trial.py -f Harlene -ps 10.png -ts 5 -d 8 -s 4 -fs left -x female -p 50 -sp gambusia -sl TBD -r 7 -cs L -fd -m $d
+d=$(date --date='TZ="US/Central" Sun October 16 15:05:00 2016' +%s); python trial.py -f Harlene -ps 5.png -ts 10 -d 8 -s 4 -fs left -x female -p 50 -sp gambusia -sl TBD -r 7 -cs L -c -m $d
+d=$(date --date='TZ="US/Central" Sun October 16 17:05:00 2016' +%s); python trial.py -f Harlene -ps 6.png -ts 12 -d 8 -s 5 -fs right -x female -p 50 -sp gambusia -sl TBD -r 7 -cs R -m $d
+d=$(date --date='TZ="US/Central" Sun October 16 17:05:00 2016' +%s); python trial.py -f Harlene -ps 12.png -ts 6 -d 8 -s 5 -fs right -x female -p 50 -sp gambusia -sl TBD -r 7 -cs R -fd -c -m $d
+d=$(date --date='TZ="US/Central" Mon October 17 9:05:00 2016' +%s); python trial.py -f Harlene -ps 12.png -ts 9 -d 9 -s 1 -fs none -x female -p 75 -sp gambusia -sl TBD -r 7 -cs L -m $d
+d=$(date --date='TZ="US/Central" Mon October 17 9:05:00 2016' +%s); python trial.py -f Harlene -ps 9.png -ts 12 -d 9 -s 1 -fs none -x female -p 75 -sp gambusia -sl TBD -r 7 -cs L -c -m $d
+d=$(date --date='TZ="US/Central" Mon October 17 11:05:00 2016' +%s); python trial.py -f Harlene -ps 8.png -ts 12 -d 9 -s 2 -fs none -x female -p 67 -sp gambusia -sl TBD -r 7 -cs R -m $d
+d=$(date --date='TZ="US/Central" Mon October 17 11:05:00 2016' +%s); python trial.py -f Harlene -ps 12.png -ts 8 -d 9 -s 2 -fs none -x female -p 67 -sp gambusia -sl TBD -r 7 -cs R -c -m $d
+d=$(date --date='TZ="US/Central" Mon October 17 13:05:00 2016' +%s); python trial.py -f Harlene -ps 14.png -ts 7 -d 9 -s 3 -fs none -x female -p 50 -sp gambusia -sl TBD -r 7 -cs L -m $d
+d=$(date --date='TZ="US/Central" Mon October 17 13:05:00 2016' +%s); python trial.py -f Harlene -ps 7.png -ts 14 -d 9 -s 3 -fs none -x female -p 50 -sp gambusia -sl TBD -r 7 -cs L -c -m $d
+d=$(date --date='TZ="US/Central" Mon October 17 15:05:00 2016' +%s); python trial.py -f Harlene -ps 12.png -ts 6 -d 9 -s 4 -fs left -x female -p 50 -sp gambusia -sl TBD -r 7 -cs L -fd -m $d
+d=$(date --date='TZ="US/Central" Mon October 17 15:05:00 2016' +%s); python trial.py -f Harlene -ps 6.png -ts 12 -d 9 -s 4 -fs left -x female -p 50 -sp gambusia -sl TBD -r 7 -cs L -c -m $d
+d=$(date --date='TZ="US/Central" Mon October 17 16:05:00 2016' +%s); python trialblack.py -fd -m $d
+d=$(date --date='TZ="US/Central" Mon October 17 16:05:00 2016' +%s); python trialblack.py -fd -m $d
+d=$(date --date='TZ="US/Central" Mon October 17 16:10:00 2016' +%s); python trialblack.py -fd -m $d
+d=$(date --date='TZ="US/Central" Mon October 17 16:10:00 2016' +%s); python trialblack.py -fd -m $d
+d=$(date --date='TZ="US/Central" Tue October 18 9:05:00 2016' +%s); python trial.py -f Harlene -ps 12.png -ts 8 -d 10 -s 1 -fs none -x female -p 67 -sp gambusia -sl TBD -r 7 -cs L -m $d
+d=$(date --date='TZ="US/Central" Tue October 18 9:05:00 2016' +%s); python trial.py -f Harlene -ps 8.png -ts 12 -d 10 -s 1 -fs none -x female -p 67 -sp gambusia -sl TBD -r 7 -cs L -c -m $d
+d=$(date --date='TZ="US/Central" Tue October 18 11:05:00 2016' +%s); python trial.py -f Harlene -ps 7.png -ts 14 -d 10 -s 2 -fs none -x female -p 50 -sp gambusia -sl TBD -r 7 -cs R -m $d
+d=$(date --date='TZ="US/Central" Tue October 18 11:05:00 2016' +%s); python trial.py -f Harlene -ps 14.png -ts 7 -d 10 -s 2 -fs none -x female -p 50 -sp gambusia -sl TBD -r 7 -cs R -c -m $d
+d=$(date --date='TZ="US/Central" Tue October 18 13:05:00 2016' +%s); python trial.py -f Harlene -ps 12.png -ts 9 -d 10 -s 3 -fs none -x female -p 75 -sp gambusia -sl TBD -r 7 -cs L -m $d
+d=$(date --date='TZ="US/Central" Tue October 18 13:05:00 2016' +%s); python trial.py -f Harlene -ps 9.png -ts 12 -d 10 -s 3 -fs none -x female -p 75 -sp gambusia -sl TBD -r 7 -cs L -c -m $d
+d=$(date --date='TZ="US/Central" Tue October 18 15:05:00 2016' +%s); python trial.py -f Harlene -ps 5.png -ts 10 -d 10 -s 4 -fs right -x female -p 50 -sp gambusia -sl TBD -r 7 -cs R -m $d
+d=$(date --date='TZ="US/Central" Tue October 18 15:05:00 2016' +%s); python trial.py -f Harlene -ps 10.png -ts 5 -d 10 -s 4 -fs right -x female -p 50 -sp gambusia -sl TBD -r 7 -cs R -fd -c -m $d
+d=$(date --date='TZ="US/Central" Tue October 18 16:05:00 2016' +%s); python trialblack.py -fd -m $d
+d=$(date --date='TZ="US/Central" Tue October 18 16:05:00 2016' +%s); python trialblack.py -fd -m $d
+d=$(date --date='TZ="US/Central" Tue October 18 16:10:00 2016' +%s); python trialblack.py -fd -m $d
+d=$(date --date='TZ="US/Central" Tue October 18 16:10:00 2016' +%s); python trialblack.py -fd -m $d
+d=$(date --date='TZ="US/Central" Wed October 19 9:05:00 2016' +%s); python trial.py -f Harlene -ps 14.png -ts 7 -d 11 -s 1 -fs none -x female -p 50 -sp gambusia -sl TBD -r 7 -cs L -m $d
+d=$(date --date='TZ="US/Central" Wed October 19 9:05:00 2016' +%s); python trial.py -f Harlene -ps 7.png -ts 14 -d 11 -s 1 -fs none -x female -p 50 -sp gambusia -sl TBD -r 7 -cs L -c -m $d
+d=$(date --date='TZ="US/Central" Wed October 19 11:05:00 2016' +%s); python trial.py -f Harlene -ps 9.png -ts 12 -d 11 -s 2 -fs none -x female -p 75 -sp gambusia -sl TBD -r 7 -cs R -m $d
+d=$(date --date='TZ="US/Central" Wed October 19 11:05:00 2016' +%s); python trial.py -f Harlene -ps 12.png -ts 9 -d 11 -s 2 -fs none -x female -p 75 -sp gambusia -sl TBD -r 7 -cs R -c -m $d
+d=$(date --date='TZ="US/Central" Wed October 19 13:05:00 2016' +%s); python trial.py -f Harlene -ps 12.png -ts 8 -d 11 -s 3 -fs none -x female -p 67 -sp gambusia -sl TBD -r 7 -cs L -m $d
+d=$(date --date='TZ="US/Central" Wed October 19 13:05:00 2016' +%s); python trial.py -f Harlene -ps 8.png -ts 12 -d 11 -s 3 -fs none -x female -p 67 -sp gambusia -sl TBD -r 7 -cs L -c -m $d
+d=$(date --date='TZ="US/Central" Wed October 19 15:05:00 2016' +%s); python trial.py -f Harlene -ps 6.png -ts 12 -d 11 -s 4 -fs right -x female -p 50 -sp gambusia -sl TBD -r 7 -cs R -m $d
+d=$(date --date='TZ="US/Central" Wed October 19 15:05:00 2016' +%s); python trial.py -f Harlene -ps 12.png -ts 6 -d 11 -s 4 -fs right -x female -p 50 -sp gambusia -sl TBD -r 7 -cs R -fd -c -m $d
+d=$(date --date='TZ="US/Central" Wed October 19 16:05:00 2016' +%s); python trialblack.py -fd -m $d
+d=$(date --date='TZ="US/Central" Wed October 19 16:05:00 2016' +%s); python trialblack.py -fd -m $d
+d=$(date --date='TZ="US/Central" Wed October 19 16:10:00 2016' +%s); python trialblack.py -fd -m $d
+d=$(date --date='TZ="US/Central" Wed October 19 16:10:00 2016' +%s); python trialblack.py -fd -m $d
