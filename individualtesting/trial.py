@@ -32,197 +32,35 @@ __author__ = 'RobertIan'
 __version__ = '0.1.1'
 
 import argparse
-import pygame
-import picamera
-import time
-import datetime
-import netifaces
-
-import RPi.GPIO as GPIO
-import os.path
-
-
-#KJW imports
 import sys
-import select
-import os
+from subprocess import call
 
 class Trial:
 
     def __init__(self, stim,starttime):
-        # perhaps replace this with a bash script or RPC that controlls timing
-        # of all servers
-        #self.now = time.asctime()
-        #self.when = when
-        #assert self.when - self.now > 0
-        #
-        pygame.display.init()
-        pygame.mouse.set_visible(False)
-        self.screen = pygame.display.set_mode((0,0),pygame.FULLSCREEN)
-        self.stimulus = stim
-        #
+
+        self.stim = stim
+        
         self.start = float(starttime)
-        self.tLength = 258
-        self.feedDelay = 10
-	#
-        GPIO.setmode(GPIO.BCM)
-        GPIO.setwarnings(False)
-        GPIO.cleanup()
-	self.feeder = 17 ##
+        self.ip = '127.0.0.1'
+
+        self.feeder = 17 ##
         self.notfeeder = 5 ##
-        #GPIO.setup(27, GPIO.IN)
-        #GPIO.add_event_detect(27, GPIO.RISING)
-        GPIO.setup(self.feeder, GPIO.OUT)
-        GPIO.output(self.feeder, True)
-        GPIO.setup(self.notfeeder, GPIO.OUT)
-        GPIO.output(self.notfeeder, False)
-        print "GPIOinit"
-#        self.camera = picamera.PiCamera()
-#        self.camera.resolution = (1920, 1080)
-#        self.camera.framerate = 30
-#        self.camera.autofocus = False
-#        self.camera.awb_mode = 'fluorescent'
-#        self.camera.led = False
-#        presented = False
 
-    def checkPiIP(self):
-       self.ip = netifaces.ifaddresses('eth0')[2][0]['addr']
-       print self.ip
 
-    def whatStimulus(self):
-        self.stim, extension = os.path.splitext(self.stimulus)
 
-        if extension == '.png' or extension == '.PNG' or extension == '.jpg' \
-        or extension == '.JPG':
-        # still image
-            try:
-                self.image = pygame.image.load('/home/pi/ethoStim/individualtesting/src/'+str(self.stimulus))
-            	self.image = pygame.transform.scale(self.image, (640,460))
-            except IOError:
-                # currently a print, should be changed to send a message to
-                #the client
-                print 'are you sure this file exists? check the src folder \
-                ony jpg/JPG, png/PNG formats'
-
-        '''
-        elif extension == '.mpg' or extension == '.MPG' or extension == '.avi' \
-        or extension == '.AVI':
-            try:
-                self.video = pygame.image.load('src/',self.stimulus)
-            except IOError:(KeyboardInterrupt           # currently a print should be changed to send a message to
-                #the client
-                print 'are you sure this file exists? check the src folder \
-                ony jpg/JPG, ong/PNG, avi/AVI and mpg/MPG formats'
-        '''
-    def feed(self):
-	GPIO.output(self.feeder, GPIO.HIGH)         
-    def notFeed(self):
-        GPIO.output(self.notfeeder, GPIO.HIGH)
-    def cameraInit(self):
-        self.camera = picamera.PiCamera()
-        self.camera.resolution = (1280,720)
-	self.camera.contrast = 100
-        self.camera.brightness = 75
-	self.camera.framerate = 25
-        #self.camera.autofocus = False
-	self.camera.exposure_mode = 'auto'
-        self.camera.awb_mode = 'off'
-	self.camera.awb_gains = (1.8, 1.0)
-        self.camera.led = False
-        presented = False
-	self.camera.rotation = 180
-	#self.camera.iso = 800	
         
     def videoFileName(self, species, tround, sl, sex, fishid, day, session,
                     thatpistimulus, proportion, fedside, correctside):
         self.vidout = ('data/'+str(self.ip)+'/'+(str(species)+'_'+str(tround)
         +'_'+str(sl)+'_'+str(sex) +'_'+str(fishid)+'_'+str(day)+'_'+
-        str(session)+'_' +str(self.stim)+'_'+str(thatpistimulus)+'_'+str(proportion)+'_'+str(fedside)+'_'+str(correctside)))
+        str(session)+'_' +str(self.stim)+'_'+str(thatpistimulus)+'_'+str(proportion)+'_'+str(fedside)+'_'+str(correctside) + '.mkv'))
         print self.vidout
+        
+        call(["mkdir", "data"])
+        call(["mkdir", "data/" + str(self.ip)])
+        return self.vidout
     
-    def startRecording(self):
-        self.camera.start_recording(self.vidout+'.mkv', format='h264')
-        
-
-    def stopRecording(self):
-        self.camera.stop_recording()
-
-    def cameraQuit(self):
-        self.camera.close()
-
-    def safeQuit(self):
-	GPIO.output(self.feeder, True)#changed
-        GPIO.cleanup()
-	print "GPIOcleanup"
-        pygame.quit()
-        exit()
-
-    def mainLoop(self, feedornot):
-        ##MATT: set-up feed or not. Dont forget to add it 
-        # as a variable in 'mailoop(self, feedornot)'
-        if feedornot == 'yes':
-            feed = True
-        else:
-            feed = False
-
-
-	#delaymet = False
-        #presented = False
-
-        while time.time()<self.start:
-           #print time.time()-self.start
-            pass
-        
-	self.startT = time.time()
-        fed = False
-        if args["camera"]:      
-            self.startRecording()
-        else:
-            pass
-        while ((time.time() - self.startT) < self.tLength):
-           #print (time.time()-self.startT)
-	    pygame.display.flip()
-	    self.screen.blit(self.image, (40,0))
-	    #presented = True
-            try:
-                
-               # if presented == True:
-                #    pass
-                if (time.time() -self.startT) >  self.feedDelay:
-		    #if not fed:
-                    #GPIO.setmode(BCM)
-		    #GPIO.setmode(GPIO.BCM)
-		    #GPIO.setup(17, GPIO.OUT)			
-		    #GPIO.output(17, False)
-	
-                 	#pygame.display.flip()
-              	 	#self.screen.blit(self.image, (0,0))
-      		 
-                 	#presented = True
-                    #if fed:
-    		        #pass
-                    #elif GPIO.event_detected(27):
-		        #time.sleep(1.0)
-		        #GPIO.output(17,True)
-                        #fed = True
-			#print "notfed, event detected"
-   		    #else:
-                      # time.sleep(1.0)
-                    ## MATT: turn on either the feeder on the notfeeder here
-                    if feed:
-                        GPIO.output(self.feeder, False)
-                    else:
-		        GPIO.output(self.notfeeder, False)  
-
-
-                       #print time.time()
-		  # pass
-
-            except KeyboardInterrupt:
-		print'KeyInterrupt'
-		self.safeQuit()	
-		
-
 
 if __name__ == '__main__':
 
@@ -245,40 +83,11 @@ if __name__ == '__main__':
     ap.add_argument("-m:", "--startTime", help="time since epoch that you want to start your trial")
     args = vars(ap.parse_args())
 
-
     T = Trial(args["pistimulus"], args["startTime"])
 
-    
-    #T.safeQuit()
-    
-    T.checkPiIP()
-    T.whatStimulus()
-    T.videoFileName(args["species"], args["round"], args["fishstandardlength"],
+    vidout = T.videoFileName(args["species"], args["round"], args["fishstandardlength"],
                     args["sex"], args["fish"], args["day"], args["session"], args["thatpistimulus"], args["proportion"], args["fedSide"], args["correctside"])  
     
-    #if args["camera"]:
-    #T.startRecording()
-    #else:
-        #pass
-    #if args["feed"]:
-    if args["camera"]:
-        T.cameraInit()
-
-    ## MATT: tell the mainloop yes or no on feeding
-    if args["feed"]:
-        T.mainLoop('yes')
-    else:
-        T.mainLoop('no')
-
-    #else:
-    #T.mainLoop(False)
-    if args["camera"]:
-        T.stopRecording()
-    else:
-        pass  
+    call(["touch", vidout])
     
-    if args["camera"]:
-	T.cameraQuit()
-
-    T.safeQuit() 
-    print "safequit"
+    sys.exit(0)
