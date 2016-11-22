@@ -39,6 +39,36 @@ def jsonText = f.getText()
 jsonH1 = slurper.parseText(jsonText)
 println("H1 schedule: \n" + jsonH1 + "\n")
 
+//Read in H2 schedule
+f = new File('/var/lib/jenkins/workspace/dsl_seed_job/H2.json')
+jsonText = f.getText()
+jsonH2 = slurper.parseText(jsonText)
+println("H2 schedule: \n" + jsonH2 + "\n")
+
+//Read in H3 schedule
+f = new File('/var/lib/jenkins/workspace/dsl_seed_job/H3.json')
+jsonText = f.getText()
+jsonH3 = slurper.parseText(jsonText)
+println("H3 schedule: \n" + jsonH3 + "\n")
+
+//Read in L1 schedule
+f = new File('/var/lib/jenkins/workspace/dsl_seed_job/L1.json')
+jsonText = f.getText()
+jsonL1 = slurper.parseText(jsonText)
+println("L1 schedule: \n" + jsonL1 + "\n")
+
+//Read in L2 schedule
+f = new File('/var/lib/jenkins/workspace/dsl_seed_job/L2.json')
+jsonText = f.getText()
+jsonL2 = slurper.parseText(jsonText)
+println("L2 schedule: \n" + jsonL2 + "\n")
+
+//Read in L3 schedule
+f = new File('/var/lib/jenkins/workspace/dsl_seed_job/L3.json')
+jsonText = f.getText()
+jsonL3 = slurper.parseText(jsonText)
+println("L3 schedule: \n" + jsonL3 + "\n")
+
 //Read in Fish specific parameters
 f = new File('/var/lib/jenkins/workspace/dsl_seed_job/fish.json')
 jsonText = f.getText()
@@ -138,9 +168,46 @@ if (h2_fish != "null") {
 	println("fishstandardlength=" + fishstandardlength)
 	println("node=" + node)
 	println("cam_node=" + cam_node)
-	//for (item in jsonH2) {
-	//	println(item.key)
-	//}
+	println("\n")
+	//Loop over each trial and create a CI job
+	for (item in jsonH2) {
+		println("\n#######################")
+		println("Sub-trial #" + item.key)
+		println("#######################")
+		day = jsonH2.(item.key)."day"
+		time = jsonH2.(item.key)."time"
+		thatpistimulus = jsonH2.(item.key)."thatpistimulus"
+		pistimulus = jsonH2.(item.key)."pistimulus"
+		correctside = jsonH2.(item.key)."correctside"
+		session = jsonH2.(item.key)."session"
+		feedside = jsonH2.(item.key)."feedside"
+		proportion = jsonH2.(item.key)."proportion"
+		feed = jsonH2.(item.key)."feed"
+		camera = jsonH2.(item.key)."camera"
+		println("day=" + day)
+		println("time=" + time)
+		println("thatpistimulus=" + thatpistimulus)
+		println("pistimulus=" + pistimulus)
+		println("correctside=" + correctside)
+		println("session=" + session)
+		println("feedside=" + feedside)
+		println("proportion=" + proportion)
+		println("feed=" + feed)
+		println("camera=" + camera)
+		
+		//Build up job name, fish + sub-trial #
+		ci_job_name = ci_job_name_root + "_" + fish + "_" + item.key
+		
+		//Decide between node with or without camera
+		if(camera == "TRUE") {
+			node = cam_node
+		}
+		
+		//Create CI job
+		createCiJob(ci_job_name, DAYS2KEEP, NUM2KEEP, fish, thatpistimulus, pistimulus, \
+		    correctside, day, session, feedside, sex, proportion, species, \
+		    fishstandardlength, round, camera, node, startDate)
+	}
 }
 println("*****************End of H2 Schedule *****************")
 
@@ -158,9 +225,46 @@ if (h3_fish != null) {
 	println("fishstandardlength=" + fishstandardlength)
 	println("node=" + node)
 	println("cam_node=" + cam_node)
-	//for (item in jsonH3) {
-	//	println(item.key)
-	//}
+	println("\n")
+	//Loop over each trial and create a CI job
+	for (item in jsonH3) {
+		println("\n#######################")
+		println("Sub-trial #" + item.key)
+		println("#######################")
+		day = jsonH3.(item.key)."day"
+		time = jsonH3.(item.key)."time"
+		thatpistimulus = jsonH3.(item.key)."thatpistimulus"
+		pistimulus = jsonH3.(item.key)."pistimulus"
+		correctside = jsonH3.(item.key)."correctside"
+		session = jsonH3.(item.key)."session"
+		feedside = jsonH3.(item.key)."feedside"
+		proportion = jsonH3.(item.key)."proportion"
+		feed = jsonH3.(item.key)."feed"
+		camera = jsonH3.(item.key)."camera"
+		println("day=" + day)
+		println("time=" + time)
+		println("thatpistimulus=" + thatpistimulus)
+		println("pistimulus=" + pistimulus)
+		println("correctside=" + correctside)
+		println("session=" + session)
+		println("feedside=" + feedside)
+		println("proportion=" + proportion)
+		println("feed=" + feed)
+		println("camera=" + camera)
+		
+		//Build up job name, fish + sub-trial #
+		ci_job_name = ci_job_name_root + "_" + fish + "_" + item.key
+		
+		//Decide between node with or without camera
+		if(camera == "TRUE") {
+			node = cam_node
+		}
+		
+		//Create CI job
+		createCiJob(ci_job_name, DAYS2KEEP, NUM2KEEP, fish, thatpistimulus, pistimulus, \
+		    correctside, day, session, feedside, sex, proportion, species, \
+		    fishstandardlength, round, camera, node, startDate)
+	}
 }
 println("*****************End of H3 Schedule *****************")
 
@@ -178,9 +282,46 @@ if (l1_fish != null) {
 	println("fishstandardlength=" + fishstandardlength)
 	println("node=" + node)
 	println("cam_node=" + cam_node)
-	//for (item in jsonL1) {
-	//	println(item.key)
-	//}
+	println("\n")
+	//Loop over each trial and create a CI job
+	for (item in jsonL1) {
+		println("\n#######################")
+		println("Sub-trial #" + item.key)
+		println("#######################")
+		day = jsonL1.(item.key)."day"
+		time = jsonL1.(item.key)."time"
+		thatpistimulus = jsonL1.(item.key)."thatpistimulus"
+		pistimulus = jsonL1.(item.key)."pistimulus"
+		correctside = jsonL1.(item.key)."correctside"
+		session = jsonL1.(item.key)."session"
+		feedside = jsonL1.(item.key)."feedside"
+		proportion = jsonL1.(item.key)."proportion"
+		feed = jsonL1.(item.key)."feed"
+		camera = jsonL1.(item.key)."camera"
+		println("day=" + day)
+		println("time=" + time)
+		println("thatpistimulus=" + thatpistimulus)
+		println("pistimulus=" + pistimulus)
+		println("correctside=" + correctside)
+		println("session=" + session)
+		println("feedside=" + feedside)
+		println("proportion=" + proportion)
+		println("feed=" + feed)
+		println("camera=" + camera)
+		
+		//Build up job name, fish + sub-trial #
+		ci_job_name = ci_job_name_root + "_" + fish + "_" + item.key
+		
+		//Decide between node with or without camera
+		if(camera == "TRUE") {
+			node = cam_node
+		}
+		
+		//Create CI job
+		createCiJob(ci_job_name, DAYS2KEEP, NUM2KEEP, fish, thatpistimulus, pistimulus, \
+		    correctside, day, session, feedside, sex, proportion, species, \
+		    fishstandardlength, round, camera, node, startDate)
+	}
 }
 println("*****************End of L1 Schedule *****************")
 
@@ -198,9 +339,46 @@ if (l2_fish != null) {
 	println("fishstandardlength=" + fishstandardlength)
 	println("node=" + node)
 	println("cam_node=" + cam_node)
-	//for (item in jsonL2) {
-	//	println(item.key)
-	//}
+	println("\n")
+	//Loop over each trial and create a CI job
+	for (item in jsonL2) {
+		println("\n#######################")
+		println("Sub-trial #" + item.key)
+		println("#######################")
+		day = jsonL2.(item.key)."day"
+		time = jsonL2.(item.key)."time"
+		thatpistimulus = jsonL2.(item.key)."thatpistimulus"
+		pistimulus = jsonL2.(item.key)."pistimulus"
+		correctside = jsonL2.(item.key)."correctside"
+		session = jsonL2.(item.key)."session"
+		feedside = jsonL2.(item.key)."feedside"
+		proportion = jsonL2.(item.key)."proportion"
+		feed = jsonL2.(item.key)."feed"
+		camera = jsonL2.(item.key)."camera"
+		println("day=" + day)
+		println("time=" + time)
+		println("thatpistimulus=" + thatpistimulus)
+		println("pistimulus=" + pistimulus)
+		println("correctside=" + correctside)
+		println("session=" + session)
+		println("feedside=" + feedside)
+		println("proportion=" + proportion)
+		println("feed=" + feed)
+		println("camera=" + camera)
+		
+		//Build up job name, fish + sub-trial #
+		ci_job_name = ci_job_name_root + "_" + fish + "_" + item.key
+		
+		//Decide between node with or without camera
+		if(camera == "TRUE") {
+			node = cam_node
+		}
+		
+		//Create CI job
+		createCiJob(ci_job_name, DAYS2KEEP, NUM2KEEP, fish, thatpistimulus, pistimulus, \
+		    correctside, day, session, feedside, sex, proportion, species, \
+		    fishstandardlength, round, camera, node, startDate)
+	}
 }
 println("*****************End of L2 Schedule *****************")
 
@@ -218,9 +396,46 @@ if (l3_fish != null) {
 	println("fishstandardlength=" + fishstandardlength)
 	println("node=" + node)
 	println("cam_node=" + cam_node)
-	//for (item in jsonL3) {
-	//	println(item.key)
-	//}
+	println("\n")
+	//Loop over each trial and create a CI job
+	for (item in jsonL3) {
+		println("\n#######################")
+		println("Sub-trial #" + item.key)
+		println("#######################")
+		day = jsonL3.(item.key)."day"
+		time = jsonL3.(item.key)."time"
+		thatpistimulus = jsonL3.(item.key)."thatpistimulus"
+		pistimulus = jsonL3.(item.key)."pistimulus"
+		correctside = jsonL3.(item.key)."correctside"
+		session = jsonL3.(item.key)."session"
+		feedside = jsonL3.(item.key)."feedside"
+		proportion = jsonL3.(item.key)."proportion"
+		feed = jsonL3.(item.key)."feed"
+		camera = jsonL3.(item.key)."camera"
+		println("day=" + day)
+		println("time=" + time)
+		println("thatpistimulus=" + thatpistimulus)
+		println("pistimulus=" + pistimulus)
+		println("correctside=" + correctside)
+		println("session=" + session)
+		println("feedside=" + feedside)
+		println("proportion=" + proportion)
+		println("feed=" + feed)
+		println("camera=" + camera)
+		
+		//Build up job name, fish + sub-trial #
+		ci_job_name = ci_job_name_root + "_" + fish + "_" + item.key
+		
+		//Decide between node with or without camera
+		if(camera == "TRUE") {
+			node = cam_node
+		}
+		
+		//Create CI job
+		createCiJob(ci_job_name, DAYS2KEEP, NUM2KEEP, fish, thatpistimulus, pistimulus, \
+		    correctside, day, session, feedside, sex, proportion, species, \
+		    fishstandardlength, round, camera, node, startDate)
+	}
 }
 println("*****************End of L3 Schedule *****************")
 
