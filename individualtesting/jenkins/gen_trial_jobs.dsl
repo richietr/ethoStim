@@ -115,7 +115,7 @@ if (h1_fish != "null") {
 	//Loop over each trial and create a CI job
 	for (item in jsonH1) {
 		println("\n#######################")
-		println("Sub-trial #" + item.key)
+		println("Trial #" + item.key)
 		println("#######################")
 		day = jsonH1.(item.key)."day"
 		time = jsonH1.(item.key)."time"
@@ -138,7 +138,7 @@ if (h1_fish != "null") {
 		println("feed=" + feed)
 		println("camera=" + camera)
 		
-		//Build up job name, fish + sub-trial #
+		//Build up job name, fish + trial #
 		ci_job_name = ci_job_name_root + "_" + fish + "_" + item.key
 		
 		//Decide between node with or without camera
@@ -172,7 +172,7 @@ if (h2_fish != "null") {
 	//Loop over each trial and create a CI job
 	for (item in jsonH2) {
 		println("\n#######################")
-		println("Sub-trial #" + item.key)
+		println("Trial #" + item.key)
 		println("#######################")
 		day = jsonH2.(item.key)."day"
 		time = jsonH2.(item.key)."time"
@@ -195,7 +195,7 @@ if (h2_fish != "null") {
 		println("feed=" + feed)
 		println("camera=" + camera)
 		
-		//Build up job name, fish + sub-trial #
+		//Build up job name, fish + trial #
 		ci_job_name = ci_job_name_root + "_" + fish + "_" + item.key
 		
 		//Decide between node with or without camera
@@ -229,7 +229,7 @@ if (h3_fish != null) {
 	//Loop over each trial and create a CI job
 	for (item in jsonH3) {
 		println("\n#######################")
-		println("Sub-trial #" + item.key)
+		println("Trial #" + item.key)
 		println("#######################")
 		day = jsonH3.(item.key)."day"
 		time = jsonH3.(item.key)."time"
@@ -252,7 +252,7 @@ if (h3_fish != null) {
 		println("feed=" + feed)
 		println("camera=" + camera)
 		
-		//Build up job name, fish + sub-trial #
+		//Build up job name, fish + trial #
 		ci_job_name = ci_job_name_root + "_" + fish + "_" + item.key
 		
 		//Decide between node with or without camera
@@ -286,7 +286,7 @@ if (l1_fish != null) {
 	//Loop over each trial and create a CI job
 	for (item in jsonL1) {
 		println("\n#######################")
-		println("Sub-trial #" + item.key)
+		println("Trial #" + item.key)
 		println("#######################")
 		day = jsonL1.(item.key)."day"
 		time = jsonL1.(item.key)."time"
@@ -309,7 +309,7 @@ if (l1_fish != null) {
 		println("feed=" + feed)
 		println("camera=" + camera)
 		
-		//Build up job name, fish + sub-trial #
+		//Build up job name, fish + trial #
 		ci_job_name = ci_job_name_root + "_" + fish + "_" + item.key
 		
 		//Decide between node with or without camera
@@ -343,7 +343,7 @@ if (l2_fish != null) {
 	//Loop over each trial and create a CI job
 	for (item in jsonL2) {
 		println("\n#######################")
-		println("Sub-trial #" + item.key)
+		println("Trial #" + item.key)
 		println("#######################")
 		day = jsonL2.(item.key)."day"
 		time = jsonL2.(item.key)."time"
@@ -366,7 +366,7 @@ if (l2_fish != null) {
 		println("feed=" + feed)
 		println("camera=" + camera)
 		
-		//Build up job name, fish + sub-trial #
+		//Build up job name, fish + trial #
 		ci_job_name = ci_job_name_root + "_" + fish + "_" + item.key
 		
 		//Decide between node with or without camera
@@ -400,7 +400,7 @@ if (l3_fish != null) {
 	//Loop over each trial and create a CI job
 	for (item in jsonL3) {
 		println("\n#######################")
-		println("Sub-trial #" + item.key)
+		println("Trial #" + item.key)
 		println("#######################")
 		day = jsonL3.(item.key)."day"
 		time = jsonL3.(item.key)."time"
@@ -423,7 +423,7 @@ if (l3_fish != null) {
 		println("feed=" + feed)
 		println("camera=" + camera)
 		
-		//Build up job name, fish + sub-trial #
+		//Build up job name, fish + trial #
 		ci_job_name = ci_job_name_root + "_" + fish + "_" + item.key
 		
 		//Decide between node with or without camera
@@ -460,8 +460,6 @@ def createCiJob(def ci_job_name, def DAYS2KEEP, def NUM2KEEP, def fish, \
 	  //Container job runs on master, sub-job will be executed on NODE specified parameter
 	  label("master")
 	  
-	  // TODO: pull scripts from github, will also house json files there
-	  //		what about the dsl file?
 	  //scm{
 	  //
 	  //}
@@ -504,9 +502,7 @@ def createCiJob(def ci_job_name, def DAYS2KEEP, def NUM2KEEP, def fish, \
 		DOM = (((day.toInteger()-1) + DOM.toInteger()) - days_in_month_map.(MONTH.toString())).toString()
 	  } else {
 		DOM = (DOM.toInteger() + day.toInteger() - 1).toString()
-	  }	  
-	  //println("adjMONTH=" + MONTH)
-	  //println("adjDOM=" + DOM)
+	  }
 	  
 	  //Trigger build based on startDate, date, and time parameters
 	  println("Triggering build on MONTH=" + MONTH + ", DAY=" + DOM + ", HOUR=" + HOUR + ", MINUTE=" + MINUTE)
@@ -521,7 +517,9 @@ def createCiJob(def ci_job_name, def DAYS2KEEP, def NUM2KEEP, def fish, \
 	  //}
 	  
 	  steps {
-		//shell('echo "Hello World!"')		
+	  
+		//shell('echo "Hello World!"')	
+			
 		triggerBuilder {
 		  configs {
 			  blockableBuildTriggerConfig {
