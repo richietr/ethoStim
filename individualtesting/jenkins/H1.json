@@ -1,7 +1,7 @@
 {
 	"1": {
 			"day": "1",
-			"time": "23:00",
+			"time": "23:12",
 			"thatpistimulus": "0.png",
 			"pistimulus": "0",
 			"correctside": "B",
@@ -13,7 +13,7 @@
 		 },
 	"2": {	
 			"day": "1",
-			"time": "23:00",
+			"time": "23:12",
 			"thatpistimulus": "0.png",
 			"pistimulus": "0",
 			"correctside": "B",
@@ -25,7 +25,7 @@
 		 },
 	"3": {
 			"day": "1",
-			"time": "23:02",
+			"time": "23:15",
 			"thatpistimulus": "0.png",
 			"pistimulus": "0",
 			"correctside": "B",
@@ -37,7 +37,7 @@
 		 },
 	"4": {	
 			"day": "1",
-			"time": "23:02",
+			"time": "23:15",
 			"thatpistimulus": "0.png",
 			"pistimulus": "0",
 			"correctside": "B",
@@ -49,7 +49,7 @@
 		 },	
 	"5": {
 			"day": "1",
-			"time": "23:04",
+			"time": "23:18",
 			"thatpistimulus": "0.png",
 			"pistimulus": "0",
 			"correctside": "B",
@@ -61,7 +61,7 @@
 		 },
 	"6": {	
 			"day": "1",
-			"time": "23:04",
+			"time": "23:18",
 			"thatpistimulus": "0.png",
 			"pistimulus": "0",
 			"correctside": "B",
@@ -73,7 +73,7 @@
 		 },
 	"7": {
 			"day": "1",
-			"time": "23:06",
+			"time": "23:21",
 			"thatpistimulus": "0.png",
 			"pistimulus": "0",
 			"correctside": "B",
@@ -85,7 +85,7 @@
 		 },
 	"8": {	
 			"day": "1",
-			"time": "23:06",
+			"time": "23:21",
 			"thatpistimulus": "0.png",
 			"pistimulus": "0",
 			"correctside": "B",
@@ -97,7 +97,7 @@
 		 },
 	"9": {
 			"day": "1",
-			"time": "23:08",
+			"time": "23:24",
 			"thatpistimulus": "0.png",
 			"pistimulus": "0",
 			"correctside": "B",
@@ -109,7 +109,7 @@
 		 },
 	"10": {	
 			"day": "1",
-			"time": "23:08",
+			"time": "23:24",
 			"thatpistimulus": "0.png",
 			"pistimulus": "0",
 			"correctside": "B",
