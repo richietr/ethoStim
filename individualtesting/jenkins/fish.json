@@ -4,41 +4,41 @@
 			"sex": "female",
 			"fishstandardlength": "TBD",
 			"node": "master",
-			"cam_node": "master",
+			"cam_node": "master"
 		 },
 	"Huma": {
 			"species": "gambusia",
 			"sex": "female",
 			"fishstandardlength": "TBD", 
 			"node": "master",
-			"cam_node": "master",
+			"cam_node": "master"
 		 },
 	"Hachi": {
 			"species": "gambusia",
 			"sex": "female",
 			"fishstandardlength": "TBD", 
 			"node": "master",
-			"cam_node": "master",
+			"cam_node": "master"
 		 },
 	"Laci": {
 			"species": "gambusia",
 			"sex": "female",
 			"fishstandardlength": "TBD", 
 			"node": "master",
-			"cam_node": "master",
+			"cam_node": "master"
 		 },
 	"Lana": {
 			"species": "gambusia",
 			"sex": "female",
 			"fishstandardlength": "TBD", 
 			"node": "master",
-			"cam_node": "master",
+			"cam_node": "master"
 		 },
 	"Lanet": {
 			"species": "gambusia",
 			"sex": "female",
 			"fishstandardlength": "TBD", 
 			"node": "master",
-			"cam_node": "master",
-		 },
+			"cam_node": "master"
+		 }
 }	
