@@ -1,12 +1,1 @@
-{
-	"startDate" : "11/22",
-	"round" : "1",
-	"mapping": {
-				"H1": "Harlene",
-				"H2": "Huma",
-				"H3": "Hachi",
-				"L1": "Laci",
-				"L2": "Lana",
-				"L3": "Lanet",
-				},
-}	
+{"startDate": "11/22", "round": "1", "mapping": {"H2": "Huma", "H3": "Harley", "H1": "Harlene", "L2": "Lanet", "L3": "Lana", "L1": "Luna"}}
