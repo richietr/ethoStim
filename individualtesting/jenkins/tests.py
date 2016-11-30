@@ -162,8 +162,10 @@ if __name__ == '__main__':
     if result is False:
         print('Failed Validation!')
         print("Exiting with Error Code 1")
+        print '*' * 50, '\n' 
         sys.exit(1)
     
     print('Passed Validation!')
     print("Exiting with Error Code 0")
+    print '*' * 50, '\n' 
     sys.exit(0)
