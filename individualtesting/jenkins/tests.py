@@ -5,6 +5,14 @@ import types
 import datetime
 from itertools import groupby
 
+def checkIfNumber(s):
+    if s[0] in ('-','+'):
+        return s[1:].isdigit()
+    return s.isdigit()  
+
+def respondsToPing(hostname):
+    return os.system("ping -c 1 -w2 " + hostname + " > /dev/null 2>&1")
+
 def parseTopJSON():
     with open(os.path.join('top.json'), 'r') as jsonFile:
         jsonString = jsonFile.read()
@@ -95,12 +103,6 @@ class Tests(object):
         self.schedules = ["H1", "H2", "H3", "L1", "L2", "L3"]
     
     @staticmethod
-    def checkIfNumber(s):
-        if s[0] in ('-','+'):
-            return s[1:].isdigit()
-        return s.isdigit()  
-    
-    @staticmethod
     def isFishInFishJson(self, fish):
         if fish in self.fish_dict:
             print self.me + ': ' + fish + ' is valid (in fish.json)'
@@ -108,6 +110,67 @@ class Tests(object):
         print self.me + ': ERROR> ' + fish + ' is NOT valid (NOT in fish.json'
         return False
     
+    @staticmethod
+    def runPiPingerTest(self):
+        print '\n', '*' * 50
+        print '*' * 16, ' Pi Pinger Test ', '*' * 16
+        print '*' * 50 
+        results = []
+        fish_list = []
+        hostname_list = []
+        # Check if mapping is in top.json
+        if 'mapping' in self.top_dict:
+            # Get a list of  all fish in mapping
+            tmp_dict = self.top_dict['mapping']
+            for sch in self.schedules:
+                if sch in tmp_dict:
+                    fish_list.append(tmp_dict[sch])
+                else:
+                    print self.me + ': Error> Schedule ' + sch + ' is not in mapping, issue with top.json'
+                    print self.me + ': Exiting...'
+                    sys.exit(1)                     
+        else:
+            print self.me + ': Error> Mapping is not in top_dict, issue with top.json'
+            print self.me + ': Exiting...'
+            sys.exit(1) 
+        
+        # Gather list of all hostnames (node and camera node per fish)
+        for fish in fish_list:
+            if fish in self.fish_dict:
+                tmp_dict2 = self.fish_dict[fish]
+                hostname_list.append(tmp_dict2['node'])
+                hostname_list.append(tmp_dict2['cam_node'])
+            else:
+                print self.me + ': Error> Fish is not in fish_dict, issue with fish.json, make sure fish is in fish.json'
+                print self.me + ': Exiting...'
+                sys.exit(1) 
+        
+        for hostname in hostname_list:
+            return_code = respondsToPing(hostname)
+            if(return_code == 0):
+                result = True
+            else:
+                result = False
+            print self.me + ': Did ' + str(hostname) + ' respond to a ping? ' + str(result)
+            results.append(result)
+                
+        # Check if any hostnames are repeated
+        tmp = [len(list(group)) for key, group in groupby(hostname_list)]
+        if (all(i == 1 for i in tmp)):
+            print self.me + ': All hostnames are assigned to only 1 Pi'
+            results.append(True)
+        else:
+            print self.me + ': ERROR> One or more hostnames are assigned to multiple Pis'
+            results.append(False)
+                
+        if False in results:
+            print '\nPi Pinger Test Result: FAIL'           
+            print '*' * 50        
+            return False
+        print '\nPi Pinger Test Result: PASS'         
+        print '*' * 50
+        return True
+        
     @staticmethod
     def runIsFishValidTest(self):
         print '\n', '*' * 50
@@ -225,7 +288,11 @@ class Tests(object):
                 results.append(self.runIsFishValidTest(self))
             elif test is 'date_is_valid':
                 results.append(self.runIsDateValidTest(self))
-        
+            elif test is 'pi_pinger':
+                results.append(self.runPiPingerTest(self))
+            else:
+                print 'ERROR> ' + test + ' is NOT a valid test!'
+            
         # Determine overall result
         if False in results:
             print '\nOverall Test Result: FAIL\n'          
