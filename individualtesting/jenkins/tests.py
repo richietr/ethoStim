@@ -2,6 +2,8 @@ import json
 import os
 import sys
 import types
+import datetime
+from itertools import groupby
 
 def parseTopJSON():
     with open(os.path.join('top.json'), 'r') as jsonFile:
@@ -99,11 +101,11 @@ class Tests(object):
         return s.isdigit()  
     
     @staticmethod
-    def isFishValid(self, fish):
+    def isFishInFishJson(self, fish):
         if fish in self.fish_dict:
-            print self.me + ': ' + fish + ' is valid'
+            print self.me + ': ' + fish + ' is valid (in fish.json)'
             return True
-        print self.me + ': ' + fish + ' is NOT valid'
+        print self.me + ': ERROR> ' + fish + ' is NOT valid (NOT in fish.json'
         return False
     
     @staticmethod
@@ -112,11 +114,15 @@ class Tests(object):
         print '*' * 14, ' Fish Validity Test ', '*' * 14
         print '*' * 50 
         results = []
+        fish_list = []
+        # Check if mapping is in top.json
         if 'mapping' in self.top_dict:
+            # Check if all fish in mapping are in fish.json
             tmp_dict = self.top_dict['mapping']
             for sch in self.schedules:
                 if sch in tmp_dict:
-                    results.append(self.isFishValid(self, tmp_dict[sch]))
+                    results.append(self.isFishInFishJson(self, tmp_dict[sch]))
+                    fish_list.append(tmp_dict[sch])
                 else:
                     print self.me + ': Error> Schedule ' + sch + ' is not in mapping, issue with top.json'
                     print self.me + ': Exiting...'
@@ -125,7 +131,16 @@ class Tests(object):
             print self.me + ': Error> Mapping is not in top_dict, issue with top.json'
             print self.me + ': Exiting...'
             sys.exit(1) 
-            
+        
+        # Check if any fish are assigned to more than 1 schedule
+        tmp = [len(list(group)) for key, group in groupby(fish_list)]
+        if (all(i == 1 for i in tmp)):
+            print self.me + ': All fish are assigned to only 1 schedule'
+            results.append(True)
+        else:
+            print self.me + ': ERROR> One or more fish are assigned to multiple schedules'
+            results.append(False)
+        
         if False in results:
             print '\nFish Validity Test Result: FAIL'           
             print '*' * 50        
@@ -134,6 +149,66 @@ class Tests(object):
         print '*' * 50
         return True
     
+    @staticmethod
+    def runIsDateValidTest(self):
+        DAYS_LIMIT = 30
+        print '\n', '*' * 50
+        print '*' * 14, ' Date Validity Test ', '*' * 14
+        print '*' * 50 
+        results = []
+        days_in_month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+        # Check if start date is in top.json
+        if 'startDate' in self.top_dict:
+            # Get today's date
+            now = datetime.datetime.now()
+            now_month = now.month
+            now_day = now.day        
+            print self.me + ': Current date/time is ' + str(now)
+            start_date = self.top_dict['startDate'].split('/')
+            start_month = int(start_date[0])
+            start_day = int(start_date[1])
+            # Check if start month is this month or next
+            if now_month is not 12:
+                print self.me + ': Is start month either this month or next? ' + str((start_month == now_month or start_month == now_month + 1))
+                results.append(start_month == now_month or start_month == now_month + 1)
+            else:
+                print self.me + ': Is start month either this month or next? ' + str((start_month == 12 or start_month == 1))
+                results.append(start_month == 12 or start_month == 1)
+            # Check if within 30 days
+            now_days = now_day
+            for i in range(1,now_month):
+                now_days = now_days + days_in_month[i-1]
+            start_days = start_day
+            for i in range(1,start_month):
+                start_days = start_days + days_in_month[i-1]
+            total_days = 0
+            for i in range(1,13):
+                total_days = total_days + days_in_month[i-1]
+            result = False
+            if now_days < total_days-30:
+                result = (now_days < start_days and start_days < now_days + DAYS_LIMIT)
+            else:
+                if(start_month == 12 and now_month == 12):
+                    result = True
+                else:
+                    days_left = total_days - now_days
+                    if days_left + start_days < DAYS_LIMIT:
+                        result = True
+            print self.me + ': Is start date within next 30 days? ' + str(result)
+            results.append(result)                            
+        else:
+            print self.me + ': Error> Start date is not in top_dict, issue with top.json'
+            print self.me + ': Exiting...'
+            sys.exit(1) 
+        
+        if False in results:
+            print '\nDate Validity Test Result: FAIL'           
+            print '*' * 50        
+            return False
+        print '\nDate Validity Test Result: PASS'         
+        print '*' * 50
+        return True
+        
     def runTests(self):                
         # Print out tests to run
         print '\n', '*' * 50
@@ -144,10 +219,14 @@ class Tests(object):
         
         results = []
         
+        # Test decode and launch
         for test in self.test_list:
             if test is 'fish_is_valid':
                 results.append(self.runIsFishValidTest(self))
-            
+            elif test is 'date_is_valid':
+                results.append(self.runIsDateValidTest(self))
+        
+        # Determine overall result
         if False in results:
             print '\nOverall Test Result: FAIL\n'          
             return False
