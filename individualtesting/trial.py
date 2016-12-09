@@ -89,7 +89,5 @@ if __name__ == '__main__':
                     args["sex"], args["fish"], args["day"], args["session"], args["thatpistimulus"], args["proportion"], args["fedSide"], args["correctside"])  
     
     call(["touch", vidout])
-    
-    return vidout
-    
+       
     sys.exit(0)
