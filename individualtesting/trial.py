@@ -52,14 +52,10 @@ class Trial:
         
     def videoFileName(self, species, tround, sl, sex, fishid, day, session,
                     thatpistimulus, proportion, fedside, correctside):
-        self.vidout = ('data/'+str(tround)+'/'+str(self.ip)+'/'+(str(species)+'_'+str(tround)
+        self.vidout = ((str(species)+'_'+str(tround)
         +'_'+str(sl)+'_'+str(sex) +'_'+str(fishid)+'_'+str(day)+'_'+
         str(session)+'_' +str(self.stim)+'_'+str(thatpistimulus)+'_'+str(proportion)+'_'+str(fedside)+'_'+str(correctside) + '.mkv'))
         print self.vidout
-        
-        call(["mkdir", "data"])
-        call(["mkdir", "data/" + str(tround)])
-        call(["mkdir", "data/" + str(tround) + "/" + str(self.ip)])
         return self.vidout
     
 
