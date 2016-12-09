@@ -90,4 +90,6 @@ if __name__ == '__main__':
     
     call(["touch", vidout])
     
+    return vidout
+    
     sys.exit(0)
