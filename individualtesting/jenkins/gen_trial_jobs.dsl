@@ -25,6 +25,7 @@ def round = "7"
 def camera = "FALSE"
 def node = "master"
 def cam_node = "master"
+def which_node = "master"
 
 //**********************************************************************
 //Read in json files
@@ -164,14 +165,16 @@ for (schedule in schedules) {
 			
 			//Decide between node with or without camera
 			if(camera == "TRUE") {
-				node = cam_node
+				which_node = cam_node
+			} else {
+			    which_node = node
 			}
-			println("node=" + node)
+			println("node=" + which_node)
 			
 			//Create CI job
 			createCiJob(ci_job_name, DAYS2KEEP, NUM2KEEP, fish, thatpistimulus, pistimulus, \
 				correctside, day, session, feedside, sex, proportion, species, \
-				fishstandardlength, round, camera, node, startDate)
+				fishstandardlength, round, camera, which_node, startDate)
 		}
 	}	
 	println("*****************End of " + schedule + " Schedule *****************")
