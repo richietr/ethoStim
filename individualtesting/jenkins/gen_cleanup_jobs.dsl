@@ -155,23 +155,23 @@ def createCiJob(def ci_job_name, def DAYS2KEEP, def NUM2KEEP, def this_node) {
 	  //DOM 	The day of the month (1–31)
 	  //MONTH 	The month (1–12)
 	  //DOW 	The day of the week (0–7) where 0 and 7 are Sunday.
-	  def (HOUR, MINUTE) = time.tokenize( ':' )
-	  def (MONTH, DOM) = startDate.tokenize( '/' )
+	  //def (HOUR, MINUTE) = time.tokenize( ':' )
+	  //def (MONTH, DOM) = startDate.tokenize( '/' )
 	  
 	  //This mapping will be okay until Feb 2020
-	  def days_in_month_map  = new HashMap<String,Integer>()
-	  days_in_month_map.put("1", 31)
-	  days_in_month_map.put("2", 28)
-	  days_in_month_map.put("3", 31)
-	  days_in_month_map.put("4", 30)
-	  days_in_month_map.put("5", 31)
-	  days_in_month_map.put("6", 30)
-	  days_in_month_map.put("7", 31)
-	  days_in_month_map.put("8", 31)
-	  days_in_month_map.put("9", 30)
-	  days_in_month_map.put("10", 31)
-	  days_in_month_map.put("11", 30)
-	  days_in_month_map.put("12", 31)
+	  //def days_in_month_map  = new HashMap<String,Integer>()
+	  //days_in_month_map.put("1", 31)
+	  //days_in_month_map.put("2", 28)
+	  //days_in_month_map.put("3", 31)
+	  //days_in_month_map.put("4", 30)
+	  //days_in_month_map.put("5", 31)
+	  //days_in_month_map.put("6", 30)
+	  //days_in_month_map.put("7", 31)
+	  //days_in_month_map.put("8", 31)
+	  //days_in_month_map.put("9", 30)
+	  //days_in_month_map.put("10", 31)
+	  //days_in_month_map.put("11", 30)
+	  //days_in_month_map.put("12", 31)
 
 	  //Adjust day/month based on day parameter
 	  //if(((day.toInteger()-1) + DOM.toInteger()) > days_in_month_map.(MONTH.toString())) {
