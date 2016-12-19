@@ -153,7 +153,7 @@ def createCiJob(def ci_job_name, def DAYS2KEEP, def NUM2KEEP, def this_node) {
 	  
 	  // run shell that deletes workspace
 	  steps {			
-		shell ( "rm -rf $WORKSPACE/../*" )
+		shell ( "cd ..; rm -rf *" )
 	  } //steps
 	} //job
 } //createCiJob
