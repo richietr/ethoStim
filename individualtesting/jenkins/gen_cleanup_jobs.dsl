@@ -131,7 +131,7 @@ for (schedule in schedules) {
 		for (i in range(0,1) {
             if (i == 0) {
                 this_node = node	      
-			else {
+			} else {
 			    this_node = cam_node
 			}
 			println("\n#######################")
