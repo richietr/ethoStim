@@ -166,6 +166,7 @@ for (schedule in schedules) {
 			if(camera == "TRUE") {
 				node = cam_node
 			}
+			println("node=" + node)
 			
 			//Create CI job
 			createCiJob(ci_job_name, DAYS2KEEP, NUM2KEEP, fish, thatpistimulus, pistimulus, \
