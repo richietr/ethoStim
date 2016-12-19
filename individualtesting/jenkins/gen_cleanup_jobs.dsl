@@ -116,7 +116,7 @@ for (schedule in schedules) {
 		println("cam_node=" + cam_node)
 		println("\n")
 		//Loop over each schedule and create a CI job
-		for (i in range(0,1)) {
+		for (i = 0; i <2; i++) {
             if (i == 0) {
                 this_node = node	      
 			} else {
