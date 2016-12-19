@@ -131,6 +131,8 @@ for (schedule in schedules) {
 			
 			//Create CI job
 			createCiJob(ci_job_name, DAYS2KEEP, NUM2KEEP, this_node)
+			
+			queue(ci_job_name)
 		}
 	}	
 	println("*******************************************************************")
