@@ -123,7 +123,7 @@ for (schedule in schedules) {
 			    this_node = cam_node
 			}
 			println("\n#######################")
-			println("Cleaning up " + this_node
+			println("Cleaning up " + this_node)
 			println("#######################")
 			
 			//Build up job name, fish + trial #
