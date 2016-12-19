@@ -11,21 +11,9 @@ def NUM2KEEP = 100
 //**********************************************************************
 def ci_job_name_root = 'cleanup-job'
 def fish = "Harlene"
-def thatpistimulus = "0"
-def pistimulus = "0.png"
-def correctside = "B"
-def day = "1"
-def session = "1"
-def feedside = "both"
-def sex = "female"
-def proportion = "0"
-def species = "gambusia"
-def fishstandardlength = "TBD"
-def round = "7"
-def camera = "FALSE"
 def node = "master"
 def cam_node = "master"
-def which_node = "master"
+def this_node = "master"
 
 //**********************************************************************
 //Read in json files
