@@ -58,7 +58,7 @@ class Trial:
         self.start = float(starttime)
         self.tLength = 6
         self.feedDelay = 3
-        self.feedDuration = 220
+        self.feedDuration = 10
         self.notch = float(notch)
 
         self.feeder_en = 17
@@ -176,15 +176,13 @@ class Trial:
         # Note time that trial really starts
         self.startT = time.time()
 
-        # Start recording
-        if use_camera:
-            self.startRecording(self)
-
-        time.sleep(2)
-
         # Turn on display
         pygame.display.flip()
         self.screen.blit(self.image, (40, 0))
+
+        # Start recording
+        if use_camera:
+            self.startRecording(self)
 
         # Wait until record length is reached
         while ((time.time() - self.startT) < self.tLength):
@@ -198,7 +196,7 @@ class Trial:
                        if feed:
                            # Set feeders direction to clockwise
                            self.setFeederDirCw(self)
-                       else:
+                       else:                           
                            # Set feeders direction to counter clockwise
                            self.setFeederDirCcw(self)
                        # Turn feeders on
@@ -216,7 +214,7 @@ class Trial:
                        if feed:
                            # Set feeders direction to counter clockwise
                            self.setFeederDirCcw(self)
-                       else:
+                       else:                           
                            # Set feeders direction to clockwise
                            self.setFeederDirCw(self)
                        # Turn feeders on
@@ -269,7 +267,7 @@ if __name__ == '__main__':
 
     T.ip = getIpAddr()
     T.whatStimulus()
-
+    
     # Set video filename
     video_file = T.videoFileName(args["species"], args["round"], args["fishstandardlength"],
                     args["sex"], args["fish"], args["day"], args["session"], args["thatpistimulus"], args["proportion"], args["fedSide"], args["correctside"])
@@ -278,7 +276,7 @@ if __name__ == '__main__':
     f = open("temp.txt", "w")
     f.write(video_file)
     f.close()
-
+    
     # Determine if camera will be used
     if args["camera"]:
         use_camera = True
@@ -286,7 +284,7 @@ if __name__ == '__main__':
     # Determine if feeding is needed
     if args["feed"]:
         feed = True
-
+    
     # Record video and feed
     T.runSingleTrial(feed, use_camera)
 
