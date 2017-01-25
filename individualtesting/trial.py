@@ -39,27 +39,77 @@ import netifaces
 import RPi.GPIO as GPIO
 import sys
 import os
+from threading import Thread
 
 def getIpAddr():
    ip = netifaces.ifaddresses('eth0')[2][0]['addr']
    print ip
    return ip
 
+def displayImage(stimulus):
+    global captureDone
+
+    pygame.display.init()
+    pygame.mouse.set_visible(False)
+    screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
+
+    stim, extension = os.path.splitext(stimulus)
+    if extension == '.png' or extension == '.PNG' or extension == '.jpg' or extension == '.JPG':
+    # still image
+        try:
+            image = pygame.image.load('src/' + str(stimulus))
+            image = pygame.transform.scale(image, (640, 460))
+        except IOError:
+            print 'Are you sure this file exists? check the src folder \
+            ony jpg/JPG, png/PNG formats'
+
+    while not captureDone:
+        pygame.display.flip()
+        screen.blit(image, (40, 0))
+
+def videoCapture(vidLength, vidOut, useCamera):
+    global captureDone
+
+    if useCamera:
+        print 'Initializing Camera...'
+        camera = picamera.PiCamera()
+        camera.resolution = (1280, 720)
+        camera.contrast = 100
+        camera.brightness = 75
+        camera.framerate = 25
+        camera.exposure_mode = 'auto'
+        camera.awb_mode = 'off'
+        camera.awb_gains = (1.8, 1.0)
+        camera.led = False
+        camera.rotation = 180
+
+        print 'Starting Recording...'
+        camera.start_recording(vidOut, format='h264')
+
+    print 'Sleep ' + str(vidLength) + ' secs...'
+    time.sleep(vidLength)
+
+    if useCamera:
+        print 'Stopping Recording...'
+        camera.stop_recording()
+        print 'Closing Camera...'
+        camera.close()
+
+    captureDone = True
+
 class Trial:
+
+    global captureDone
 
     def __init__(self, stim, starttime, notch):
 
-        pygame.display.init()
-        pygame.mouse.set_visible(False)
-
         self.vidout = None
-        self.screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
         self.stimulus = stim
         self.start = float(starttime)
-        self.tLength = 6
-        self.feedDelay = 3
-        self.feedDuration = 10
-        self.notch = float(notch)
+        self.tLength = 256
+        self.feedDelay = 8
+        self.feedDuration = 220
+        self.notch = 3.8
 
         self.feeder_en = 17
         self.feeder_a = 27
@@ -79,14 +129,6 @@ class Trial:
 
     def whatStimulus(self):
         self.stim, extension = os.path.splitext(self.stimulus)
-        if extension == '.png' or extension == '.PNG' or extension == '.jpg' or extension == '.JPG':
-        # still image
-            try:
-                self.image = pygame.image.load('src/' + str(self.stimulus))
-                self.image = pygame.transform.scale(self.image, (640, 460))
-            except IOError:
-                print 'Are you sure this file exists? check the src folder \
-                ony jpg/JPG, png/PNG formats'
 
     # Sets Feeder(s) direction to clockwise
     @staticmethod
@@ -104,14 +146,12 @@ class Trial:
 
     @staticmethod
     def turnOnFeeder(self):
-        #GPIO.output(self.feeder_en, 1)
         self.p = GPIO.PWM(self.feeder_en, self.freq)
         self.p.start(self.dc)
         print 'turnOnFeeder'
 
     @staticmethod
     def turnOffFeeder(self):
-        #GPIO.output(self.feeder_en, 0)
         self.p.stop()
         print 'turnOffFeeder'
 
@@ -122,7 +162,6 @@ class Trial:
         self.camera.contrast = 100
         self.camera.brightness = 75
         self.camera.framerate = 25
-        # self.camera.autofocus = False
         self.camera.exposure_mode = 'auto'
         self.camera.awb_mode = 'off'
         self.camera.awb_gains = (1.8, 1.0)
@@ -163,11 +202,8 @@ class Trial:
 
     def runSingleTrial(self, feed, use_camera):
 
-        fed = False
-
-        # Initialize camera
-        if use_camera:
-            self.cameraInit(self)
+        global captureDone
+        captureDone = False
 
         # Wait for start time
         while time.time() < self.start:
@@ -176,64 +212,61 @@ class Trial:
         # Note time that trial really starts
         self.startT = time.time()
 
+        # Start up thread which control the video capture
+        thread = Thread(target = videoCapture, args = (self.tLength, self.vidout, use_camera, ))
+        thread.start()
+
+        # Sleep a few seconds to allow camera to come up
+        time.sleep(2)
+
         # Turn on display
-        pygame.display.flip()
-        self.screen.blit(self.image, (40, 0))
+        thread2 = Thread(target = displayImage, args = (self.stimulus,))
+        thread2.start()
 
-        # Start recording
-        if use_camera:
-            self.startRecording(self)
+        if feed:
+            # Set feeders direction to clockwise
+            self.setFeederDirCw(self)
+        else:
+            # Set feeders direction to counter clockwise
+            self.setFeederDirCcw(self)
 
-        # Wait until record length is reached
-        while ((time.time() - self.startT) < self.tLength):
+	time.sleep(self.feedDelay)
+        print 'Kelly added the feed delay here:' + str(self.feedDelay) + ' secs'
 
-           #print (time.time()-self.startT)
+        # Turn feeders on
+        self.turnOnFeeder(self)
+        # Wait for notch time
+        print 'Sleep ' + str(self.notch) + ' secs'
+        time.sleep(self.notch)
+        # Turn feeders off
+        self.turnOffFeeder(self)
+        # Wait for feed duration
+        print 'Eat Fish, EAT!'
+        print 'Sleep ' + str(self.feedDuration) + ' secs'
+        time.sleep(self.feedDuration)
+        # Switch direction
+        if feed:
+            # Set feeders direction to counter clockwise
+            self.setFeederDirCcw(self)
+        else:
+            # Set feeders direction to clockwise
+            self.setFeederDirCw(self)
+        # Turn feeders on
+        self.turnOnFeeder(self)
+        # Return to start position
+        print 'Sleep ' + str(self.notch) + ' secs'
+        time.sleep(self.notch)
+        # Turn feeders off
+        self.turnOffFeeder(self)
 
-           # Wait and feed (if applicable)
-           try:
-               if (time.time() - self.startT) > self.feedDelay:
-                   if not fed:
-                       if feed:
-                           # Set feeders direction to clockwise
-                           self.setFeederDirCw(self)
-                       else:                           
-                           # Set feeders direction to counter clockwise
-                           self.setFeederDirCcw(self)
-                       # Turn feeders on
-                       self.turnOnFeeder(self)
-                       # Wait for notch time
-                       print 'Sleep ' + str(self.notch) + ' secs'
-                       time.sleep(self.notch)
-                       # Turn feeders off
-                       self.turnOffFeeder(self)
-                       # Wait for feed duration
-                       print 'Eat Fish, EAT!'
-                       print 'Sleep ' + str(self.feedDuration) + ' secs'
-                       time.sleep(self.feedDuration)
-                       # Switch direction
-                       if feed:
-                           # Set feeders direction to counter clockwise
-                           self.setFeederDirCcw(self)
-                       else:                           
-                           # Set feeders direction to clockwise
-                           self.setFeederDirCw(self)
-                       # Turn feeders on
-                       self.turnOnFeeder(self)
-                       # Return to start position
-                       print 'Sleep ' + str(self.notch) + ' secs'
-                       time.sleep(self.notch)
-                       # Turn feeders off
-                       self.turnOffFeeder(self)
-                       fed = True
-           except KeyboardInterrupt:
-               print'KeyInterrupt'
-               safeQuit()
+        print 'Wait for recording to complete'
+        while not captureDone:
+	    time.sleep(1)
+            print 'Waiting...'
 
-        # Stop recording and close camera
-        if use_camera:
-            self.stopRecording(self)
-            self.cameraQuit(self)
-
+        print 'Done'
+        thread.join()
+        thread2.join()
 
 if __name__ == '__main__':
 
@@ -267,7 +300,7 @@ if __name__ == '__main__':
 
     T.ip = getIpAddr()
     T.whatStimulus()
-    
+
     # Set video filename
     video_file = T.videoFileName(args["species"], args["round"], args["fishstandardlength"],
                     args["sex"], args["fish"], args["day"], args["session"], args["thatpistimulus"], args["proportion"], args["fedSide"], args["correctside"])
@@ -276,7 +309,7 @@ if __name__ == '__main__':
     f = open("temp.txt", "w")
     f.write(video_file)
     f.close()
-    
+
     # Determine if camera will be used
     if args["camera"]:
         use_camera = True
@@ -284,7 +317,7 @@ if __name__ == '__main__':
     # Determine if feeding is needed
     if args["feed"]:
         feed = True
-    
+
     # Record video and feed
     T.runSingleTrial(feed, use_camera)
 
