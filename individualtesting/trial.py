@@ -106,10 +106,10 @@ class Trial:
         self.vidout = None
         self.stimulus = stim
         self.start = float(starttime)
-        self.tLength = 256
+        self.tLength = 56
         self.feedDelay = 8
-        self.feedDuration = 220
-        self.notch = 3.8
+        self.feedDuration = 20
+        self.notch = 10
 
         self.feeder_en = 17
         self.feeder_a = 27
