@@ -247,7 +247,7 @@ class Trial:
         self.turnOnFeeder(self)
         # Wait for feeder to turn into place time
         print 'Sleep ' + str(intime) + ' secs'
-        time.sleep(intime)
+        time.sleep(intime*1.0)
         # Turn feeders off
         self.turnOffFeeder(self)
         # Wait for feed duration
@@ -265,7 +265,7 @@ class Trial:
         self.turnOnFeeder(self)
         # Return to start position
         print 'Sleep ' + str(outtime) + ' secs'
-        time.sleep(outtime)
+        time.sleep(outtime*1.0)
         # Turn feeders off
         self.turnOffFeeder(self)
 
