@@ -176,8 +176,7 @@ class Trial:
 
     def videoFileName(self, species, tround, sl, sex, fishid, day, session,
                     thatpistimulus, proportion, fedside, correctside):
-        # TODO: Remove data/<ip> whenever switch to jenkins occurs
-        self.vidout = ('data/' + str(self.ip) + '/' + (str(species) + '_' + str(tround)
+        self.vidout = ((str(species) + '_' + str(tround)
                        + '_' + str(sl) + '_' + str(sex) + '_' + str(fishid) + '_' + str(day) + '_' +
                        str(session) + '_' + str(self.stim) + '_' + str(thatpistimulus) + '_' +
                        str(proportion) + '_' + str(fedside) + '_' + str(correctside) + '.mkv'))
