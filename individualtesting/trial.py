@@ -101,7 +101,7 @@ class Trial:
 
     global captureDone
 
-    def __init__(self, stim, starttime, notch):
+    def __init__(self, stim, starttime, cwtime, ccwtime):
 
         self.vidout = None
         self.stimulus = stim
@@ -109,7 +109,8 @@ class Trial:
         self.tLength = 56
         self.feedDelay = 8
         self.feedDuration = 20
-        self.notch = 10
+        self.cwtime = cwtime
+        self.ccwtime = ccwtime
 
         self.feeder_en = 17
         self.feeder_a = 27
@@ -125,6 +126,9 @@ class Trial:
         GPIO.setup(self.feeder_en, GPIO.OUT)
         GPIO.setup(self.feeder_a, GPIO.OUT)
         GPIO.setup(self.feeder_b, GPIO.OUT)
+        GPIO.output(self.feeder_en, 0)
+        GPIO.output(self.feeder_a, 0)
+        GPIO.output(self.feeder_b, 0)
         print "GPIOinit"
 
     def whatStimulus(self):
@@ -195,6 +199,9 @@ class Trial:
     def safeQuit(self):
         # Ensure feeders are OFF
         self.turnOffFeeder(self)
+        GPIO.output(self.feeder_en, 0)
+        GPIO.output(self.feeder_a, 0)
+        GPIO.output(self.feeder_b, 0)
         GPIO.cleanup()
         print "GPIOcleanup"
         pygame.quit()
@@ -226,18 +233,21 @@ class Trial:
         if feed:
             # Set feeders direction to clockwise
             self.setFeederDirCw(self)
+            intime = self.cwtime
+            outtime = self.ccwtime
         else:
             # Set feeders direction to counter clockwise
             self.setFeederDirCcw(self)
+            intime = self.ccwtime
+            outtime = self.cwtime
 
-	time.sleep(self.feedDelay)
-        print 'Kelly added the feed delay here:' + str(self.feedDelay) + ' secs'
+        time.sleep(self.feedDelay)
 
         # Turn feeders on
         self.turnOnFeeder(self)
-        # Wait for notch time
-        print 'Sleep ' + str(self.notch) + ' secs'
-        time.sleep(self.notch)
+        # Wait for feeder to turn into place time
+        print 'Sleep ' + str(intime) + ' secs'
+        time.sleep(intime)
         # Turn feeders off
         self.turnOffFeeder(self)
         # Wait for feed duration
@@ -254,8 +264,8 @@ class Trial:
         # Turn feeders on
         self.turnOnFeeder(self)
         # Return to start position
-        print 'Sleep ' + str(self.notch) + ' secs'
-        time.sleep(self.notch)
+        print 'Sleep ' + str(outtime) + ' secs'
+        time.sleep(outtime)
         # Turn feeders off
         self.turnOffFeeder(self)
 
@@ -277,7 +287,8 @@ if __name__ == '__main__':
     os.environ["DISPLAY"] = ":0.0"
 
     ap = argparse.ArgumentParser()
-    ap.add_argument("-n", "--notch", help="Time is seconds that motor(s) is on")
+    ap.add_argument("-a", "--cwtime", help="Time is seconds that motor(s) is on in clockwise dir")
+    ap.add_argument("-b", "--ccwtime", help="Time is seconds that motor(s) is on in counter clockwise dir")
     ap.add_argument("-f", "--fish", help="ID of fish in tank")
     ap.add_argument("-ts", "--thatpistimulus", help="numerosity stimulus being shown on the other raspberry pi in the tank")
     ap.add_argument("-ps", "--pistimulus", help="stimulus being presented with this raspberry pi")
@@ -305,21 +316,20 @@ if __name__ == '__main__':
     video_file = T.videoFileName(args["species"], args["round"], args["fishstandardlength"],
                     args["sex"], args["fish"], args["day"], args["session"], args["thatpistimulus"], args["proportion"], args["fedSide"], args["correctside"])
 
-    # Write video file name out to temp.txt, needed by Jenkins
-    f = open("temp.txt", "w")
-    f.write(video_file)
-    f.close()
-
     # Determine if camera will be used
     if args["camera"]:
         use_camera = True
+        # Write video file name out to temp.txt, needed by Jenkins
+        f = open("temp.txt", "w")
+        f.write(video_file)
+        f.close()
 
     # Determine if feeding is needed
     if args["feed"]:
         feed = True
 
     # Record video and feed
-    T.runSingleTrial(feed, use_camera)
+    T.runSingleTrial(feed, use_camera, args["cwtime"], args["ccwtime"])
 
     # Cleanup and Exit
     T.safeQuit()
