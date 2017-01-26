@@ -109,8 +109,8 @@ class Trial:
         self.tLength = 56
         self.feedDelay = 8
         self.feedDuration = 20
-        self.cwtime = cwtime
-        self.ccwtime = ccwtime
+        self.cwtime = float(cwtime)
+        self.ccwtime = float(ccwtime)
 
         self.feeder_en = 17
         self.feeder_a = 27
@@ -247,7 +247,7 @@ class Trial:
         self.turnOnFeeder(self)
         # Wait for feeder to turn into place time
         print 'Sleep ' + str(intime) + ' secs'
-        time.sleep(intime*1.0)
+        time.sleep(intime)
         # Turn feeders off
         self.turnOffFeeder(self)
         # Wait for feed duration
@@ -265,7 +265,7 @@ class Trial:
         self.turnOnFeeder(self)
         # Return to start position
         print 'Sleep ' + str(outtime) + ' secs'
-        time.sleep(outtime*1.0)
+        time.sleep(outtime)
         # Turn feeders off
         self.turnOffFeeder(self)
 
