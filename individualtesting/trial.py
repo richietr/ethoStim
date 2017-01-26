@@ -307,7 +307,7 @@ if __name__ == '__main__':
     args = vars(ap.parse_args())
 
 
-    T = Trial(args["pistimulus"], args["startTime"], args["notch"])
+    T = Trial(args["pistimulus"], args["startTime"], args["cwtime"], args["ccwtime"])
 
     T.ip = getIpAddr()
     T.whatStimulus()
@@ -329,7 +329,7 @@ if __name__ == '__main__':
         feed = True
 
     # Record video and feed
-    T.runSingleTrial(feed, use_camera, args["cwtime"], args["ccwtime"])
+    T.runSingleTrial(feed, use_camera)
 
     # Cleanup and Exit
     T.safeQuit()
