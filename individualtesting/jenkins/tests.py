@@ -134,9 +134,9 @@ class Tests(object):
     def isPiInPiesJson(self, pi):
         if pi in self.pies_dict:
             print self.me + ': ' + pi + ' is valid (in pies.json)'
-            return True
+            return 0
         print self.me + ': ERROR> ' + pi + ' is NOT valid (NOT in pies.json)'
-        return False   
+        return 1   
 
     @staticmethod
     def runPiInPiesTest(self):
@@ -186,10 +186,10 @@ class Tests(object):
         #TODO: Add check if hostname is repeated in pies.json
                 
         if False in results:
-            print '\nPi Pinger Test Result: FAIL'           
+            print '\nPi in Pies JSON Test Result: FAIL'           
             print '*' * 50        
             return False
-        print '\nPi Pinger Test Result: PASS'         
+        print '\nPi in Pies JSON Test Result: PASS'         
         print '*' * 50
         return True
             
