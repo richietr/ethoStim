@@ -1,7 +1,7 @@
 {
 	"1": {
 			"day": "1",
-			"time": "15:35",
+			"time": "15:45",
 			"thatpistimulus": "6",
 			"pistimulus": "12.png",
 			"correctside": "B",
@@ -10,5 +10,17 @@
 			"proportion": "0",
 			"feed": "TRUE",
 			"camera": "FALSE",
+		 },
+	"2": {
+			"day": "1",
+			"time": "15:45",
+			"thatpistimulus": "6",
+			"pistimulus": "12.png",
+			"correctside": "B",
+			"session": "1",
+			"feedside": "both",
+			"proportion": "0",
+			"feed": "TRUE",
+			"camera": "TRUE",
 		 },
 }
