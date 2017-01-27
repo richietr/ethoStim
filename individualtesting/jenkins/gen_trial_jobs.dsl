@@ -243,7 +243,8 @@ def createCiJob(def ci_job_name, def DAYS2KEEP, def NUM2KEEP, def fish, \
 			MONTH = "1"
 		}
 		println(day + " " + DOM + " " + MONTH)
-		println(day.toInteger.GetType())
+		println((day.toInteger() - 1))
+		println(day.GetType())
 		DOM = (((day.toInteger() - 1) + DOM.toInteger()) - days_in_month_map.(MONTH.toString())).toString()
 	  } else {
 		DOM = (DOM.toInteger() + day.toInteger() - 1).toString()
