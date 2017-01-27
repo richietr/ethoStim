@@ -332,7 +332,7 @@ class Tests(object):
                 total_days = total_days + days_in_month[i-1]
             result = False
             if now_days < total_days-30:
-                result = (now_days < start_days and start_days < now_days + DAYS_LIMIT)
+                result = (now_days <= start_days and start_days < now_days + DAYS_LIMIT)
             else:
                 if(start_month == 12 and now_month == 12):
                     result = True
