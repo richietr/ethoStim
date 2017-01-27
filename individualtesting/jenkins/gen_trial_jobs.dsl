@@ -238,7 +238,11 @@ def createCiJob(def ci_job_name, def DAYS2KEEP, def NUM2KEEP, def fish, \
 	  //Adjust day/month based on day parameter
 	  if(((day.toInteger()-1) + DOM.toInteger()) > days_in_month_map.(MONTH.toString())) {
 		if(MONTH != "12") {
-			MONTH = "0" + (MONTH.toInteger() + 1).toString()
+			if(MONTH == "9" || MONTH == "10" || MONTH == "11") {
+				(MONTH.toInteger() + 1).toString()
+			} else {
+				MONTH = "0" + (MONTH.toInteger() + 1).toString()
+			}
 		} else {
 			MONTH = "01"
 		}
