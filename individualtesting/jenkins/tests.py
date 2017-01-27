@@ -51,6 +51,25 @@ def parseFishJSON():
     
     return fish_dict       
                         
+def parsePiesJSON():
+    with open(os.path.join('pies.json'), 'r') as jsonFile:
+        jsonString = jsonFile.read()
+        paramsDict = json.loads(jsonString)
+        for k,v in paramsDict.iteritems():
+            if type(v) == types.UnicodeType:    
+                path_elems = v.split('\\')
+                newPath = os.path.join(*path_elems)
+                paramsDict[k] = newPath
+    pies_dict = paramsDict
+    
+    # check error conditions           
+    if pies_dict is None:
+        print 'Tests: Error> Pies dictionary is None, problem parsing pies.json'
+        print 'Tests: Exiting...'
+        sys.exit(1) 
+    
+    return fish_dict  
+    
 def parseTestsJSON():        
     with open(os.path.join('tests.json'), 'r') as jsonFile:
         jsonString = jsonFile.read()
@@ -100,6 +119,7 @@ class Tests(object):
         self.top_dict = parseTopJSON()
         self.fish_dict = parseFishJSON()
         self.test_list = parseTestsJSON()     
+        self.pies_dict = parsePiesJSON()
         self.schedules = ["H1", "H2", "H3", "L1", "L2", "L3"]
     
     @staticmethod
@@ -107,9 +127,72 @@ class Tests(object):
         if fish in self.fish_dict:
             print self.me + ': ' + fish + ' is valid (in fish.json)'
             return True
-        print self.me + ': ERROR> ' + fish + ' is NOT valid (NOT in fish.json'
+        print self.me + ': ERROR> ' + fish + ' is NOT valid (NOT in fish.json)'
         return False
-    
+        
+    @staticmethod
+    def isPiInPiesJson(self, pi):
+        if pi in self.pies_dict:
+            print self.me + ': ' + pi + ' is valid (in pies.json)'
+            return True
+        print self.me + ': ERROR> ' + pi + ' is NOT valid (NOT in pies.json)'
+        return False   
+
+    @staticmethod
+    def runPiInPiesTest(self):
+        print '\n', '*' * 50
+        print '*' * 16, ' Pi In Pies JSON Test ', '*' * 16
+        print '*' * 50 
+        results = []
+        fish_list = []
+        hostname_list = []
+        # Check if mapping is in top.json
+        if 'mapping' in self.top_dict:
+            # Get a list of  all fish in mapping
+            tmp_dict = self.top_dict['mapping']
+            for sch in self.schedules:
+                if sch in tmp_dict:
+                    fish_list.append(tmp_dict[sch])
+                else:
+                    print self.me + ': Error> Schedule ' + sch + ' is not in mapping, issue with top.json'
+                    print self.me + ': Exiting...'
+                    sys.exit(1)                     
+        else:
+            print self.me + ': Error> Mapping is not in top_dict, issue with top.json'
+            print self.me + ': Exiting...'
+            sys.exit(1) 
+        
+        # Gather list of all hostnames (node and camera node per fish)
+        for fish in fish_list:
+            if fish in self.fish_dict:
+                tmp_dict2 = self.fish_dict[fish]
+                hostname_list.append(tmp_dict2['node'])
+                hostname_list.append(tmp_dict2['cam_node'])
+            else:
+                print self.me + ': Error> Fish is not in fish_dict, issue with fish.json, make sure fish is in fish.json'
+                print self.me + ': Exiting...'
+                sys.exit(1) 
+        
+        for hostname in hostname_list:
+            return_code = isPiInPiesJson(hostname)
+            if(return_code == 0):
+                result = True
+            else:
+                result = False
+            print self.me + ': Is ' + str(hostname) + ' in pies.json? ' + str(result)
+            results.append(result)
+                
+        # Check if any hostnames are repeated
+        #TODO: Add check if hostname is repeated in pies.json
+                
+        if False in results:
+            print '\nPi Pinger Test Result: FAIL'           
+            print '*' * 50        
+            return False
+        print '\nPi Pinger Test Result: PASS'         
+        print '*' * 50
+        return True
+            
     @staticmethod
     def runPiPingerTest(self):
         print '\n', '*' * 50
@@ -290,6 +373,8 @@ class Tests(object):
                 results.append(self.runIsDateValidTest(self))
             elif test is 'pi_pinger':
                 results.append(self.runPiPingerTest(self))
+            elif test is 'pi_in_pies_json':
+                results.append(self.runPiInPiesTest(self))				
             else:
                 print 'ERROR> ' + test + ' is NOT a valid test!'
             
