@@ -68,7 +68,7 @@ def parsePiesJSON():
         print 'Tests: Exiting...'
         sys.exit(1) 
     
-    return fish_dict  
+    return pies_dict  
     
 def parseTestsJSON():        
     with open(os.path.join('tests.json'), 'r') as jsonFile:
