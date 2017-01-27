@@ -106,9 +106,9 @@ class Trial:
         self.vidout = None
         self.stimulus = stim
         self.start = float(starttime)
-        self.tLength = 56
+        self.tLength = 240
         self.feedDelay = 8
-        self.feedDuration = 20
+        self.feedDuration = 220
         self.cwtime = float(cwtime)
         self.ccwtime = float(ccwtime)
 
