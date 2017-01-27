@@ -174,7 +174,7 @@ class Tests(object):
                 sys.exit(1) 
         
         for hostname in hostname_list:
-            return_code = isPiInPiesJson(hostname)
+            return_code = self.isPiInPiesJson(hostname)
             if(return_code == 0):
                 result = True
             else:
