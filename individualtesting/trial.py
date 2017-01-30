@@ -109,14 +109,16 @@ class Trial:
         self.tLength = 256
         self.feedDelay = 8
         self.feedDuration = 220
-        self.cwtime = float(cwtime)
-        self.ccwtime = float(ccwtime)
+        #self.cwtime = float(cwtime)
+        #self.ccwtime = float(ccwtime)
+        self.cwtime = .55
+        self.ccwtime = .55
 
         self.feeder_en = 17
         self.feeder_a = 27
         self.feeder_b = 22
-        self.freq = 100
-        self.dc = 13
+        #self.freq = 100
+        #self.dc = 13
         self.feeder = None
         self.ip = None
 
@@ -150,13 +152,15 @@ class Trial:
 
     @staticmethod
     def turnOnFeeder(self):
-        self.p = GPIO.PWM(self.feeder_en, self.freq)
-        self.p.start(self.dc)
+        #self.p = GPIO.PWM(self.feeder_en, self.freq)
+        #self.p.start(self.dc)
+        GPIO.output(self.feeder_en, 1)
         print 'turnOnFeeder'
 
     @staticmethod
     def turnOffFeeder(self):
-        self.p.stop()
+        #self.p.stop()
+        GPIO.output(self.feeder_en, 0)
         print 'turnOffFeeder'
 
     @staticmethod
@@ -283,6 +287,7 @@ if __name__ == '__main__':
     feed = False
     video_file = 'N/A'
 
+    # send export DISPLAY=:0.0 (this is linux specific)
     os.environ["DISPLAY"] = ":0.0"
 
     ap = argparse.ArgumentParser()
