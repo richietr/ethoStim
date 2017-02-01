@@ -11,16 +11,24 @@ if __name__ == '__main__':
 
     args = vars(ap.parse_args())
 
-    a_dict = {args["pi"]: {"cwtime": args["cwtime"], "ccwtime": args["ccwtime"]}}
+    pi = args["pi"]
+    a_dict = {pi: {"cwtime": args["cwtime"], "ccwtime": args["ccwtime"]}}
     
-    print a_dict
+    #print a_dict
     
     with open('pies.json') as f:
         data = json.load(f)
     
+    if pi in data:
+        print 'ERROR> ' + pi + ' is already in pies.json!'
+        print 'Remove pi before adding!'
+        sys.exit(1)
+        
     data.update(a_dict)
     
     with open('pies.json', 'w') as f:
-        json.dump(data, f)
+        json.dump(data, f, sort_keys=True, indent=4, separators=(',', ': '))
+    
+    print 'SUCCESS> ' + pi + ' was added to pies.json'
     
     sys.exit(0)
