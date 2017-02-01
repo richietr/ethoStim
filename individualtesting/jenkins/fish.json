@@ -1,1 +1,86 @@
-{"Olympia": {"node": "mars", "fishstandardlength": "TBD", "cam_node": "earth", "species": "gambusia", "sex": "female"}, "Lanet": {"node": "mars", "fishstandardlength": "TBD", "cam_node": "earth", "species": "gambusia", "sex": "female"}, "Lana": {"node": "saturn", "fishstandardlength": "TBD", "cam_node": "jupiter", "species": "gambusia", "sex": "female"}, "Laci": {"node": "neptune", "fishstandardlength": "TBD", "cam_node": "uranus", "species": "gambusia", "sex": "female"}, "Opal": {"node": "makemake", "fishstandardlength": "TBD", "cam_node": "haumea", "species": "gambusia", "sex": "female"}, "Inez": {"node": "ceres", "fishstandardlength": "TBD", "cam_node": "pluto", "species": "gambusia", "sex": "female"}, "Ontario": {"node": "neptune", "fishstandardlength": "TBD", "cam_node": "uranus", "species": "gambusia", "sex": "female"}, "NA": {"node": "venus", "fishstandardlength": "TBD", "cam_node": "mercury", "species": "gambusia", "sex": "female"}, "Harlene": {"node": "ceres", "fishstandardlength": "TBD", "cam_node": "pluto", "species": "gambusia", "sex": "female"}, "Ivanka": {"node": "saturn", "fishstandardlength": "TBD", "cam_node": "jupiter", "species": "gambusia", "sex": "female"}, "Huma": {"node": "venus", "fishstandardlength": "TBD", "cam_node": "mercury", "species": "gambusia", "sex": "female"}, "Hachi": {"node": "makemake", "fishstandardlength": "TBD", "cam_node": "haumea", "species": "gambusia", "sex": "female"}}
+{
+    "Hachi": {
+        "cam_node": "haumea",
+        "fishstandardlength": "TBD",
+        "node": "makemake",
+        "sex": "female",
+        "species": "gambusia"
+    },
+    "Harlene": {
+        "cam_node": "pluto",
+        "fishstandardlength": "TBD",
+        "node": "ceres",
+        "sex": "female",
+        "species": "gambusia"
+    },
+    "Huma": {
+        "cam_node": "mercury",
+        "fishstandardlength": "TBD",
+        "node": "venus",
+        "sex": "female",
+        "species": "gambusia"
+    },
+    "Inez": {
+        "cam_node": "pluto",
+        "fishstandardlength": "TBD",
+        "node": "ceres",
+        "sex": "female",
+        "species": "gambusia"
+    },
+    "Ivanka": {
+        "cam_node": "jupiter",
+        "fishstandardlength": "TBD",
+        "node": "saturn",
+        "sex": "female",
+        "species": "gambusia"
+    },
+    "Laci": {
+        "cam_node": "uranus",
+        "fishstandardlength": "TBD",
+        "node": "neptune",
+        "sex": "female",
+        "species": "gambusia"
+    },
+    "Lana": {
+        "cam_node": "jupiter",
+        "fishstandardlength": "TBD",
+        "node": "saturn",
+        "sex": "female",
+        "species": "gambusia"
+    },
+    "Lanet": {
+        "cam_node": "earth",
+        "fishstandardlength": "TBD",
+        "node": "mars",
+        "sex": "female",
+        "species": "gambusia"
+    },
+    "NA": {
+        "cam_node": "mercury",
+        "fishstandardlength": "TBD",
+        "node": "venus",
+        "sex": "female",
+        "species": "gambusia"
+    },
+    "Olympia": {
+        "cam_node": "earth",
+        "fishstandardlength": "TBD",
+        "node": "mars",
+        "sex": "female",
+        "species": "gambusia"
+    },
+    "Ontario": {
+        "cam_node": "uranus",
+        "fishstandardlength": "TBD",
+        "node": "neptune",
+        "sex": "female",
+        "species": "gambusia"
+    },
+    "Opal": {
+        "cam_node": "haumea",
+        "fishstandardlength": "TBD",
+        "node": "makemake",
+        "sex": "female",
+        "species": "gambusia"
+    }
+}
