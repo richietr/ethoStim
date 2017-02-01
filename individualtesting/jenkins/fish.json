@@ -82,12 +82,5 @@
         "node": "makemake",
         "sex": "female",
         "species": "gambusia"
-    },
-    "Ted": {
-        "cam_node": "master",
-        "fishstandardlength": "TBD",
-        "node": "master",
-        "sex": "female",
-        "species": "gambusia"
     }
 }
