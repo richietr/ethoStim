@@ -1,1 +1,12 @@
-{"startDate": "01/29", "round": "9", "mapping": {"H2": "Ivanka", "H3": "NA", "H1": "Inez", "L2": "Olympia", "L3": "Opal", "L1": "Ontario"}}
+{
+    "mapping": {
+        "H1": "Inez",
+        "H2": "Ivanka",
+        "H3": "NA",
+        "L1": "Ontario",
+        "L2": "Olympia",
+        "L3": "Opal"
+    },
+    "round": "9",
+    "startDate": "02/01"
+}
