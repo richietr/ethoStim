@@ -167,30 +167,30 @@ for (schedule in schedules) {
 			println("proportion=" + proportion)
 			println("feed=" + feed)
 			println("camera=" + camera)
-			
+
 			//Build up job name, fish + trial #
 			ci_job_name = ci_job_name_root + "_" + fish + "_" + item.key
-			
+
 			//Decide between node with or without camera
 			if(camera == "TRUE") {
 				which_node = cam_node
 			} else {
-			    which_node = node
+				which_node = node
 			}
 			println("node=" + which_node)
-			
+
 			//Determine cw and ccw times
 			cwtime = jsonPies.(which_node.toString())."cwtime"
 			ccwtime = jsonPies.(which_node.toString())."ccwtime"
 			println("cwtime=" + cwtime)
 			println("ccwtime=" + ccwtime)
-			
+
 			//Create CI job
 			createCiJob(ci_job_name, DAYS2KEEP, NUM2KEEP, fish, thatpistimulus, pistimulus, \
 				correctside, day, session, feedside, sex, proportion, species, \
-				fishstandardlength, round, camera, which_node, startDate, cwtime, ccwtime)
+				fishstandardlength, round, camera, which_node, startDate, cwtime, ccwtime, feed)
 		}
-	}	
+	}
 	println("*****************End of " + schedule + " Schedule *****************")
 }
 
@@ -201,16 +201,16 @@ def createCiJob(def ci_job_name, def DAYS2KEEP, def NUM2KEEP, def fish, \
                 def thatpistimulus, def pistimulus, def correctside, \
                 def day, def session, def feedside, def sex, def proportion, \
                 def species, def fishstandardlength, def round, def camera, \
-                def node, def startDate, def cwtime, def ccwtime) {
+                def node, def startDate, def cwtime, def ccwtime, def feed) {
 	job(ci_job_name){
 	  logRotator {
 		daysToKeep(DAYS2KEEP)
 		numToKeep(NUM2KEEP)
 	  }
-	  
+
 	  //Container job runs on master, sub-job will be executed on NODE specified parameter
 	  label("master")
-	  
+
 	  //Spec syntax, similar to cron
 	  //MINUTE 	Minutes within the hour (0–59)
 	  //HOUR 	The hour of the day (0–23)
@@ -219,7 +219,7 @@ def createCiJob(def ci_job_name, def DAYS2KEEP, def NUM2KEEP, def fish, \
 	  //DOW 	The day of the week (0–7) where 0 and 7 are Sunday.
 	  def (HOUR, MINUTE) = time.tokenize( ':' )
 	  def (MONTH, DOM) = startDate.tokenize( '/' )
-	  
+
 	  //This mapping will be okay until Feb 2020
 	  def days_in_month_map  = new HashMap<String,Integer>()
 	  days_in_month_map.put("01", 31)
@@ -237,22 +237,23 @@ def createCiJob(def ci_job_name, def DAYS2KEEP, def NUM2KEEP, def fish, \
 
 	  //Adjust day/month based on day parameter
 	  if(((day.toInteger()-1) + DOM.toInteger()) > days_in_month_map.(MONTH.toString())) {
-		if(MONTH != "12") {
-			if(MONTH == "9" || MONTH == "10" || MONTH == "11") {
-				(MONTH.toInteger() + 1).toString()
+			orig_month = MONTH
+			if(MONTH != "12") {
+				if(MONTH == "9" || MONTH == "10" || MONTH == "11") {
+					(MONTH.toInteger() + 1).toString()
+				} else {
+					MONTH = "0" + (MONTH.toInteger() + 1).toString()
+				}
 			} else {
-				MONTH = "0" + (MONTH.toInteger() + 1).toString()
+				MONTH = "01"
 			}
-		} else {
-			MONTH = "01"
-		}
-		temp1 = (day.toInteger() - 1) + DOM.toInteger()
-		temp2 = days_in_month_map.(MONTH.toString())
-		DOM = (temp1 - temp2).toString()
+			temp1 = (day.toInteger() - 1) + DOM.toInteger()
+			temp2 = days_in_month_map.(orig_month.toString())
+			DOM = (temp1 - temp2).toString()
 	  } else {
-		DOM = (DOM.toInteger() + day.toInteger() - 1).toString()
+			DOM = (DOM.toInteger() + day.toInteger() - 1).toString()
 	  }
-	  
+
 	  //Trigger build based on startDate, date, and time parameters
 	  println("Triggering build on MONTH=" + MONTH + ", DAY=" + DOM + ", HOUR=" + HOUR + ", MINUTE=" + MINUTE)
 	  triggers {
@@ -260,9 +261,9 @@ def createCiJob(def ci_job_name, def DAYS2KEEP, def NUM2KEEP, def fish, \
 							 spec(MINUTE + " " + HOUR + " " + DOM + " " + MONTH + " *")
 				}
 	  }
-	  
+
 	  //Launch RunSingleTrial (calls trial.py) job with specified parameters
-	  steps {			
+	  steps {
 		triggerBuilder {
 		  configs {
 			  blockableBuildTriggerConfig {
@@ -275,10 +276,10 @@ def createCiJob(def ci_job_name, def DAYS2KEEP, def NUM2KEEP, def fish, \
 				  configFactories {}
 				  configs {
 					  predefinedBuildParameters {
-						properties("fish=" + fish + 
+						properties("fish=" + fish +
 								   "\nthatpistimulus=" + thatpistimulus +
 								   "\npistimulus=" + pistimulus +
-								   "\ncorrectside=" + correctside + 
+								   "\ncorrectside=" + correctside +
 								   "\nday=" + day +
 								   "\nsession=" + session +
 								   "\nfeedside=" + feedside +
@@ -290,7 +291,8 @@ def createCiJob(def ci_job_name, def DAYS2KEEP, def NUM2KEEP, def fish, \
 								   "\ncamera=" + camera +
 								   "\nNODE=" + node +
 								   "\ncwtime=" + cwtime +
-								   "\nccwtime=" + ccwtime)
+								   "\nccwtime=" + ccwtime +
+									 "\nfeed=" + feed)
 					  }
 				  } //configs
 			  } //blockableBuildTriggerConfig
