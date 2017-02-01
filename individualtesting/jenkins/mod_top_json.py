@@ -2,7 +2,7 @@ import json
 import argparse
 import sys
 import os
-    
+
 if __name__ == '__main__':
 
     ap = argparse.ArgumentParser()
@@ -18,12 +18,12 @@ if __name__ == '__main__':
     args = vars(ap.parse_args())
 
     a_dict = {"startDate": args["startdate"], "round": args["round"], "mapping": {"H1": args["h1fish"], "H2": args["h2fish"], "H3": args["h3fish"], "L1": args["l1fish"], "L2": args["l2fish"], "L3": args["l3fish"],}}
-    
+
     #print a_dict
-    
+
     os.remove('top.json')
-    
+
     with open('top.json', 'w') as f:
-        json.dump(data, f, sort_keys=True, indent=4, separators=(',', ': '))
-    
+        json.dump(a_dict, f, sort_keys=True, indent=4, separators=(',', ': '))
+
     sys.exit(0)
