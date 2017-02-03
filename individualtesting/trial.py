@@ -323,17 +323,22 @@ if __name__ == '__main__':
     # Determine if camera will be used
     if args["camera"]:
         use_camera = True
-        # Write video file name out to temp.txt, needed by Jenkins
-        f = open("temp.txt", "w")
-        f.write(video_file)
-        f.close()
 
     # Determine if feeding is needed
     if args["feed"]:
         feed = True
 
-    # Record video and feed
+    # Display image, record video, and feed (for those that
+    # are applicable)
     T.runSingleTrial(feed, use_camera)
+
+    # Write video file name out to temp.txt, needed by Jenkins
+    # only applicable if camera is in use, this needs to be done
+    # after the trial has been run to keep time sync
+    if args["camera"]:
+        f = open("temp.txt", "w")
+        f.write(video_file)
+        f.close()
 
     # Cleanup and Exit
     T.safeQuit()
