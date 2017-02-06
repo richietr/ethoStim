@@ -88,13 +88,10 @@ def videoCapture(vidLength, vidOut, useCamera):
         camera.start_recording(vidOut, format='h264')
 
     print 'Sleep ' + str(vidLength) + ' secs...'
-    #time.sleep(vidLength)
     currenttime = datetime.datetime.now()
     finaltime = currenttime + datetime.timedelta(seconds=vidLength)
-    print 'finaltime: ' + str(finaltime)
     while datetime.datetime.now() < finaltime:
-        print 'Now: ' + str(datetime.datetime.now())
-        time.sleep(1)
+        pass
 
     if useCamera:
         print 'Stopping Recording...'
@@ -113,14 +110,14 @@ class Trial:
         self.vidout = None
         self.stimulus = stim
         self.start = starttime
-        self.tLength = 30 #seconds
+        self.tLength = 241 #seconds
         self.feedDelay = 8 #seconds
-        self.feedDuration = 10 #seconds
+        self.feedDuration = 220 #seconds
         #self.cwtime = float(cwtime)
         #self.ccwtime = float(ccwtime)
         self.cwtime = .55 #seconds
         self.ccwtime = .55 #seconds
-        self.startDelay = 1 #minutes
+        self.startDelay = 3 #minutes
 
         self.feeder_en = 17
         self.feeder_a = 27
