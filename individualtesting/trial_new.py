@@ -217,19 +217,24 @@ class Trial:
         global captureDone
         captureDone = False
 
-        now = datetime.now()
+        now = datetime.datetime.now()
+        print 'now= ' + str(now)
 
-        hour, minute = self.start.split(:)
+        hour, minute = start.split(":")
         new_minute = float(minute) + startDelay
 
-        time2start = now.replace(hour=hour)
-        time2start = time2start.replace(minute=new_minute)
+        time2start = now.replace(hour=int(hour))
+        time2start = time2start.replace(minute=int(new_minute))
+        time2start = time2start.replace(second=0)
+        time2start = time2start.replace(microsecond=0)
 
-        print 'time2start' + str(time2start)
+        print 'time2start= ' + str(time2start)
 
         # Wait for start time
-        while time.time() < time2start:
+        while datetime.datetime.now() < time2start:
             pass
+
+        print "(real)starttime= " + str(datetime.datetime.now())
 
         # Note time that trial really starts
         self.startT = time.time()
