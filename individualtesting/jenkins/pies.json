@@ -31,6 +31,10 @@
         "ccwtime": "3.8",
         "cwtime": "3.8"
     },
+    "gorilla": {
+        "ccwtime": "3.8",
+        "cwtime": "3.8"
+    },
     "haumea": {
         "ccwtime": "6.2",
         "cwtime": "5.1"
