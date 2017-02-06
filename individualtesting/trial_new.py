@@ -89,6 +89,9 @@ def videoCapture(vidLength, vidOut, useCamera):
 
     print 'Sleep ' + str(vidLength) + ' secs...'
     time.sleep(vidLength)
+    wait_time = time.time + vidLength
+    while time.time < wait_time
+        pass
 
     if useCamera:
         print 'Stopping Recording...'
@@ -107,7 +110,7 @@ class Trial:
         self.vidout = None
         self.stimulus = stim
         self.start = starttime
-        self.tLength = 256 #seconds
+        self.tLength = 240 #seconds
         self.feedDelay = 8 #seconds
         self.feedDuration = 220 #seconds
         #self.cwtime = float(cwtime)
