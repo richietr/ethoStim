@@ -106,7 +106,7 @@ class Trial:
 
         self.vidout = None
         self.stimulus = stim
-        self.start = float(starttime)
+        self.start = starttime
         self.tLength = 256 #seconds
         self.feedDelay = 8 #seconds
         self.feedDuration = 220 #seconds
@@ -220,7 +220,7 @@ class Trial:
         now = datetime.datetime.now()
         print 'now= ' + str(now)
 
-        hour, minute = start.split(":")
+        hour, minute = self.start.split(":")
         new_minute = float(minute) + startDelay
 
         time2start = now.replace(hour=int(hour))
