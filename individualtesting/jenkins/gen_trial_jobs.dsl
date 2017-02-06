@@ -254,6 +254,8 @@ def createCiJob(def ci_job_name, def DAYS2KEEP, def NUM2KEEP, def fish, \
 			DOM = (DOM.toInteger() + day.toInteger() - 1).toString()
 	  }
 
+		starttime = (HOUR.toInteger()).toString() + ":" + (MINUTE.toInteger()).toString()
+
 	  //Trigger build based on startDate, date, and time parameters
 	  println("Triggering build on MONTH=" + MONTH + ", DAY=" + DOM + ", HOUR=" + HOUR + ", MINUTE=" + MINUTE)
 	  triggers {
@@ -267,7 +269,7 @@ def createCiJob(def ci_job_name, def DAYS2KEEP, def NUM2KEEP, def fish, \
 		triggerBuilder {
 		  configs {
 			  blockableBuildTriggerConfig {
-				  projects("RunSingleTrial")
+				  projects("RunSingleTrial_new")
 				  block {
 					  buildStepFailureThreshold("FAILURE")
 					  unstableThreshold("UNSTABLE")
@@ -292,7 +294,8 @@ def createCiJob(def ci_job_name, def DAYS2KEEP, def NUM2KEEP, def fish, \
 								   "\nNODE=" + node +
 								   "\ncwtime=" + cwtime +
 								   "\nccwtime=" + ccwtime +
-									 "\nfeed=" + feed)
+									 "\nfeed=" + feed +
+									 "\nstarttime=" + starttime)
 					  }
 				  } //configs
 			  } //blockableBuildTriggerConfig
