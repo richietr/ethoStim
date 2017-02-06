@@ -117,5 +117,12 @@
         "node": "jaguar",
         "sex": "female",
         "species": "gambusia"
+    },
+    "india": {
+        "cam_node": "kiwi",
+        "fishstandardlength": "TBD",
+        "node": "leopard",
+        "sex": "female",
+        "species": "gambusia"
     }
 }
