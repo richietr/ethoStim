@@ -221,7 +221,7 @@ class Trial:
         print 'now= ' + str(now)
 
         hour, minute = self.start.split(":")
-        new_minute = float(minute) + startDelay
+        new_minute = float(minute) + self.startDelay
 
         time2start = now.replace(hour=int(hour))
         time2start = time2start.replace(minute=int(new_minute))
