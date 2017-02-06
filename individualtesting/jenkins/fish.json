@@ -110,5 +110,12 @@
         "node": "makemake",
         "sex": "female",
         "species": "gambusia"
+    },
+    "Oprah": {
+        "cam_node": "impala",
+        "fishstandardlength": "TBD",
+        "node": "jaguar",
+        "sex": "female",
+        "species": "gambusia"
     }
 }
