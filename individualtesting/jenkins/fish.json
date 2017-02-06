@@ -69,6 +69,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "Odyssey": {
+        "cam_node": "eagle",
+        "fishstandardlength": "TBD",
+        "node": "falcon",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "Olga": {
         "cam_node": "albatross",
         "fishstandardlength": "TBD",
