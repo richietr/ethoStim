@@ -90,7 +90,7 @@ def videoCapture(vidLength, vidOut, useCamera):
     print 'Sleep ' + str(vidLength) + ' secs...'
     #time.sleep(vidLength)
     currenttime = datetime.datetime.now()
-    finaltime = currenttime + timedelta(seconds=vidLength)
+    finaltime = currenttime + datetime.timedelta(seconds=vidLength)
     while datetime.datetime.now() < finaltime:
         pass
 
