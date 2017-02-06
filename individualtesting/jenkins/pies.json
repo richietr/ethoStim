@@ -1,4 +1,8 @@
 {
+    "albatross": {
+        "ccwtime": "4",
+        "cwtime": "4"
+    },
     "ceres": {
         "ccwtime": "5.3",
         "cwtime": "4.6"
