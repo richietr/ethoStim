@@ -59,6 +59,10 @@
         "ccwtime": "3.8",
         "cwtime": "3.8"
     },
+    "leopard": {
+        "ccwtime": "3.8",
+        "cwtime": "3.8"
+    },
     "makemake": {
         "ccwtime": "3.9",
         "cwtime": "4.2"
