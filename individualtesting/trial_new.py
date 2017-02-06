@@ -91,7 +91,8 @@ def videoCapture(vidLength, vidOut, useCamera):
     currenttime = datetime.datetime.now()
     finaltime = currenttime + datetime.timedelta(seconds=vidLength)
     while datetime.datetime.now() < finaltime:
-        pass
+        print "Waiting..."
+        time.sleep(1)
 
     if useCamera:
         print 'Stopping Recording...'
