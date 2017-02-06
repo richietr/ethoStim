@@ -55,6 +55,10 @@
         "ccwtime": "3.95",
         "cwtime": "3.95"
     },
+    "kiwi": {
+        "ccwtime": "3.8",
+        "cwtime": "3.8"
+    },
     "makemake": {
         "ccwtime": "3.9",
         "cwtime": "4.2"
