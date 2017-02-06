@@ -88,9 +88,10 @@ def videoCapture(vidLength, vidOut, useCamera):
         camera.start_recording(vidOut, format='h264')
 
     print 'Sleep ' + str(vidLength) + ' secs...'
-    time.sleep(vidLength)
-    wait_time = time.time + vidLength
-    while time.time < wait_time:
+    #time.sleep(vidLength)
+    currenttime = datetime.datetime.now()
+    finaltime = currenttime + timedelta(seconds=vidLength)
+    while datetime.datetime.now() < finaltime:
         pass
 
     if useCamera:
