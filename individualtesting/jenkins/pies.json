@@ -39,6 +39,10 @@
         "ccwtime": "6.2",
         "cwtime": "5.1"
     },
+    "hawk": {
+        "ccwtime": "3.8",
+        "cwtime": "3.8"
+    },
     "jupiter": {
         "ccwtime": "3.95",
         "cwtime": "3.95"
