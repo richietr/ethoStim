@@ -29,14 +29,14 @@ nodes = ["node1", "node2", "node3", "node4", "node5", "node6", "node7", "node8",
 for (node in nodes) {
 	if (node in jsonTc) {
 		println("\n#######################")
-		println("Cleaning up " + jsonTc.node)
+		println("Cleaning up " + jsonTc.(node.toString()))
 		println("#######################")
 		
 		//Build up job name
-		ci_job_name = ci_job_name_root + "_" + jsonTc.node
+		ci_job_name = ci_job_name_root + "_" + jsonTc.(node.toString())
 		
 		//Create CI job
-		createCiJob(ci_job_name, DAYS2KEEP, NUM2KEEP, jsonTc.node)
+		createCiJob(ci_job_name, DAYS2KEEP, NUM2KEEP, jsonTc.(node.toString()))
 		
 		queue(ci_job_name)
 		
