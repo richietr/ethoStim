@@ -90,6 +90,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "Octavia": {
+        "cam_node": "pluto",
+        "fishstandardlength": "TBD",
+        "node": "ceres",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "Odyssey": {
         "cam_node": "eagle",
         "fishstandardlength": "TBD",
