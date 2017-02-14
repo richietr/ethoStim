@@ -12,7 +12,12 @@ def NUM2KEEP = 100
 def ci_job_name_root = 'cleanup-job'
 
 //Loop through schedules
+println("Here I am!")
+
 nodes = ["mercury", "venus"]
+
+println(nodes)
+
 for (node in nodes) {
 	println("\n#######################")
 	println("Cleaning up " + node)
