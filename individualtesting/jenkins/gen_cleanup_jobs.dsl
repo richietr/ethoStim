@@ -10,131 +10,22 @@ def NUM2KEEP = 100
 // Define parameters with default settings
 //**********************************************************************
 def ci_job_name_root = 'cleanup-job'
-def fish = "Harlene"
-def node = "master"
-def cam_node = "master"
-def this_node = "master"
-
-//**********************************************************************
-//Read in json files
-//**********************************************************************
-println("Current dir: " + System.getProperty("user.dir") + "\n")
-
-def slurper = new JsonSlurper()
-
-//Read in H1 schedule
-File f = new File('/var/lib/jenkins/workspace/dsl-seed-job/H1.json')
-def jsonText = f.getText()
-jsonH1 = slurper.parseText(jsonText)
-println("H1 schedule: \n" + jsonH1 + "\n")
-
-//Read in H2 schedule
-f = new File('/var/lib/jenkins/workspace/dsl-seed-job/H2.json')
-jsonText = f.getText()
-jsonH2 = slurper.parseText(jsonText)
-println("H2 schedule: \n" + jsonH2 + "\n")
-
-//Read in H3 schedule
-f = new File('/var/lib/jenkins/workspace/dsl-seed-job/H3.json')
-jsonText = f.getText()
-jsonH3 = slurper.parseText(jsonText)
-println("H3 schedule: \n" + jsonH3 + "\n")
-
-//Read in L1 schedule
-f = new File('/var/lib/jenkins/workspace/dsl-seed-job/L1.json')
-jsonText = f.getText()
-jsonL1 = slurper.parseText(jsonText)
-println("L1 schedule: \n" + jsonL1 + "\n")
-
-//Read in L2 schedule
-f = new File('/var/lib/jenkins/workspace/dsl-seed-job/L2.json')
-jsonText = f.getText()
-jsonL2 = slurper.parseText(jsonText)
-println("L2 schedule: \n" + jsonL2 + "\n")
-
-//Read in L3 schedule
-f = new File('/var/lib/jenkins/workspace/dsl-seed-job/L3.json')
-jsonText = f.getText()
-jsonL3 = slurper.parseText(jsonText)
-println("L3 schedule: \n" + jsonL3 + "\n")
-
-//Read in Fish specific parameters
-f = new File('/var/lib/jenkins/workspace/dsl-seed-job/fish.json')
-jsonText = f.getText()
-jsonFish = slurper.parseText(jsonText)
-println("Fish: \n" + jsonFish + "\n")
-
-//Read in top level parameters
-f = new File('/var/lib/jenkins/workspace/dsl-seed-job/top.json')
-jsonText = f.getText()
-jsonTop = slurper.parseText(jsonText)
-println("Top: \n" + jsonTop + "\n")
-round = jsonTop."round"
-println("round=" + round)
-def startDate = jsonTop."startDate"
-println("startDate=" + startDate)
-String h1_fish = jsonTop."mapping"."H1"
-println("h1_fish=" + h1_fish)
-String h2_fish = jsonTop."mapping"."H2"
-println("h2_fish=" + h2_fish)
-String h3_fish = jsonTop."mapping"."H3"
-println("h3_fish=" + h3_fish)
-String l1_fish = jsonTop."mapping"."L1"
-println("l1_fish=" + l1_fish)
-String l2_fish = jsonTop."mapping"."L2"
-println("l2_fish=" + l2_fish)
-String l3_fish = jsonTop."mapping"."L3"
-println("l3_fish=" + l3_fish + "\n")
 
 //Loop through schedules
-schedules = ["H1", "H2", "H3", "L1", "L2", "L3"]
-for (schedule in schedules) {
-	println("\n*****************" + schedule + " Schedule *****************")
-	if (schedule == "H1") {
-		fish = h1_fish
-		json = jsonH1
-	} else if (schedule == "H2") {
-		fish = h2_fish
-		json = jsonH2
-	} else if (schedule == "H3") {
-		fish = h3_fish
-		json = jsonH3
-	} else if (schedule == "L1") {
-		fish = l1_fish
-		json = jsonL1
-	} else if (schedule == "L2") {
-		fish = l2_fish
-		json = jsonL2
-	} else if (schedule == "L3") {
-		fish = l3_fish
-		json = jsonL3
-	}
-	if (fish != "null") {
-		node = jsonFish.(fish.toString())."node"
-		cam_node = jsonFish.(fish.toString())."cam_node"
-		println("node=" + node)
-		println("cam_node=" + cam_node)
-		println("\n")
-		//Loop over each schedule and create a CI job
-		for (i = 0; i <2; i++) {
-            if (i == 0) {
-                this_node = node	      
-			} else {
-			    this_node = cam_node
-			}
-			println("\n#######################")
-			println("Cleaning up " + this_node)
-			println("#######################")
-			
-			//Build up job name, fish + trial #
-			ci_job_name = ci_job_name_root + "_" + this_node
-			
-			//Create CI job
-			createCiJob(ci_job_name, DAYS2KEEP, NUM2KEEP, this_node)
-			
-			queue(ci_job_name)
-		}
-	}	
+nodes = ${NODE_LIST}
+for (node in nodes) {
+	println("\n#######################")
+	println("Cleaning up " + node)
+	println("#######################")
+	
+	//Build up job name
+	ci_job_name = ci_job_name_root + "_" + node
+	
+	//Create CI job
+	createCiJob(ci_job_name, DAYS2KEEP, NUM2KEEP, node)
+	
+	queue(ci_job_name)
+	
 	println("*******************************************************************")
 }
 
