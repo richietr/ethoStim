@@ -11,23 +11,37 @@ def NUM2KEEP = 100
 //**********************************************************************
 def ci_job_name_root = 'cleanup-job'
 
+//**********************************************************************
+//Read in json file
+//**********************************************************************
+println("Current dir: " + System.getProperty("user.dir") + "\n")
+
+def slurper = new JsonSlurper()
+
+File f = new File('/var/lib/jenkins/workspace/cleanup-dsl-seed-job/trashcan.json')
+def jsonText = f.getText()
+jsonTc = slurper.parseText(jsonText)
+println("Trashcan: \n" + jsonTc + "\n")
+
 //Loop through schedules
-nodes = "${NODE_LIST}"
+nodes = ["node1", "node2", "node3", "node4", "node5", "node6", "node7", "node8", "node9", "node10", "node11", "node12"]
 
 for (node in nodes) {
-	println("\n#######################")
-	println("Cleaning up " + node)
-	println("#######################")
-	
-	//Build up job name
-	ci_job_name = ci_job_name_root + "_" + node
-	
-	//Create CI job
-	createCiJob(ci_job_name, DAYS2KEEP, NUM2KEEP, node)
-	
-	queue(ci_job_name)
-	
-	println("*******************************************************************")
+	if (node in jsonTc) {
+		println("\n#######################")
+		println("Cleaning up " + jsonTc.node)
+		println("#######################")
+		
+		//Build up job name
+		ci_job_name = ci_job_name_root + "_" + jsonTc.node
+		
+		//Create CI job
+		createCiJob(ci_job_name, DAYS2KEEP, NUM2KEEP, jsonTc.node)
+		
+		queue(ci_job_name)
+		
+		println("*******************************************************************")
+	}
 }
 
 //**********************************************************************
