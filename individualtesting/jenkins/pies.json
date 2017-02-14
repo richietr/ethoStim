@@ -94,11 +94,6 @@
         "copydelay": "0",
         "cwtime": "4"
     },
-    "uranus": {
-        "ccwtime": "4.5",
-        "copydelay": "810",
-        "cwtime": "4.2"
-    },
     "venus": {
         "ccwtime": "3.8",
         "copydelay": "0",
