@@ -94,6 +94,11 @@
         "copydelay": "0",
         "cwtime": "3.8"
     },
+    "pluto": {
+        "ccwtime": "3.8",
+        "copydelay": "720",
+        "cwtime": "3.8"
+    },
     "saturn": {
         "ccwtime": "4",
         "copydelay": "0",
