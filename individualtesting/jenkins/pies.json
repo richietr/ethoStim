@@ -59,6 +59,11 @@
         "copydelay": "0",
         "cwtime": "3.8"
     },
+    "jupiter": {
+        "ccwtime": "3.8",
+        "copydelay": "360",
+        "cwtime": "3.8"
+    },
     "kiwi": {
         "ccwtime": "3.8",
         "copydelay": "450",
