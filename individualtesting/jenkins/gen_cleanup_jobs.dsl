@@ -27,20 +27,21 @@ println("Trashcan: \n" + jsonTc + "\n")
 nodes = ["node1", "node2", "node3", "node4", "node5", "node6", "node7", "node8", "node9", "node10", "node11", "node12"]
 
 for (node in nodes) {
-	if (node in jsonTc) {
+	if (node in jsonTc && node != "NA") {
 		println("\n#######################")
 		println("Cleaning up " + jsonTc.(node.toString()))
 		println("#######################")
-		
+
 		//Build up job name
 		ci_job_name = ci_job_name_root + "_" + jsonTc.(node.toString())
-		
+
 		//Create CI job
 		createCiJob(ci_job_name, DAYS2KEEP, NUM2KEEP, jsonTc.(node.toString()))
-		
+
 		queue(ci_job_name)
-		
-		println("*******************************************************************")
+
+	} else {
+		println("Not creating job for node " + jsonTc.(node.toString()))
 	}
 }
 
@@ -53,12 +54,12 @@ def createCiJob(def ci_job_name, def DAYS2KEEP, def NUM2KEEP, def this_node) {
 		daysToKeep(DAYS2KEEP)
 		numToKeep(NUM2KEEP)
 	  }
-	  
+
 	  //Container job runs on master, sub-job will be executed on NODE specified parameter
 	  label(this_node)
-	  
+
 	  // run shell that deletes workspace
-	  steps {			
+	  steps {
 		shell ( "cd ..; rm -rf *" )
 	  } //steps
 	} //job
