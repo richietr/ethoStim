@@ -44,6 +44,11 @@
         "copydelay": "270",
         "cwtime": "3.8"
     },
+    "haumea": {
+        "ccwtime": "3.8",
+        "copydelay": "900",
+        "cwtime": "3.8"
+    },
     "hawk": {
         "ccwtime": "3.8",
         "copydelay": "0",
