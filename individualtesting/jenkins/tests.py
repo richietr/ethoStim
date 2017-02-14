@@ -152,7 +152,10 @@ class Tests(object):
             tmp_dict = self.top_dict['mapping']
             for sch in self.schedules:
                 if sch in tmp_dict:
-                    fish_list.append(tmp_dict[sch])
+					if tmp_dict[sch] == "NA":
+						print 'Not adding fish=' + tmp_dict[sch] + ' to fish list'
+					else:
+						fish_list.append(tmp_dict[sch])
                 else:
                     print self.me + ': Error> Schedule ' + sch + ' is not in mapping, issue with top.json'
                     print self.me + ': Exiting...'
@@ -207,7 +210,10 @@ class Tests(object):
             tmp_dict = self.top_dict['mapping']
             for sch in self.schedules:
                 if sch in tmp_dict:
-                    fish_list.append(tmp_dict[sch])
+					if tmp_dict[sch] == "NA":
+						print 'Not adding fish=' + tmp_dict[sch] + ' to fish list'
+					else:
+						fish_list.append(tmp_dict[sch])
                 else:
                     print self.me + ': Error> Schedule ' + sch + ' is not in mapping, issue with top.json'
                     print self.me + ': Exiting...'
@@ -267,11 +273,11 @@ class Tests(object):
             tmp_dict = self.top_dict['mapping']
             for sch in self.schedules:
                 if sch in tmp_dict:
-					if tmp_dict[sch] /= "NA":
+					if tmp_dict[sch] == "NA":
+						results.append(True)
+					else:
 						results.append(self.isFishInFishJson(self, tmp_dict[sch]))
 						fish_list.append(tmp_dict[sch])
-					else:
-						results.append(True)
                 else:
                     print self.me + ': Error> Schedule ' + sch + ' is not in mapping, issue with top.json'
                     print self.me + ': Exiting...'
