@@ -1,122 +1,117 @@
 {
-    "albatross": {
-        "ccwtime": "4",
-        "cwtime": "4",
-        "copydelay": "0"
-    },
     "bobolink": {
         "ccwtime": "3.8",
-        "cwtime": "3.8",
-        "copydelay": "0"
+        "copydelay": "0",
+        "cwtime": "3.8"
     },
     "ceres": {
         "ccwtime": "5.3",
-        "cwtime": "4.6",
-        "copydelay": "0"
+        "copydelay": "0",
+        "cwtime": "4.6"
     },
     "cougar": {
         "ccwtime": "3.8",
-        "cwtime": "3.8",
-        "copydelay": "90"
+        "copydelay": "90",
+        "cwtime": "3.8"
     },
     "dolphin": {
         "ccwtime": "3.8",
-        "cwtime": "3.8",
-        "copydelay": "0"
+        "copydelay": "0",
+        "cwtime": "3.8"
     },
     "eagle": {
         "ccwtime": "3.8",
-        "cwtime": "3.8",
-        "copydelay": "180"
+        "copydelay": "180",
+        "cwtime": "3.8"
     },
     "earth": {
         "ccwtime": "4.2",
-        "cwtime": "5",
-        "copydelay": "630"
+        "copydelay": "630",
+        "cwtime": "5"
     },
     "falcon": {
         "ccwtime": "3.8",
-        "cwtime": "3.8",
-        "copydelay": "0"
+        "copydelay": "0",
+        "cwtime": "3.8"
     },
     "gorilla": {
         "ccwtime": "3.8",
-        "cwtime": "3.8",
-        "copydelay": "270"
+        "copydelay": "270",
+        "cwtime": "3.8"
     },
     "haumea": {
         "ccwtime": "6.2",
-        "cwtime": "5.1",
-        "copydelay": "990"
+        "copydelay": "990",
+        "cwtime": "5.1"
     },
     "hawk": {
         "ccwtime": "3.8",
-        "cwtime": "3.8",
-        "copydelay": "0"
+        "copydelay": "0",
+        "cwtime": "3.8"
     },
     "impala": {
         "ccwtime": "3.8",
-        "cwtime": "3.8",
-        "copydelay": "360"
+        "copydelay": "360",
+        "cwtime": "3.8"
     },
     "jaguar": {
         "ccwtime": "3.8",
-        "cwtime": "3.8",
-        "copydelay": "0"
+        "copydelay": "0",
+        "cwtime": "3.8"
     },
     "jupiter": {
         "ccwtime": "3.95",
-        "cwtime": "3.95",
-        "copydelay": "720"
+        "copydelay": "720",
+        "cwtime": "3.95"
     },
     "kiwi": {
         "ccwtime": "3.8",
-        "cwtime": "3.8",
-        "copydelay": "450"
+        "copydelay": "450",
+        "cwtime": "3.8"
     },
     "leopard": {
         "ccwtime": "3.8",
-        "cwtime": "3.8",
-        "copydelay": "0"
+        "copydelay": "0",
+        "cwtime": "3.8"
     },
     "makemake": {
         "ccwtime": "3.9",
-        "cwtime": "4.2",
-        "copydelay": "0"
+        "copydelay": "0",
+        "cwtime": "4.2"
     },
     "mars": {
         "ccwtime": "3.95",
-        "cwtime": "4",
-        "copydelay": "0"
+        "copydelay": "0",
+        "cwtime": "4"
     },
     "mercury": {
         "ccwtime": "3.8",
-        "cwtime": "3.8",
-        "copydelay": "540"
+        "copydelay": "540",
+        "cwtime": "3.8"
     },
     "neptune": {
         "ccwtime": "4.3",
-        "cwtime": "3.8",
-        "copydelay": "0"
+        "copydelay": "0",
+        "cwtime": "3.8"
     },
     "pluto": {
         "ccwtime": "5.2",
-        "cwtime": "4.8",
-        "copydelay": "900"
+        "copydelay": "900",
+        "cwtime": "4.8"
     },
     "saturn": {
         "ccwtime": "4",
-        "cwtime": "4",
-        "copydelay": "0"
+        "copydelay": "0",
+        "cwtime": "4"
     },
     "uranus": {
         "ccwtime": "4.5",
-        "cwtime": "4.2",
-        "copydelay": "810"
+        "copydelay": "810",
+        "cwtime": "4.2"
     },
     "venus": {
         "ccwtime": "3.8",
-        "cwtime": "3.8",
-        "copydelay": "0"
+        "copydelay": "0",
+        "cwtime": "3.8"
     }
 }
