@@ -5,6 +5,7 @@ import groovy.json.JsonSlurper
 //**********************************************************************
 def DAYS2KEEP = 30
 def NUM2KEEP = 100
+def TIMEOUT = 90
 
 //**********************************************************************
 // Define parameters with default settings
@@ -186,7 +187,7 @@ for (schedule in schedules) {
 			println("ccwtime=" + ccwtime)
 
 			//Create CI job
-			createCiJob(ci_job_name, DAYS2KEEP, NUM2KEEP, fish, thatpistimulus, pistimulus, \
+			createCiJob(ci_job_name, DAYS2KEEP, NUM2KEEP, TIMEOUT, fish, thatpistimulus, pistimulus, \
 				correctside, day, session, feedside, sex, proportion, species, \
 				fishstandardlength, round, camera, which_node, startDate, cwtime, ccwtime, feed)
 		}
@@ -197,7 +198,7 @@ for (schedule in schedules) {
 //**********************************************************************
 // Function creates CI job with specified parameters
 //**********************************************************************
-def createCiJob(def ci_job_name, def DAYS2KEEP, def NUM2KEEP, def fish, \
+def createCiJob(def ci_job_name, def DAYS2KEEP, def NUM2KEEP, def TIMEOUT, def fish, \
                 def thatpistimulus, def pistimulus, def correctside, \
                 def day, def session, def feedside, def sex, def proportion, \
                 def species, def fishstandardlength, def round, def camera, \
@@ -206,6 +207,12 @@ def createCiJob(def ci_job_name, def DAYS2KEEP, def NUM2KEEP, def fish, \
 	  logRotator {
 		daysToKeep(DAYS2KEEP)
 		numToKeep(NUM2KEEP)
+	  }
+	  
+	  wrappers {
+		timeout {
+		 absolute(TIMEOUT)
+		}
 	  }
 
 	  //Container job runs on master, sub-job will be executed on NODE specified parameter
