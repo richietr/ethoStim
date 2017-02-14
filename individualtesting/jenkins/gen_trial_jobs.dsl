@@ -261,10 +261,6 @@ def createCiJob(def ci_job_name, def DAYS2KEEP, def NUM2KEEP, def TIMEOUT, def f
 			DOM = (DOM.toInteger() + day.toInteger() - 1).toString()
 	  }
 	  
-	  if(MINUTE.toInteger()  < 10) {
-		MINUTE = "0" + MINUTE
-	  }
-	  
 	  starttime = HOUR + ":" + MINUTE
 
 	  //Trigger build based on startDate, date, and time parameters
