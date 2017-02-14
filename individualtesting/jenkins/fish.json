@@ -111,6 +111,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "Onyx": {
+        "cam_node": "jupiter",
+        "fishstandardlength": "TBD",
+        "node": "saturn",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "Opal": {
         "cam_node": "haumea",
         "fishstandardlength": "TBD",
