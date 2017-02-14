@@ -130,7 +130,7 @@ for (schedule in schedules) {
 		fish = l3_fish
 		json = jsonL3
 	}
-	if (fish != "null" and fish != "NA") {
+	if (fish != "null" && fish != "NA") {
 		fishstandardlength = jsonFish.(fish.toString())."fishstandardlength"
 		species = jsonFish.(fish.toString())."species"
 		sex = jsonFish.(fish.toString())."sex"
