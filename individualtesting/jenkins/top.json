@@ -1,12 +1,12 @@
 {
     "mapping": {
-        "H1": "NA",
-        "H2": "India",
-        "H3": "Isabella",
-        "L1": "Odyssey",
-        "L2": "Oprah",
-        "L3": "Olga"
+        "H1": "Huma",
+        "H2": "NA",
+        "H3": "NA",
+        "L1": "NA",
+        "L2": "NA",
+        "L3": "NA"
     },
-    "round": "10",
-    "startDate": "02/07"
+    "round": "2",
+    "startDate": "02/14"
 }
