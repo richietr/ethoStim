@@ -55,6 +55,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "Ivory": {
+        "cam_node": "earth",
+        "fishstandardlength": "TBD",
+        "node": "mars",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "Laci": {
         "cam_node": "uranus",
         "fishstandardlength": "TBD",
