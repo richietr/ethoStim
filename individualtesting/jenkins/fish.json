@@ -20,6 +20,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "India": {
+        "cam_node": "kiwi",
+        "fishstandardlength": "TBD",
+        "node": "leopard",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "Inez": {
         "cam_node": "pluto",
         "fishstandardlength": "TBD",
@@ -111,10 +118,10 @@
         "sex": "female",
         "species": "gambusia"
     },
-    "India": {
-        "cam_node": "kiwi",
+    "Orchid": {
+        "cam_node": "mercury",
         "fishstandardlength": "TBD",
-        "node": "leopard",
+        "node": "venus",
         "sex": "female",
         "species": "gambusia"
     }
