@@ -34,6 +34,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "Irma": {
+        "cam_node": "uranus",
+        "fishstandardlength": "TBD",
+        "node": "neptune",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "Isabella": {
         "cam_node": "cougar",
         "fishstandardlength": "TBD",
