@@ -248,7 +248,7 @@
 			"session": "1",
 			"feedside": "left",
 			"proportion": "50",
-			"feed": "FALSE",
+			"feed": "TRUE",
 			"camera": "FALSE",
 		 },
 	"22": {	
@@ -260,7 +260,7 @@
 			"session": "1",
 			"feedside": "left",
 			"proportion": "50",
-			"feed": "TRUE",
+			"feed": "FALSE",
 			"camera": "TRUE",	
 		 },
 	"23": {
@@ -272,7 +272,7 @@
 			"session": "2",
 			"feedside": "right",
 			"proportion": "50",
-			"feed": "TRUE",
+			"feed": "FALSE",
 			"camera": "FALSE",
 		 },
 	"24": {	
@@ -284,7 +284,7 @@
 			"session" :"2",
 			"feedside": "right",
 			"proportion": "50",
-			"feed": "FALSE",
+			"feed": "TRUE",
 			"camera": "TRUE",	
 		 },	
 	"25": {
@@ -296,7 +296,7 @@
 			"session": "3",
 			"feedside": "right",
 			"proportion": "50",
-			"feed": "TRUE",
+			"feed": "FALSE",
 			"camera": "FALSE",
 		 },
 	"26": {	
@@ -308,7 +308,7 @@
 			"session": "3",
 			"feedside": "right",
 			"proportion": "50",
-			"feed": "FALSE",
+			"feed": "TRUE",
 			"camera": "TRUE",	
 		 },
 	"27": {
@@ -320,7 +320,7 @@
 			"session": "4",
 			"feedside": "left",
 			"proportion": "50",
-			"feed": "FALSE",
+			"feed": "TRUE",
 			"camera": "FALSE",
 		 },
 	"28": {	
@@ -332,7 +332,7 @@
 			"session": "4",
 			"feedside": "left",
 			"proportion": "50",
-			"feed": "TRUE",
+			"feed": "FALSE",
 			"camera": "TRUE",	
 		 },
 	"29": {
@@ -344,7 +344,7 @@
 			"session": "5",
 			"feedside": "right",
 			"proportion": "50",
-			"feed": "TRUE",
+			"feed": "FALSE",
 			"camera": "FALSE",
 		 },
 	"30": {	
@@ -356,7 +356,7 @@
 			"session": "5",
 			"feedside": "right",
 			"proportion": "50",
-			"feed": "FALSE",
+			"feed": "TRUE",
 			"camera": "TRUE",	
 		 },	
 	"31": {
@@ -368,7 +368,7 @@
 			"session": "1",
 			"feedside": "left",
 			"proportion": "50",
-			"feed": "FALSE",
+			"feed": "TRUE",
 			"camera": "FALSE",
 		 },
 	"32": {	
@@ -380,7 +380,7 @@
 			"session": "1",
 			"feedside": "left",
 			"proportion": "50",
-			"feed": "TRUE",
+			"feed": "FALSE",
 			"camera": "TRUE",	
 		 },
 	"33": {
@@ -392,7 +392,7 @@
 			"session": "2",
 			"feedside": "right",
 			"proportion": "50",
-			"feed": "TRUE",
+			"feed": "FALSE",
 			"camera": "FALSE",
 		 },
 	"34": {	
@@ -404,7 +404,7 @@
 			"session" :"2",
 			"feedside": "right",
 			"proportion": "50",
-			"feed": "FALSE",
+			"feed": "TRUE",
 			"camera": "TRUE",	
 		 },	
 	"35": {
@@ -416,7 +416,7 @@
 			"session": "3",
 			"feedside": "left",
 			"proportion": "50",
-			"feed": "FALSE",
+			"feed": "TRUE",
 			"camera": "FALSE",
 		 },
 	"36": {	
@@ -428,7 +428,7 @@
 			"session": "3",
 			"feedside": "left",
 			"proportion": "50",
-			"feed": "TRUE",
+			"feed": "FALSE",
 			"camera": "TRUE",	
 		 },
 	"37": {
@@ -440,7 +440,7 @@
 			"session": "4",
 			"feedside": "right",
 			"proportion": "50",
-			"feed": "TRUE",
+			"feed": "FALSE",
 			"camera": "FALSE",
 		 },
 	"38": {	
@@ -452,7 +452,7 @@
 			"session": "4",
 			"feedside": "right",
 			"proportion": "50",
-			"feed": "FALSE",
+			"feed": "TRUE",
 			"camera": "TRUE",	
 		 },
 	"39": {
@@ -464,7 +464,7 @@
 			"session": "5",
 			"feedside": "left",
 			"proportion": "50",
-			"feed": "FALSE",
+			"feed": "TRUE",
 			"camera": "FALSE",
 		 },
 	"40": {	
@@ -476,7 +476,7 @@
 			"session": "5",
 			"feedside": "left",
 			"proportion": "50",
-			"feed": "TRUE",
+			"feed": "FALSE",
 			"camera": "TRUE",	
 		 },
 	"41": {
@@ -488,7 +488,7 @@
 			"session": "1",
 			"feedside": "right",
 			"proportion": "50",
-			"feed": "TRUE",
+			"feed": "FALSE",
 			"camera": "FALSE",
 		 },
 	"42": {	
@@ -500,7 +500,7 @@
 			"session": "1",
 			"feedside": "right",
 			"proportion": "50",
-			"feed": "FALSE",
+			"feed": "TRUE",
 			"camera": "TRUE",	
 		 },
 	"43": {
@@ -512,7 +512,7 @@
 			"session": "2",
 			"feedside": "left",
 			"proportion": "50",
-			"feed": "FALSE",
+			"feed": "TRUE",
 			"camera": "FALSE",
 		 },
 	"44": {	
@@ -524,7 +524,7 @@
 			"session" :"2",
 			"feedside": "left",
 			"proportion": "50",
-			"feed": "TRUE",
+			"feed": "FALSE",
 			"camera": "TRUE",	
 		 },	
 	"45": {
@@ -536,7 +536,7 @@
 			"session": "3",
 			"feedside": "left",
 			"proportion": "50",
-			"feed": "FALSE",
+			"feed": "TRUE",
 			"camera": "FALSE",
 		 },
 	"46": {	
@@ -548,7 +548,7 @@
 			"session": "3",
 			"feedside": "left",
 			"proportion": "50",
-			"feed": "TRUE",
+			"feed": "FALSE",
 			"camera": "TRUE",	
 		 },
 	"47": {
@@ -560,7 +560,7 @@
 			"session": "4",
 			"feedside": "right",
 			"proportion": "50",
-			"feed": "TRUE",
+			"feed": "FALSE",
 			"camera": "FALSE",
 		 },
 	"48": {	
@@ -572,7 +572,7 @@
 			"session": "4",
 			"feedside": "right",
 			"proportion": "50",
-			"feed": "FALSE",
+			"feed": "TRUE",
 			"camera": "TRUE",	
 		 },
 	"49": {
@@ -584,7 +584,7 @@
 			"session": "5",
 			"feedside": "left",
 			"proportion": "50",
-			"feed": "FALSE",
+			"feed": "TRUE",
 			"camera": "FALSE",
 		 },
 	"50": {	
@@ -596,7 +596,7 @@
 			"session": "5",
 			"feedside": "left",
 			"proportion": "50",
-			"feed": "TRUE",
+			"feed": "FALSE",
 			"camera": "TRUE",	
 		 },
 	"51": {
@@ -938,25 +938,25 @@
 	"79": {
 			"day": "8",
 			"time": "17:05",
-			"thatpistimulus": "12",
-			"pistimulus": "6.png",
-			"correctside": "L",
+			"thatpistimulus": "6",
+			"pistimulus": "12.png",
+			"correctside": "R",
 			"session": "5",
-			"feedside": "left",
+			"feedside": "right",
 			"proportion": "50",
-			"feed": "TRUE",
+			"feed": "FALSE",
 			"camera": "FALSE",
 		 },
 	"80": {	
 			"day": "8",
 			"time": "17:05",
-			"thatpistimulus": "6",
-			"pistimulus": "12.png",
-			"correctside": "L",
+			"thatpistimulus": "12",
+			"pistimulus": "6.png",
+			"correctside": "R",
 			"session": "5",
-			"feedside": "left",
+			"feedside": "right",
 			"proportion": "50",
-			"feed": "FALSE",
+			"feed": "TRUE",
 			"camera": "TRUE",	
 		 },
 	"81": {
