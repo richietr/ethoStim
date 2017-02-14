@@ -130,7 +130,7 @@ for (schedule in schedules) {
 		fish = l3_fish
 		json = jsonL3
 	}
-	if (fish != "null") {
+	if (fish != "null" and fish != "NA") {
 		fishstandardlength = jsonFish.(fish.toString())."fishstandardlength"
 		species = jsonFish.(fish.toString())."species"
 		sex = jsonFish.(fish.toString())."sex"
@@ -191,6 +191,8 @@ for (schedule in schedules) {
 				correctside, day, session, feedside, sex, proportion, species, \
 				fishstandardlength, round, camera, which_node, startDate, cwtime, ccwtime, feed)
 		}
+	} else {
+		println("Not creating jobs for fish=" + fish + ", schedule=" + schedule)
 	}
 	println("*****************End of " + schedule + " Schedule *****************")
 }
