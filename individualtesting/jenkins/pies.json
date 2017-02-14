@@ -74,6 +74,11 @@
         "copydelay": "0",
         "cwtime": "4"
     },
+    "mercury": {
+        "ccwtime": "3.8",
+        "copydelay": "540",
+        "cwtime": "3.8"
+    },
     "neptune": {
         "ccwtime": "4.3",
         "copydelay": "0",
