@@ -34,6 +34,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "Inocencia": {
+        "cam_node": "haumea",
+        "fishstandardlength": "TBD",
+        "node": "makemake",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "Irma": {
         "cam_node": "uranus",
         "fishstandardlength": "TBD",
