@@ -27,21 +27,22 @@ println("Trashcan: \n" + jsonTc + "\n")
 nodes = ["node1", "node2", "node3", "node4", "node5", "node6", "node7", "node8", "node9", "node10", "node11", "node12"]
 
 for (node in nodes) {
-	if (node in jsonTc && node != "NA") {
-		println("\n#######################")
-		println("Cleaning up " + jsonTc.(node.toString()))
-		println("#######################")
+	if (node in jsonTc) {
+		if (jsonTc.(node.toString()) != "NA") {
+			println("\n#######################")
+			println("Cleaning up " + jsonTc.(node.toString()))
+			println("#######################")
 
-		//Build up job name
-		ci_job_name = ci_job_name_root + "_" + jsonTc.(node.toString())
+			//Build up job name
+			ci_job_name = ci_job_name_root + "_" + jsonTc.(node.toString())
 
-		//Create CI job
-		createCiJob(ci_job_name, DAYS2KEEP, NUM2KEEP, jsonTc.(node.toString()))
+			//Create CI job
+			createCiJob(ci_job_name, DAYS2KEEP, NUM2KEEP, jsonTc.(node.toString()))
 
-		queue(ci_job_name)
-
-	} else {
-		println("Not creating job for node " + jsonTc.(node.toString()))
+			queue(ci_job_name)
+		} else {
+		 	println("Not creating job for node " + jsonTc.(node.toString()))
+		}
 	}
 }
 
