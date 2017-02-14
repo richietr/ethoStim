@@ -267,8 +267,11 @@ class Tests(object):
             tmp_dict = self.top_dict['mapping']
             for sch in self.schedules:
                 if sch in tmp_dict:
-                    results.append(self.isFishInFishJson(self, tmp_dict[sch]))
-                    fish_list.append(tmp_dict[sch])
+					if tmp_dict[sch] /= "NA":
+						results.append(self.isFishInFishJson(self, tmp_dict[sch]))
+						fish_list.append(tmp_dict[sch])
+					else:
+						results.append(True)
                 else:
                     print self.me + ': Error> Schedule ' + sch + ' is not in mapping, issue with top.json'
                     print self.me + ': Exiting...'

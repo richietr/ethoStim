@@ -69,13 +69,6 @@
         "sex": "female",
         "species": "gambusia"
     },
-    "NA": {
-        "cam_node": "mercury",
-        "fishstandardlength": "TBD",
-        "node": "venus",
-        "sex": "female",
-        "species": "gambusia"
-    },
     "Odyssey": {
         "cam_node": "eagle",
         "fishstandardlength": "TBD",
