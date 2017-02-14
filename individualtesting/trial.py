@@ -35,6 +35,7 @@ import argparse
 import pygame
 import picamera
 import time
+import datetime
 import netifaces
 import RPi.GPIO as GPIO
 import sys
@@ -87,7 +88,10 @@ def videoCapture(vidLength, vidOut, useCamera):
         camera.start_recording(vidOut, format='h264')
 
     print 'Sleep ' + str(vidLength) + ' secs...'
-    time.sleep(vidLength)
+    currenttime = datetime.datetime.now()
+    finaltime = currenttime + datetime.timedelta(seconds=vidLength)
+    while datetime.datetime.now() < finaltime:
+        time.sleep(0.1)
 
     if useCamera:
         print 'Stopping Recording...'
@@ -105,14 +109,15 @@ class Trial:
 
         self.vidout = None
         self.stimulus = stim
-        self.start = float(starttime)
-        self.tLength = 256
-        self.feedDelay = 8
-        self.feedDuration = 220
+        self.start = starttime
+        self.tLength = 245 #seconds
+        self.feedDelay = 8 #seconds
+        self.feedDuration = 220 #seconds
         #self.cwtime = float(cwtime)
         #self.ccwtime = float(ccwtime)
-        self.cwtime = .55
-        self.ccwtime = .55
+        self.cwtime = .55 #seconds
+        self.ccwtime = .55 #seconds
+        self.startDelay = 3 #minutes
 
         self.feeder_en = 17
         self.feeder_a = 27
@@ -215,9 +220,24 @@ class Trial:
         global captureDone
         captureDone = False
 
+        now = datetime.datetime.now()
+        print 'now= ' + str(now)
+
+        hour, minute = self.start.split(":")
+        new_minute = float(minute) + self.startDelay
+
+        time2start = now.replace(hour=int(hour))
+        time2start = time2start.replace(minute=int(new_minute))
+        time2start = time2start.replace(second=0)
+        time2start = time2start.replace(microsecond=0)
+
+        print 'time2start= ' + str(time2start)
+
         # Wait for start time
-        while time.time() < self.start:
+        while datetime.datetime.now() < time2start:
             pass
+
+        print "(real)starttime= " + str(datetime.datetime.now())
 
         # Note time that trial really starts
         self.startT = time.time()
