@@ -29,11 +29,6 @@
         "copydelay": "180",
         "cwtime": "3.8"
     },
-    "earth": {
-        "ccwtime": "4.2",
-        "copydelay": "630",
-        "cwtime": "5"
-    },
     "falcon": {
         "ccwtime": "3.8",
         "copydelay": "0",
