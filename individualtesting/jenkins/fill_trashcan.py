@@ -12,12 +12,12 @@ if __name__ == '__main__':
     ap.add_argument("-n4", "--node4", help="Node 4 that will be clean", required=True)
     ap.add_argument("-n5", "--node5", help="Node 5 that will be clean", required=True)
     ap.add_argument("-n6", "--node6", help="Node 6 that will be clean", required=True)
-    ap.add_argument("-n7", "--node6", help="Node 7 that will be clean", required=True)
-    ap.add_argument("-n8", "--node6", help="Node 8 that will be clean", required=True)
-    ap.add_argument("-n9", "--node6", help="Node 9 that will be clean", required=True)
-    ap.add_argument("-n10", "--node6", help="Node 10 that will be clean", required=True)
-    ap.add_argument("-n11", "--node6", help="Node 11 that will be clean", required=True)
-    ap.add_argument("-n12", "--node6", help="Node 12 that will be clean", required=True)
+    ap.add_argument("-n7", "--node7", help="Node 7 that will be clean", required=True)
+    ap.add_argument("-n8", "--node8", help="Node 8 that will be clean", required=True)
+    ap.add_argument("-n9", "--node9", help="Node 9 that will be clean", required=True)
+    ap.add_argument("-n10", "--node10", help="Node 10 that will be clean", required=True)
+    ap.add_argument("-n11", "--node11", help="Node 11 that will be clean", required=True)
+    ap.add_argument("-n12", "--node12", help="Node 12 that will be clean", required=True)
 
     args = vars(ap.parse_args())
 
