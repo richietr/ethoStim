@@ -29,6 +29,7 @@ def cam_node = "master"
 def which_node = "master"
 def cwtime = "3.8"
 def ccwtime = "3.8"
+def copydelay = "0"
 
 //**********************************************************************
 //Read in json files
@@ -183,13 +184,16 @@ for (schedule in schedules) {
 			//Determine cw and ccw times
 			cwtime = jsonPies.(which_node.toString())."cwtime"
 			ccwtime = jsonPies.(which_node.toString())."ccwtime"
+			copydelay = jsonPies.(which_node.toString())."copydelay"
 			println("cwtime=" + cwtime)
 			println("ccwtime=" + ccwtime)
+			println("copydelay=" + copydelay)
 
 			//Create CI job
 			createCiJob(ci_job_name, DAYS2KEEP, NUM2KEEP, TIMEOUT, fish, thatpistimulus, pistimulus, \
 				correctside, day, session, feedside, sex, proportion, species, \
-				fishstandardlength, round, camera, which_node, startDate, cwtime, ccwtime, feed)
+				fishstandardlength, round, camera, which_node, startDate, cwtime, \
+				ccwtime, feed, copydelay)
 		}
 	} else {
 		println("Not creating jobs for fish=" + fish + ", schedule=" + schedule)
@@ -204,13 +208,14 @@ def createCiJob(def ci_job_name, def DAYS2KEEP, def NUM2KEEP, def TIMEOUT, def f
                 def thatpistimulus, def pistimulus, def correctside, \
                 def day, def session, def feedside, def sex, def proportion, \
                 def species, def fishstandardlength, def round, def camera, \
-                def node, def startDate, def cwtime, def ccwtime, def feed) {
+                def node, def startDate, def cwtime, def ccwtime, def feed, \
+								def copydelay) {
 	job(ci_job_name){
 	  logRotator {
 		daysToKeep(DAYS2KEEP)
 		numToKeep(NUM2KEEP)
 	  }
-	  
+
 	  wrappers {
 		timeout {
 		 absolute(TIMEOUT)
@@ -262,7 +267,7 @@ def createCiJob(def ci_job_name, def DAYS2KEEP, def NUM2KEEP, def TIMEOUT, def f
 	  } else {
 			DOM = (DOM.toInteger() + day.toInteger() - 1).toString()
 	  }
-	  
+
 	  starttime = HOUR + ":" + MINUTE
 
 	  //Trigger build based on startDate, date, and time parameters
@@ -278,7 +283,7 @@ def createCiJob(def ci_job_name, def DAYS2KEEP, def NUM2KEEP, def TIMEOUT, def f
 		triggerBuilder {
 		  configs {
 			  blockableBuildTriggerConfig {
-				  projects("RunSingleTrial_new")
+				  projects("RunSingleTrial")
 				  block {
 					  buildStepFailureThreshold("FAILURE")
 					  unstableThreshold("UNSTABLE")
@@ -304,7 +309,8 @@ def createCiJob(def ci_job_name, def DAYS2KEEP, def NUM2KEEP, def TIMEOUT, def f
 								   "\ncwtime=" + cwtime +
 								   "\nccwtime=" + ccwtime +
 									 "\nfeed=" + feed +
-									 "\nstarttime=" + starttime)
+									 "\nstarttime=" + starttime +
+									 "\ncopydelay=" + copydelay)
 					  }
 				  } //configs
 			  } //blockableBuildTriggerConfig
