@@ -115,8 +115,8 @@ class Trial:
         self.feedDuration = 220 #seconds
         #self.cwtime = float(cwtime)
         #self.ccwtime = float(ccwtime)
-        self.cwtime = .55 #seconds
-        self.ccwtime = .55 #seconds
+        self.cwtime = .65 #seconds
+        self.ccwtime = .65 #seconds
         self.startDelay = 3 #minutes
 
         self.feeder_en = 17
