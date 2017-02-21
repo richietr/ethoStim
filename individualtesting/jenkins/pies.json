@@ -19,11 +19,6 @@
         "copydelay": "360",
         "cwtime": "3.8"
     },
-    "kiwi": {
-        "ccwtime": "3.8",
-        "copydelay": "450",
-        "cwtime": "3.8"
-    },
     "leopard": {
         "ccwtime": "3.8",
         "copydelay": "0",
