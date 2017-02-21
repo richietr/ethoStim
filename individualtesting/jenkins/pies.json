@@ -19,11 +19,6 @@
         "copydelay": "360",
         "cwtime": "3.8"
     },
-    "leopard": {
-        "ccwtime": "3.8",
-        "copydelay": "0",
-        "cwtime": "3.8"
-    },
     "makemake": {
         "ccwtime": "3.9",
         "copydelay": "0",
