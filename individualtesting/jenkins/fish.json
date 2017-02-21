@@ -111,6 +111,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "NA1": {
+        "cam_node": "gorilla",
+        "fishstandardlength": "TBD",
+        "node": "hawk",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "Octavia": {
         "cam_node": "pluto",
         "fishstandardlength": "TBD",
