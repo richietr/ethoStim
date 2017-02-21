@@ -39,6 +39,11 @@
         "copydelay": "0",
         "cwtime": "3.8"
     },
+    "gorilla": {
+        "ccwtime": "3.8",
+        "copydelay": "540",
+        "cwtime": "3.8"
+    },
     "haumea": {
         "ccwtime": "3.8",
         "copydelay": "900",
