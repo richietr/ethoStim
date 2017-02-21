@@ -1,4 +1,9 @@
 {
+    "albatross": {
+        "ccwtime": "3.8",
+        "copydelay": "0",
+        "cwtime": "3.8"
+    },
     "ceres": {
         "ccwtime": "5.3",
         "copydelay": "0",
