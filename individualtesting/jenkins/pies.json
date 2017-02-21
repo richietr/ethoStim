@@ -24,6 +24,11 @@
         "copydelay": "0",
         "cwtime": "3.8"
     },
+    "eagle": {
+        "ccwtime": "3.8",
+        "copydelay": "360",
+        "cwtime": "3.8"
+    },
     "earth": {
         "ccwtime": "3.8",
         "copydelay": "180",
