@@ -76,6 +76,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "Ivette": {
+        "cam_node": "kiwi",
+        "fishstandardlength": "TBD",
+        "node": "leopard",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "Ivory": {
         "cam_node": "earth",
         "fishstandardlength": "TBD",
