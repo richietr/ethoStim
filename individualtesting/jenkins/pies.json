@@ -69,6 +69,11 @@
         "copydelay": "360",
         "cwtime": "3.8"
     },
+    "kiwi": {
+        "ccwtime": "3.8",
+        "copydelay": "900",
+        "cwtime": "3.8"
+    },
     "makemake": {
         "ccwtime": "3.9",
         "copydelay": "0",
