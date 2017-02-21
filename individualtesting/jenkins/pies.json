@@ -14,11 +14,6 @@
         "copydelay": "900",
         "cwtime": "3.8"
     },
-    "impala": {
-        "ccwtime": "3.8",
-        "copydelay": "360",
-        "cwtime": "3.8"
-    },
     "jaguar": {
         "ccwtime": "3.8",
         "copydelay": "0",
