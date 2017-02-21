@@ -19,6 +19,11 @@
         "copydelay": "180",
         "cwtime": "3.8"
     },
+    "dolphin": {
+        "ccwtime": "3.8",
+        "copydelay": "0",
+        "cwtime": "3.8"
+    },
     "earth": {
         "ccwtime": "3.8",
         "copydelay": "180",
