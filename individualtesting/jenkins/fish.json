@@ -111,6 +111,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "Ohara": {
+        "cam_node": "albatross",
+        "fishstandardlength": "TBD",
+        "node": "bobolink",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "Olga": {
         "cam_node": "albatross",
         "fishstandardlength": "TBD",
