@@ -4,11 +4,6 @@
         "copydelay": "0",
         "cwtime": "4.6"
     },
-    "dolphin": {
-        "ccwtime": "3.8",
-        "copydelay": "0",
-        "cwtime": "3.8"
-    },
     "eagle": {
         "ccwtime": "3.8",
         "copydelay": "180",
