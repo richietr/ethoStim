@@ -118,6 +118,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "NA2": {
+        "cam_node": "impala",
+        "fishstandardlength": "TBD",
+        "node": "jaguar",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "Octavia": {
         "cam_node": "pluto",
         "fishstandardlength": "TBD",
