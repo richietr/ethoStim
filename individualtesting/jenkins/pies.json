@@ -49,6 +49,11 @@
         "copydelay": "900",
         "cwtime": "3.8"
     },
+    "hawk": {
+        "ccwtime": "3.8",
+        "copydelay": "0",
+        "cwtime": "3.8"
+    },
     "jupiter": {
         "ccwtime": "3.8",
         "copydelay": "360",
