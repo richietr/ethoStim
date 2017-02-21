@@ -54,6 +54,11 @@
         "copydelay": "0",
         "cwtime": "3.8"
     },
+    "impala": {
+        "ccwtime": "3.8",
+        "copydelay": "720",
+        "cwtime": "3.8"
+    },
     "jupiter": {
         "ccwtime": "3.8",
         "copydelay": "360",
