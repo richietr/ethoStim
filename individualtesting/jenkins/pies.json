@@ -9,11 +9,6 @@
         "copydelay": "180",
         "cwtime": "3.8"
     },
-    "falcon": {
-        "ccwtime": "3.8",
-        "copydelay": "0",
-        "cwtime": "3.8"
-    },
     "gorilla": {
         "ccwtime": "3.8",
         "copydelay": "270",
