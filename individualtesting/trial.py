@@ -341,7 +341,7 @@ if __name__ == '__main__':
 
     # Set video filename
     video_file = T.videoFileName(args["species"], args["round"], args["fishstandardlength"],
-                    args["sex"], args["fish"], args["day"], args["session"], args["thatpistimulus"], args["proportion"], args["fedSide"], args["correctside"])
+                    args["sex"], args["fish"], args["day"], args["session"], args["thatpistimulus"], args["proportion"], args["fedside"], args["correctside"])
 
     # Determine if camera will be used
     if args["camera"]:
