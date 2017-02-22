@@ -31,7 +31,7 @@
     },
     "earth": {
         "ccwtime": "3.8",
-        "copydelay": "180",
+        "copydelay": "1260",
         "cwtime": "3.8"
     },
     "falcon": {
@@ -46,7 +46,7 @@
     },
     "haumea": {
         "ccwtime": "3.8",
-        "copydelay": "900",
+        "copydelay": "1980",
         "cwtime": "3.8"
     },
     "hawk": {
@@ -66,7 +66,7 @@
     },
     "jupiter": {
         "ccwtime": "3.8",
-        "copydelay": "360",
+        "copydelay": "1440",
         "cwtime": "3.8"
     },
     "kiwi": {
@@ -91,7 +91,7 @@
     },
     "mercury": {
         "ccwtime": "3.8",
-        "copydelay": "0",
+        "copydelay": "1080",
         "cwtime": "3.8"
     },
     "neptune": {
@@ -101,7 +101,7 @@
     },
     "pluto": {
         "ccwtime": "3.8",
-        "copydelay": "720",
+        "copydelay": "1800",
         "cwtime": "3.8"
     },
     "saturn": {
@@ -111,7 +111,7 @@
     },
     "uranus": {
         "ccwtime": "3.8",
-        "copydelay": "540",
+        "copydelay": "1620",
         "cwtime": "3.8"
     },
     "venus": {
