@@ -322,7 +322,7 @@ if __name__ == '__main__':
     ap.add_argument("-cs", "--correctside", help="stimulus side on which the correct stimulus is being presented")
     ap.add_argument("-d", "--day", help="experiment day, e.g. 1-7")
     ap.add_argument("-s", "--session", help="trial session, e.g. 1-4")
-    ap.add_argument("-fs", "--fedSide", help="side feed on/conditioned side")
+    ap.add_argument("-fs", "--fedside", help="side feed on/conditioned side")
     ap.add_argument("-x", "--sex", help="fish sex")
     ap.add_argument("-p", "--proportion", help="ratio that is being presented this trial")
     ap.add_argument("-sp", "--species", help="species name")
