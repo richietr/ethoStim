@@ -105,7 +105,7 @@ class Trial:
 
     global captureDone
 
-    def __init__(self, stim, starttime, cwtime, ccwtime):
+    def __init__(self, stim, starttime, cwtime, ccwtime, fedside):
 
         self.vidout = None
         self.stimulus = stim
@@ -126,6 +126,7 @@ class Trial:
         #self.dc = 13
         self.feeder = None
         self.ip = None
+        self.fedside = fedside
 
         # Configure RPi GPIO
         GPIO.setmode(GPIO.BCM)
@@ -267,7 +268,8 @@ class Trial:
         time.sleep(self.feedDelay)
 
         # Turn feeders on
-        self.turnOnFeeder(self)
+        if fedside != 'none':
+            self.turnOnFeeder(self)
         # Wait for feeder to turn into place time
         print 'Sleep ' + str(intime) + ' secs'
         time.sleep(intime)
@@ -285,7 +287,8 @@ class Trial:
             # Set feeders direction to clockwise
             self.setFeederDirCw(self)
         # Turn feeders on
-        self.turnOnFeeder(self)
+        if fedside != 'none':
+            self.turnOnFeeder(self)
         # Return to start position
         print 'Sleep ' + str(outtime) + ' secs'
         time.sleep(outtime)
@@ -331,7 +334,7 @@ if __name__ == '__main__':
     args = vars(ap.parse_args())
 
 
-    T = Trial(args["pistimulus"], args["startTime"], args["cwtime"], args["ccwtime"])
+    T = Trial(args["pistimulus"], args["startTime"], args["cwtime"], args["ccwtime"], args["fedside"])
 
     T.ip = getIpAddr()
     T.whatStimulus()
