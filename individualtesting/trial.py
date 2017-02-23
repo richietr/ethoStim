@@ -268,7 +268,7 @@ class Trial:
         time.sleep(self.feedDelay)
 
         # Turn feeders on
-        if fedside != 'none':
+        if self.fedside != 'none':
             self.turnOnFeeder(self)
         # Wait for feeder to turn into place time
         print 'Sleep ' + str(intime) + ' secs'
@@ -287,7 +287,7 @@ class Trial:
             # Set feeders direction to clockwise
             self.setFeederDirCw(self)
         # Turn feeders on
-        if fedside != 'none':
+        if self.fedside != 'none':
             self.turnOnFeeder(self)
         # Return to start position
         print 'Sleep ' + str(outtime) + ' secs'
