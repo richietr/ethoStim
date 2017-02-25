@@ -62,6 +62,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "Iris": {
+        "cam_node": "earth",
+        "fishstandardlength": "TBD",
+        "node": "mars",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "Irma": {
         "cam_node": "uranus",
         "fishstandardlength": "TBD",
