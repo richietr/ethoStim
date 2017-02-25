@@ -34,6 +34,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "Ilyssa": {
+        "cam_node": "haumea",
+        "fishstandardlength": "TBD",
+        "node": "makemake",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "India": {
         "cam_node": "kiwi",
         "fishstandardlength": "TBD",
