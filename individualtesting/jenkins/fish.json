@@ -20,6 +20,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "Iggy": {
+        "cam_node": "uranus",
+        "fishstandardlength": "TBD",
+        "node": "neptune",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "Iliana": {
         "cam_node": "cougar",
         "fishstandardlength": "TBD",
