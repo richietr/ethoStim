@@ -125,6 +125,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "Ocean": {
+        "cam_node": "mercury",
+        "fishstandardlength": "TBD",
+        "node": "venus",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "Octavia": {
         "cam_node": "pluto",
         "fishstandardlength": "TBD",
