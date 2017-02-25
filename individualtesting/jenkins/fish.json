@@ -223,6 +223,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "Ozera": {
+        "cam_node": "pluto",
+        "fishstandardlength": "TBD",
+        "node": "ceres",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "iris": {
         "cam_node": "earth",
         "fishstandardlength": "TBD",
