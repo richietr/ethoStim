@@ -208,5 +208,12 @@
         "node": "falcon",
         "sex": "female",
         "species": "gambusia"
+    },
+    "iris": {
+        "cam_node": "earth",
+        "fishstandardlength": "TBD",
+        "node": "mars",
+        "sex": "female",
+        "species": "gambusia"
     }
 }
