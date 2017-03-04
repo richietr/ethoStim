@@ -118,6 +118,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "Izzy": {
+        "cam_node": "gorilla",
+        "fishstandardlength": "TBD",
+        "node": "hawk",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "Laci": {
         "cam_node": "uranus",
         "fishstandardlength": "TBD",
