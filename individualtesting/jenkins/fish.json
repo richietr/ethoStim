@@ -188,6 +188,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "Omi": {
+        "cam_node": "albatross",
+        "fishstandardlength": "TBD",
+        "node": "bobolink",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "Ontario": {
         "cam_node": "uranus",
         "fishstandardlength": "TBD",
