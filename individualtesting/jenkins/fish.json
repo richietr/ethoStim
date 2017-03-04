@@ -20,6 +20,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "Ifeoma": {
+        "cam_node": "kiwi",
+        "fishstandardlength": "TBD",
+        "node": "leopard",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "Iggy": {
         "cam_node": "uranus",
         "fishstandardlength": "TBD",
