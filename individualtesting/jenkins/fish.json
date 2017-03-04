@@ -160,6 +160,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "Oahu": {
+        "cam_node": "impala",
+        "fishstandardlength": "TBD",
+        "node": "jaguar",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "Ocean": {
         "cam_node": "mercury",
         "fishstandardlength": "TBD",
