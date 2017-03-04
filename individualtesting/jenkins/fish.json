@@ -244,6 +244,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "Oteria": {
+        "cam_node": "eagle",
+        "fishstandardlength": "TBD",
+        "node": "falcon",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "Oz": {
         "cam_node": "eagle",
         "fishstandardlength": "TBD",
