@@ -97,6 +97,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "Isadora": {
+        "cam_node": "earth",
+        "fishstandardlength": "TBD",
+        "node": "mars",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "Iva": {
         "cam_node": "gorilla",
         "fishstandardlength": "TBD",
