@@ -216,6 +216,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "Olopte": {
+        "cam_node": "jupiter",
+        "fishstandardlength": "TBD",
+        "node": "saturn",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "Olympia": {
         "cam_node": "earth",
         "fishstandardlength": "TBD",
