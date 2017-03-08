@@ -223,6 +223,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "Ollie": {
+        "cam_node": "pluto",
+        "fishstandardlength": "TBD",
+        "node": "ceres",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "Olopte": {
         "cam_node": "jupiter",
         "fishstandardlength": "TBD",
