@@ -285,5 +285,12 @@
         "node": "ceres",
         "sex": "female",
         "species": "gambusia"
+    },
+    "Ozzi": {
+        "cam_node": "mercury",
+        "fishstandardlength": "TBD",
+        "node": "venus",
+        "sex": "female",
+        "species": "gambusia"
     }
 }
