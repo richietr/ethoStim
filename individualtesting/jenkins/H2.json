@@ -9,9 +9,9 @@
 			"feedside": "both",
 			"proportion": "0",
 			"feed": "TRUE",
-			"camera": "FALSE",
+			"camera": "FALSE"
 		 },
-	"2": {	
+	"2": {
 			"day": "1",
 			"time": "9:05",
 			"thatpistimulus": "0",
@@ -21,7 +21,7 @@
 			"feedside": "both",
 			"proportion": "0",
 			"feed": "TRUE",
-			"camera": "TRUE",	
+			"camera": "TRUE"
 		 },
 	"3": {
 			"day": "1",
@@ -33,9 +33,9 @@
 			"feedside": "both",
 			"proportion": "0",
 			"feed": "TRUE",
-			"camera": "FALSE",
+			"camera": "FALSE"
 		 },
-	"4": {	
+	"4": {
 			"day": "1",
 			"time": "11:05",
 			"thatpistimulus": "0",
@@ -45,8 +45,8 @@
 			"feedside": "both",
 			"proportion": "0",
 			"feed": "TRUE",
-			"camera": "TRUE",	
-		 },	
+			"camera": "TRUE"
+		 },
 	"5": {
 			"day": "1",
 			"time": "13:05",
@@ -57,9 +57,9 @@
 			"feedside": "both",
 			"proportion": "0",
 			"feed": "TRUE",
-			"camera": "FALSE",
+			"camera": "FALSE"
 		 },
-	"6": {	
+	"6": {
 			"day": "1",
 			"time": "13:05",
 			"thatpistimulus": "0",
@@ -69,7 +69,7 @@
 			"feedside": "both",
 			"proportion": "0",
 			"feed": "TRUE",
-			"camera": "TRUE",	
+			"camera": "TRUE"
 		 },
 	"7": {
 			"day": "1",
@@ -81,9 +81,9 @@
 			"feedside": "both",
 			"proportion": "0",
 			"feed": "TRUE",
-			"camera": "FALSE",
+			"camera": "FALSE"
 		 },
-	"8": {	
+	"8": {
 			"day": "1",
 			"time": "15:05",
 			"thatpistimulus": "0",
@@ -93,7 +93,7 @@
 			"feedside": "both",
 			"proportion": "0",
 			"feed": "TRUE",
-			"camera": "TRUE",	
+			"camera": "TRUE"
 		 },
 	"9": {
 			"day": "1",
@@ -105,9 +105,9 @@
 			"feedside": "both",
 			"proportion": "0",
 			"feed": "TRUE",
-			"camera": "FALSE",
+			"camera": "FALSE"
 		 },
-	"10": {	
+	"10": {
 			"day": "1",
 			"time": "17:05",
 			"thatpistimulus": "0",
@@ -117,8 +117,8 @@
 			"feedside": "both",
 			"proportion": "0",
 			"feed": "TRUE",
-			"camera": "TRUE",	
-		 },	
+			"camera": "TRUE"
+		 },
 	"11": {
 			"day": "2",
 			"time": "9:05",
@@ -129,9 +129,9 @@
 			"feedside": "both",
 			"proportion": "0",
 			"feed": "TRUE",
-			"camera": "FALSE",
+			"camera": "FALSE"
 		 },
-	"12": {	
+	"12": {
 			"day": "2",
 			"time": "9:05",
 			"thatpistimulus": "0",
@@ -141,7 +141,7 @@
 			"feedside": "both",
 			"proportion": "0",
 			"feed": "TRUE",
-			"camera": "TRUE",	
+			"camera": "TRUE"
 		 },
 	"13": {
 			"day": "2",
@@ -153,9 +153,9 @@
 			"feedside": "both",
 			"proportion": "0",
 			"feed": "TRUE",
-			"camera": "FALSE",
+			"camera": "FALSE"
 		 },
-	"14": {	
+	"14": {
 			"day": "2",
 			"time": "11:05",
 			"thatpistimulus": "0",
@@ -165,8 +165,8 @@
 			"feedside": "both",
 			"proportion": "0",
 			"feed": "TRUE",
-			"camera": "TRUE",	
-		 },	
+			"camera": "TRUE"
+		 },
 	"15": {
 			"day": "2",
 			"time": "13:05",
@@ -177,9 +177,9 @@
 			"feedside": "both",
 			"proportion": "0",
 			"feed": "TRUE",
-			"camera": "FALSE",
+			"camera": "FALSE"
 		 },
-	"16": {	
+	"16": {
 			"day": "2",
 			"time": "13:05",
 			"thatpistimulus": "0",
@@ -189,7 +189,7 @@
 			"feedside": "both",
 			"proportion": "0",
 			"feed": "TRUE",
-			"camera": "TRUE",	
+			"camera": "TRUE"
 		 },
 	"17": {
 			"day": "2",
@@ -201,9 +201,9 @@
 			"feedside": "both",
 			"proportion": "0",
 			"feed": "TRUE",
-			"camera": "FALSE",
+			"camera": "FALSE"
 		 },
-	"18": {	
+	"18": {
 			"day": "2",
 			"time": "15:05",
 			"thatpistimulus": "0",
@@ -213,7 +213,7 @@
 			"feedside": "both",
 			"proportion": "0",
 			"feed": "TRUE",
-			"camera": "TRUE",	
+			"camera": "TRUE"
 		 },
 	"19": {
 			"day": "2",
@@ -225,9 +225,9 @@
 			"feedside": "both",
 			"proportion": "0",
 			"feed": "TRUE",
-			"camera": "FALSE",
+			"camera": "FALSE"
 		 },
-	"20": {	
+	"20": {
 			"day": "2",
 			"time": "17:05",
 			"thatpistimulus": "0",
@@ -237,7 +237,7 @@
 			"feedside": "both",
 			"proportion": "0",
 			"feed": "TRUE",
-			"camera": "TRUE",	
+			"camera": "TRUE"
 		 },
 	"21": {
 			"day": "3",
@@ -249,9 +249,9 @@
 			"feedside": "right",
 			"proportion": "50",
 			"feed": "FALSE",
-			"camera": "FALSE",
+			"camera": "FALSE"
 		 },
-	"22": {	
+	"22": {
 			"day": "3",
 			"time": "9:05",
 			"thatpistimulus": "5",
@@ -261,7 +261,7 @@
 			"feedside": "right",
 			"proportion": "50",
 			"feed": "TRUE",
-			"camera": "TRUE",	
+			"camera": "TRUE"
 		 },
 	"23": {
 			"day": "3",
@@ -273,9 +273,9 @@
 			"feedside": "left",
 			"proportion": "50",
 			"feed": "TRUE",
-			"camera": "FALSE",
+			"camera": "FALSE"
 		 },
-	"24": {	
+	"24": {
 			"day": "3",
 			"time": "11:05",
 			"thatpistimulus": "12",
@@ -285,8 +285,8 @@
 			"feedside": "left",
 			"proportion": "50",
 			"feed": "FALSE",
-			"camera": "TRUE",	
-		 },	
+			"camera": "TRUE"
+		 },
 	"25": {
 			"day": "3",
 			"time": "13:05",
@@ -297,9 +297,9 @@
 			"feedside": "left",
 			"proportion": "50",
 			"feed": "TRUE",
-			"camera": "FALSE",
+			"camera": "FALSE"
 		 },
-	"26": {	
+	"26": {
 			"day": "3",
 			"time": "13:05",
 			"thatpistimulus": "12",
@@ -309,7 +309,7 @@
 			"feedside": "left",
 			"proportion": "50",
 			"feed": "FALSE",
-			"camera": "TRUE",	
+			"camera": "TRUE"
 		 },
 	"27": {
 			"day": "3",
@@ -321,9 +321,9 @@
 			"feedside": "right",
 			"proportion": "50",
 			"feed": "FALSE",
-			"camera": "FALSE",
+			"camera": "FALSE"
 		 },
-	"28": {	
+	"28": {
 			"day": "3",
 			"time": "15:05",
 			"thatpistimulus": "5",
@@ -333,7 +333,7 @@
 			"feedside": "right",
 			"proportion": "50",
 			"feed": "TRUE",
-			"camera": "TRUE",	
+			"camera": "TRUE"
 		 },
 	"29": {
 			"day": "3",
@@ -345,9 +345,9 @@
 			"feedside": "left",
 			"proportion": "50",
 			"feed": "TRUE",
-			"camera": "FALSE",
+			"camera": "FALSE"
 		 },
-	"30": {	
+	"30": {
 			"day": "3",
 			"time": "17:05",
 			"thatpistimulus": "10",
@@ -357,8 +357,8 @@
 			"feedside": "left",
 			"proportion": "50",
 			"feed": "FALSE",
-			"camera": "TRUE",	
-		 },	
+			"camera": "TRUE"
+		 },
 	"31": {
 			"day": "4",
 			"time": "9:05",
@@ -369,9 +369,9 @@
 			"feedside": "right",
 			"proportion": "50",
 			"feed": "FALSE",
-			"camera": "FALSE",
+			"camera": "FALSE"
 		 },
-	"32": {	
+	"32": {
 			"day": "4",
 			"time": "9:05",
 			"thatpistimulus": "6",
@@ -381,7 +381,7 @@
 			"feedside": "right",
 			"proportion": "50",
 			"feed": "TRUE",
-			"camera": "TRUE",	
+			"camera": "TRUE"
 		 },
 	"33": {
 			"day": "4",
@@ -393,9 +393,9 @@
 			"feedside": "left",
 			"proportion": "50",
 			"feed": "TRUE",
-			"camera": "FALSE",
+			"camera": "FALSE"
 		 },
-	"34": {	
+	"34": {
 			"day": "4",
 			"time": "11:05",
 			"thatpistimulus": "10",
@@ -405,8 +405,8 @@
 			"feedside": "left",
 			"proportion": "50",
 			"feed": "FALSE",
-			"camera": "TRUE",	
-		 },	
+			"camera": "TRUE"
+		 },
 	"35": {
 			"day": "4",
 			"time": "13:05",
@@ -417,9 +417,9 @@
 			"feedside": "right",
 			"proportion": "50",
 			"feed": "FALSE",
-			"camera": "FALSE",
+			"camera": "FALSE"
 		 },
-	"36": {	
+	"36": {
 			"day": "4",
 			"time": "13:05",
 			"thatpistimulus": "6",
@@ -429,7 +429,7 @@
 			"feedside": "right",
 			"proportion": "50",
 			"feed": "TRUE",
-			"camera": "TRUE",	
+			"camera": "TRUE"
 		 },
 	"37": {
 			"day": "4",
@@ -441,9 +441,9 @@
 			"feedside": "left",
 			"proportion": "50",
 			"feed": "TRUE",
-			"camera": "FALSE",
+			"camera": "FALSE"
 		 },
-	"38": {	
+	"38": {
 			"day": "4",
 			"time": "15:05",
 			"thatpistimulus": "10",
@@ -453,7 +453,7 @@
 			"feedside": "left",
 			"proportion": "50",
 			"feed": "FALSE",
-			"camera": "TRUE",	
+			"camera": "TRUE"
 		 },
 	"39": {
 			"day": "4",
@@ -465,9 +465,9 @@
 			"feedside": "right",
 			"proportion": "50",
 			"feed": "FALSE",
-			"camera": "FALSE",
+			"camera": "FALSE"
 		 },
-	"40": {	
+	"40": {
 			"day": "4",
 			"time": "17:05",
 			"thatpistimulus": "6",
@@ -477,7 +477,7 @@
 			"feedside": "right",
 			"proportion": "50",
 			"feed": "TRUE",
-			"camera": "TRUE",	
+			"camera": "TRUE"
 		 },
 	"41": {
 			"day": "5",
@@ -489,9 +489,9 @@
 			"feedside": "left",
 			"proportion": "50",
 			"feed": "TRUE",
-			"camera": "FALSE",
+			"camera": "FALSE"
 		 },
-	"42": {	
+	"42": {
 			"day": "5",
 			"time": "9:05",
 			"thatpistimulus": "12",
@@ -501,7 +501,7 @@
 			"feedside": "left",
 			"proportion": "50",
 			"feed": "FALSE",
-			"camera": "TRUE",	
+			"camera": "TRUE"
 		 },
 	"43": {
 			"day": "5",
@@ -513,9 +513,9 @@
 			"feedside": "right",
 			"proportion": "50",
 			"feed": "FALSE",
-			"camera": "FALSE",
+			"camera": "FALSE"
 		 },
-	"44": {	
+	"44": {
 			"day": "5",
 			"time": "11:05",
 			"thatpistimulus": "5",
@@ -525,8 +525,8 @@
 			"feedside": "right",
 			"proportion": "50",
 			"feed": "TRUE",
-			"camera": "TRUE",	
-		 },	
+			"camera": "TRUE"
+		 },
 	"45": {
 			"day": "5",
 			"time": "13:05",
@@ -537,9 +537,9 @@
 			"feedside": "right",
 			"proportion": "50",
 			"feed": "FALSE",
-			"camera": "FALSE",
+			"camera": "FALSE"
 		 },
-	"46": {	
+	"46": {
 			"day": "5",
 			"time": "13:05",
 			"thatpistimulus": "5",
@@ -549,7 +549,7 @@
 			"feedside": "right",
 			"proportion": "50",
 			"feed": "TRUE",
-			"camera": "TRUE",	
+			"camera": "TRUE"
 		 },
 	"47": {
 			"day": "5",
@@ -561,9 +561,9 @@
 			"feedside": "left",
 			"proportion": "50",
 			"feed": "TRUE",
-			"camera": "FALSE",
+			"camera": "FALSE"
 		 },
-	"48": {	
+	"48": {
 			"day": "5",
 			"time": "15:05",
 			"thatpistimulus": "12",
@@ -573,7 +573,7 @@
 			"feedside": "left",
 			"proportion": "50",
 			"feed": "FALSE",
-			"camera": "TRUE",	
+			"camera": "TRUE"
 		 },
 	"49": {
 			"day": "5",
@@ -585,9 +585,9 @@
 			"feedside": "right",
 			"proportion": "50",
 			"feed": "FALSE",
-			"camera": "FALSE",
+			"camera": "FALSE"
 		 },
-	"50": {	
+	"50": {
 			"day": "5",
 			"time": "17:05",
 			"thatpistimulus": "5",
@@ -597,7 +597,7 @@
 			"feedside": "right",
 			"proportion": "50",
 			"feed": "TRUE",
-			"camera": "TRUE",	
+			"camera": "TRUE"
 		 },
 	"51": {
 			"day": "6",
@@ -609,9 +609,9 @@
 			"feedside": "left",
 			"proportion": "50",
 			"feed": "TRUE",
-			"camera": "FALSE",
+			"camera": "FALSE"
 		 },
-	"52": {	
+	"52": {
 			"day": "6",
 			"time": "9:05",
 			"thatpistimulus": "10",
@@ -621,7 +621,7 @@
 			"feedside": "left",
 			"proportion": "50",
 			"feed": "FALSE",
-			"camera": "TRUE",	
+			"camera": "TRUE"
 		 },
 	"53": {
 			"day": "6",
@@ -633,9 +633,9 @@
 			"feedside": "right",
 			"proportion": "50",
 			"feed": "FALSE",
-			"camera": "FALSE",
+			"camera": "FALSE"
 		 },
-	"54": {	
+	"54": {
 			"day": "6",
 			"time": "11:05",
 			"thatpistimulus": "6",
@@ -645,8 +645,8 @@
 			"feedside": "right",
 			"proportion": "50",
 			"feed": "TRUE",
-			"camera": "TRUE",	
-		 },	
+			"camera": "TRUE"
+		 },
 	"55": {
 			"day": "6",
 			"time": "13:05",
@@ -657,9 +657,9 @@
 			"feedside": "left",
 			"proportion": "50",
 			"feed": "TRUE",
-			"camera": "FALSE",
+			"camera": "FALSE"
 		 },
-	"56": {	
+	"56": {
 			"day": "6",
 			"time": "13:05",
 			"thatpistimulus": "10",
@@ -669,7 +669,7 @@
 			"feedside": "left",
 			"proportion": "50",
 			"feed": "FALSE",
-			"camera": "TRUE",	
+			"camera": "TRUE"
 		 },
 	"57": {
 			"day": "6",
@@ -681,9 +681,9 @@
 			"feedside": "right",
 			"proportion": "50",
 			"feed": "FALSE",
-			"camera": "FALSE",
+			"camera": "FALSE"
 		 },
-	"58": {	
+	"58": {
 			"day": "6",
 			"time": "15:05",
 			"thatpistimulus": "6",
@@ -693,7 +693,7 @@
 			"feedside": "right",
 			"proportion": "50",
 			"feed": "TRUE",
-			"camera": "TRUE",	
+			"camera": "TRUE"
 		 },
 	"59": {
 			"day": "6",
@@ -705,9 +705,9 @@
 			"feedside": "left",
 			"proportion": "50",
 			"feed": "TRUE",
-			"camera": "FALSE",
+			"camera": "FALSE"
 		 },
-	"60": {	
+	"60": {
 			"day": "6",
 			"time": "17:05",
 			"thatpistimulus": "10",
@@ -717,7 +717,7 @@
 			"feedside": "left",
 			"proportion": "50",
 			"feed": "FALSE",
-			"camera": "TRUE",	
+			"camera": "TRUE"
 		 },
 	"61": {
 			"day": "7",
@@ -729,9 +729,9 @@
 			"feedside": "right",
 			"proportion": "50",
 			"feed": "FALSE",
-			"camera": "FALSE",
+			"camera": "FALSE"
 		 },
-	"62": {	
+	"62": {
 			"day": "7",
 			"time": "9:05",
 			"thatpistimulus": "5",
@@ -741,7 +741,7 @@
 			"feedside": "right",
 			"proportion": "50",
 			"feed": "TRUE",
-			"camera": "TRUE",	
+			"camera": "TRUE"
 		 },
 	"63": {
 			"day": "7",
@@ -753,9 +753,9 @@
 			"feedside": "left",
 			"proportion": "50",
 			"feed": "TRUE",
-			"camera": "FALSE",
+			"camera": "FALSE"
 		 },
-	"64": {	
+	"64": {
 			"day": "7",
 			"time": "11:05",
 			"thatpistimulus": "12",
@@ -765,8 +765,8 @@
 			"feedside": "left",
 			"proportion": "50",
 			"feed": "FALSE",
-			"camera": "TRUE",	
-		 },	
+			"camera": "TRUE"
+		 },
 	"65": {
 			"day": "7",
 			"time": "13:05",
@@ -777,9 +777,9 @@
 			"feedside": "left",
 			"proportion": "50",
 			"feed": "TRUE",
-			"camera": "FALSE",
+			"camera": "FALSE"
 		 },
-	"66": {	
+	"66": {
 			"day": "7",
 			"time": "13:05",
 			"thatpistimulus": "12",
@@ -789,7 +789,7 @@
 			"feedside": "left",
 			"proportion": "50",
 			"feed": "FALSE",
-			"camera": "TRUE",	
+			"camera": "TRUE"
 		 },
 	"67": {
 			"day": "7",
@@ -801,9 +801,9 @@
 			"feedside": "right",
 			"proportion": "50",
 			"feed": "FALSE",
-			"camera": "FALSE",
+			"camera": "FALSE"
 		 },
-	"68": {	
+	"68": {
 			"day": "7",
 			"time": "15:05",
 			"thatpistimulus": "5",
@@ -813,7 +813,7 @@
 			"feedside": "right",
 			"proportion": "50",
 			"feed": "TRUE",
-			"camera": "TRUE",	
+			"camera": "TRUE"
 		 },
 	"69": {
 			"day": "7",
@@ -825,9 +825,9 @@
 			"feedside": "left",
 			"proportion": "50",
 			"feed": "TRUE",
-			"camera": "FALSE",
+			"camera": "FALSE"
 		 },
-	"70": {	
+	"70": {
 			"day": "7",
 			"time": "17:05",
 			"thatpistimulus": "12",
@@ -837,7 +837,7 @@
 			"feedside": "left",
 			"proportion": "50",
 			"feed": "FALSE",
-			"camera": "TRUE",	
+			"camera": "TRUE"
 		 },
 	"71": {
 			"day": "8",
@@ -849,9 +849,9 @@
 			"feedside": "right",
 			"proportion": "50",
 			"feed": "FALSE",
-			"camera": "FALSE",
+			"camera": "FALSE"
 		 },
-	"72": {	
+	"72": {
 			"day": "8",
 			"time": "9:05",
 			"thatpistimulus": "6",
@@ -861,7 +861,7 @@
 			"feedside": "right",
 			"proportion": "50",
 			"feed": "TRUE",
-			"camera": "TRUE",	
+			"camera": "TRUE"
 		 },
 	"73": {
 			"day": "8",
@@ -873,9 +873,9 @@
 			"feedside": "left",
 			"proportion": "50",
 			"feed": "TRUE",
-			"camera": "FALSE",
+			"camera": "FALSE"
 		 },
-	"74": {	
+	"74": {
 			"day": "8",
 			"time": "11:05",
 			"thatpistimulus": "10",
@@ -885,8 +885,8 @@
 			"feedside": "left",
 			"proportion": "50",
 			"feed": "FALSE",
-			"camera": "TRUE",	
-		 },	
+			"camera": "TRUE"
+		 },
 	"75": {
 			"day": "8",
 			"time": "13:05",
@@ -897,9 +897,9 @@
 			"feedside": "right",
 			"proportion": "50",
 			"feed": "FALSE",
-			"camera": "FALSE",
+			"camera": "FALSE"
 		 },
-	"76": {	
+	"76": {
 			"day": "8",
 			"time": "13:05",
 			"thatpistimulus": "6",
@@ -909,7 +909,7 @@
 			"feedside": "right",
 			"proportion": "50",
 			"feed": "TRUE",
-			"camera": "TRUE",	
+			"camera": "TRUE"
 		 },
 	"77": {
 			"day": "8",
@@ -921,9 +921,9 @@
 			"feedside": "left",
 			"proportion": "50",
 			"feed": "TRUE",
-			"camera": "FALSE",
+			"camera": "FALSE"
 		 },
-	"78": {	
+	"78": {
 			"day": "8",
 			"time": "15:05",
 			"thatpistimulus": "10",
@@ -933,7 +933,7 @@
 			"feedside": "left",
 			"proportion": "50",
 			"feed": "FALSE",
-			"camera": "TRUE",	
+			"camera": "TRUE"
 		 },
 	"79": {
 			"day": "8",
@@ -945,9 +945,9 @@
 			"feedside": "right",
 			"proportion": "50",
 			"feed": "FALSE",
-			"camera": "FALSE",
+			"camera": "FALSE"
 		 },
-	"80": {	
+	"80": {
 			"day": "8",
 			"time": "17:05",
 			"thatpistimulus": "6",
@@ -957,7 +957,7 @@
 			"feedside": "right",
 			"proportion": "50",
 			"feed": "TRUE",
-			"camera": "TRUE",	
+			"camera": "TRUE"
 		 },
 	"81": {
 			"day": "9",
@@ -969,9 +969,9 @@
 			"feedside": "none",
 			"proportion": "50",
 			"feed": "FALSE",
-			"camera": "FALSE",
+			"camera": "FALSE"
 		 },
-	"82": {	
+	"82": {
 			"day": "9",
 			"time": "9:05",
 			"thatpistimulus": "14",
@@ -981,7 +981,7 @@
 			"feedside": "none",
 			"proportion": "50",
 			"feed": "FALSE",
-			"camera": "TRUE",	
+			"camera": "TRUE"
 		 },
 	"83": {
 			"day": "9",
@@ -993,9 +993,9 @@
 			"feedside": "none",
 			"proportion": "75",
 			"feed": "FALSE",
-			"camera": "FALSE",
+			"camera": "FALSE"
 		 },
-	"84": {	
+	"84": {
 			"day": "9",
 			"time": "11:05",
 			"thatpistimulus": "9",
@@ -1005,8 +1005,8 @@
 			"feedside": "none",
 			"proportion": "75",
 			"feed": "FALSE",
-			"camera": "TRUE",	
-		 },	
+			"camera": "TRUE"
+		 },
 	"85": {
 			"day": "9",
 			"time": "13:05",
@@ -1017,9 +1017,9 @@
 			"feedside": "none",
 			"proportion": "67",
 			"feed": "FALSE",
-			"camera": "FALSE",
+			"camera": "FALSE"
 		 },
-	"86": {	
+	"86": {
 			"day": "9",
 			"time": "13:05",
 			"thatpistimulus": "12",
@@ -1029,7 +1029,7 @@
 			"feedside": "none",
 			"proportion": "67",
 			"feed": "FALSE",
-			"camera": "TRUE",	
+			"camera": "TRUE"
 		 },
 	"87": {
 			"day": "9",
@@ -1041,9 +1041,9 @@
 			"feedside": "right",
 			"proportion": "50",
 			"feed": "FALSE",
-			"camera": "FALSE",
+			"camera": "FALSE"
 		 },
-	"88": {	
+	"88": {
 			"day": "9",
 			"time": "15:05",
 			"thatpistimulus": "6",
@@ -1053,7 +1053,7 @@
 			"feedside": "right",
 			"proportion": "50",
 			"feed": "TRUE",
-			"camera": "TRUE",	
+			"camera": "TRUE"
 		 },
 	"89": {
 			"day": "9",
@@ -1065,9 +1065,9 @@
 			"feedside": "both",
 			"proportion": "0",
 			"feed": "TRUE",
-			"camera": "FALSE",
+			"camera": "FALSE"
 		 },
-	"90": {	
+	"90": {
 			"day": "9",
 			"time": "16:05",
 			"thatpistimulus": "0",
@@ -1077,7 +1077,7 @@
 			"feedside": "both",
 			"proportion": "0",
 			"feed": "TRUE",
-			"camera": "TRUE",	
+			"camera": "TRUE"
 		 },
 	"91": {
 			"day": "9",
@@ -1089,9 +1089,9 @@
 			"feedside": "both",
 			"proportion": "0",
 			"feed": "TRUE",
-			"camera": "FALSE",
+			"camera": "FALSE"
 		 },
-	"92": {	
+	"92": {
 			"day": "9",
 			"time": "16:10",
 			"thatpistimulus": "0",
@@ -1101,7 +1101,7 @@
 			"feedside": "both",
 			"proportion": "0",
 			"feed": "TRUE",
-			"camera": "TRUE",	
+			"camera": "TRUE"
 		 },
 	"93": {
 			"day": "10",
@@ -1113,9 +1113,9 @@
 			"feedside": "none",
 			"proportion": "75",
 			"feed": "FALSE",
-			"camera": "FALSE",
+			"camera": "FALSE"
 		 },
-	"94": {	
+	"94": {
 			"day": "10",
 			"time": "9:05",
 			"thatpistimulus": "12",
@@ -1125,8 +1125,8 @@
 			"feedside": "none",
 			"proportion": "75",
 			"feed": "FALSE",
-			"camera": "TRUE",	
-		 },	
+			"camera": "TRUE"
+		 },
 	"95": {
 			"day": "10",
 			"time": "11:05",
@@ -1137,9 +1137,9 @@
 			"feedside": "none",
 			"proportion": "67",
 			"feed": "FALSE",
-			"camera": "FALSE",
+			"camera": "FALSE"
 		 },
-	"96": {	
+	"96": {
 			"day": "10",
 			"time": "11:05",
 			"thatpistimulus": "8",
@@ -1149,7 +1149,7 @@
 			"feedside": "none",
 			"proportion": "67",
 			"feed": "FALSE",
-			"camera": "TRUE",	
+			"camera": "TRUE"
 		 },
 	"97": {
 			"day": "10",
@@ -1161,9 +1161,9 @@
 			"feedside": "none",
 			"proportion": "50",
 			"feed": "FALSE",
-			"camera": "FALSE",
+			"camera": "FALSE"
 		 },
-	"98": {	
+	"98": {
 			"day": "10",
 			"time": "13:05",
 			"thatpistimulus": "14",
@@ -1173,7 +1173,7 @@
 			"feedside": "none",
 			"proportion": "50",
 			"feed": "FALSE",
-			"camera": "TRUE",	
+			"camera": "TRUE"
 		 },
 	"99": {
 			"day": "10",
@@ -1185,9 +1185,9 @@
 			"feedside": "left",
 			"proportion": "50",
 			"feed": "TRUE",
-			"camera": "FALSE",
+			"camera": "FALSE"
 		 },
-	"100": {	
+	"100": {
 			"day": "10",
 			"time": "15:05",
 			"thatpistimulus": "12",
@@ -1197,7 +1197,7 @@
 			"feedside": "left",
 			"proportion": "50",
 			"feed": "FALSE",
-			"camera": "TRUE",	
+			"camera": "TRUE"
 		 },
 	"101": {
 			"day": "10",
@@ -1209,9 +1209,9 @@
 			"feedside": "both",
 			"proportion": "0",
 			"feed": "TRUE",
-			"camera": "FALSE",
+			"camera": "FALSE"
 		 },
-	"102": {	
+	"102": {
 			"day": "10",
 			"time": "16:05",
 			"thatpistimulus": "0",
@@ -1221,7 +1221,7 @@
 			"feedside": "both",
 			"proportion": "0",
 			"feed": "TRUE",
-			"camera": "TRUE",	
+			"camera": "TRUE"
 		 },
 	"103": {
 			"day": "10",
@@ -1233,9 +1233,9 @@
 			"feedside": "both",
 			"proportion": "0",
 			"feed": "TRUE",
-			"camera": "FALSE",
+			"camera": "FALSE"
 		 },
-	"104": {	
+	"104": {
 			"day": "10",
 			"time": "16:10",
 			"thatpistimulus": "0",
@@ -1245,7 +1245,7 @@
 			"feedside": "both",
 			"proportion": "0",
 			"feed": "TRUE",
-			"camera": "TRUE",	
+			"camera": "TRUE"
 		 },
 	"105": {
 			"day": "11",
@@ -1257,9 +1257,9 @@
 			"feedside": "none",
 			"proportion": "67",
 			"feed": "FALSE",
-			"camera": "FALSE",
+			"camera": "FALSE"
 		 },
-	"106": {	
+	"106": {
 			"day": "11",
 			"time": "9:05",
 			"thatpistimulus": "12",
@@ -1269,8 +1269,8 @@
 			"feedside": "none",
 			"proportion": "67",
 			"feed": "FALSE",
-			"camera": "TRUE",	
-		 },	
+			"camera": "TRUE"
+		 },
 	"107": {
 			"day": "11",
 			"time": "11:05",
@@ -1281,9 +1281,9 @@
 			"feedside": "none",
 			"proportion": "50",
 			"feed": "FALSE",
-			"camera": "FALSE",
+			"camera": "FALSE"
 		 },
-	"108": {	
+	"108": {
 			"day": "11",
 			"time": "11:05",
 			"thatpistimulus": "7",
@@ -1293,7 +1293,7 @@
 			"feedside": "none",
 			"proportion": "50",
 			"feed": "FALSE",
-			"camera": "TRUE",	
+			"camera": "TRUE"
 		 },
 	"109": {
 			"day": "11",
@@ -1305,9 +1305,9 @@
 			"feedside": "none",
 			"proportion": "75",
 			"feed": "FALSE",
-			"camera": "FALSE",
+			"camera": "FALSE"
 		 },
-	"110": {	
+	"110": {
 			"day": "11",
 			"time": "13:05",
 			"thatpistimulus": "12",
@@ -1317,7 +1317,7 @@
 			"feedside": "none",
 			"proportion": "75",
 			"feed": "FALSE",
-			"camera": "TRUE",	
+			"camera": "TRUE"
 		 },
 	"111": {
 			"day": "11",
@@ -1329,9 +1329,9 @@
 			"feedside": "right",
 			"proportion": "50",
 			"feed": "FALSE",
-			"camera": "FALSE",
+			"camera": "FALSE"
 		 },
-	"112": {	
+	"112": {
 			"day": "11",
 			"time": "15:05",
 			"thatpistimulus": "5",
@@ -1341,7 +1341,7 @@
 			"feedside": "right",
 			"proportion": "50",
 			"feed": "TRUE",
-			"camera": "TRUE",	
+			"camera": "TRUE"
 		 },
 	"113": {
 			"day": "11",
@@ -1353,9 +1353,9 @@
 			"feedside": "both",
 			"proportion": "0",
 			"feed": "TRUE",
-			"camera": "FALSE",
+			"camera": "FALSE"
 		 },
-	"114": {	
+	"114": {
 			"day": "11",
 			"time": "16:05",
 			"thatpistimulus": "0",
@@ -1365,7 +1365,7 @@
 			"feedside": "both",
 			"proportion": "0",
 			"feed": "TRUE",
-			"camera": "TRUE",	
+			"camera": "TRUE"
 		 },
 	"115": {
 			"day": "11",
@@ -1377,9 +1377,9 @@
 			"feedside": "both",
 			"proportion": "0",
 			"feed": "TRUE",
-			"camera": "FALSE",
+			"camera": "FALSE"
 		 },
-	"116": {	
+	"116": {
 			"day": "11",
 			"time": "16:10",
 			"thatpistimulus": "0",
@@ -1389,6 +1389,6 @@
 			"feedside": "both",
 			"proportion": "0",
 			"feed": "TRUE",
-			"camera": "TRUE",	
-		 },
+			"camera": "TRUE"
+		 }
 }
