@@ -207,10 +207,11 @@ for (schedule in schedules) {
 		
 		days = [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"]
 		for (day in days) {
-		  for (item in jsonR1) {
-            println("\n#######################")
-            println("Record Only (Day " + day + ", Record "  + item.key)
-            println("#######################")
+		    for (item in jsonR1) {
+               println("\n#######################")
+               println("Record Only (Day " + day + ", Record "  + item.key)
+               println("#######################")
+            }
 		}
 	} else {
 		println("Not creating jobs for fish=" + fish + ", schedule=" + schedule)
