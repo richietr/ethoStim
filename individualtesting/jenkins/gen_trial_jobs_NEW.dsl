@@ -202,7 +202,7 @@ for (schedule in schedules) {
 			createCiJob(ci_job_name, DAYS2KEEP, NUM2KEEP, TIMEOUT, fish, thatpistimulus, pistimulus, \
 				correctside, day, session, feedside, sex, proportion, species, \
 				fishstandardlength, round, camera, which_node, startDate, cwtime, \
-				ccwtime, feed, copydelay, def time)
+				ccwtime, feed, copydelay, time)
 		}
 		
 		days = [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"]
