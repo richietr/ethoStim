@@ -209,10 +209,18 @@ for (schedule in schedules) {
 		for (d in days) {
 		    for (item in jsonR1) {
                println("\n#######################")
-               println("Record Only (Day " + d + ", Record "  + item.key)
-               println("#######################")
+               println("Record Only (Day " + d + ", Record "  + item.key + ")")
+               println("#######################")               
+               ci_job_name = "run-record-only + "_" + fish + "_d" + d + "_r" + item.key
+               time = jsonR1.(item.key)."time"
+               fileExt = ".h264"
+               vidLen = "30"
+               id = item.key
+               
+               createRecordJob(ci_job_name, DAYS2KEEP, NUM2KEEP, TIMEOUT, fish, id, \
+                               round, cam_node, startDate, vidLen, fileExt, d, time)
             }
-		}
+		} 
 	} else {
 		println("Not creating jobs for fish=" + fish + ", schedule=" + schedule)
 	}
@@ -342,7 +350,8 @@ def createCiJob(def ci_job_name, def DAYS2KEEP, def NUM2KEEP, def TIMEOUT, def f
 // Function creates CI job with specified parameters
 //**********************************************************************
 def createRecordJob(def ci_job_name, def DAYS2KEEP, def NUM2KEEP, def TIMEOUT, def fish, \
-                def id, def round, def node, def startDate, def vidLen, def fileExt, def time) {
+                def id, def round, def node, def startDate, def vidLen, def fileExt, \
+                def day, def time) {
 	job(ci_job_name){
 	  logRotator {
 		daysToKeep(DAYS2KEEP)
