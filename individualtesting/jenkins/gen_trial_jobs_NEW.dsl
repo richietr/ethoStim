@@ -211,7 +211,7 @@ for (schedule in schedules) {
                println("\n#######################")
                println("Record Only (Day " + d + ", Record "  + item.key + ")")
                println("#######################")               
-               ci_job_name = "run-record-only + "_" + fish + "_d" + d + "_r" + item.key
+               ci_job_name = "run-record-only_" + fish + "_d" + d + "_r" + item.key
                time = jsonR1.(item.key)."time"
                fileExt = ".h264"
                vidLen = "30"
